@@ -5,3 +5,7 @@
 
 Techical references and info:  
 [Cardboard XR Plugin](https://github.com/googlevr/cardboard)  
+
+Documentation:
+[How to setup the Main Camera correctly](doc/HowToReticlePointer.md)
+[How to make IwfyReticlePointer interact with objects](doc/HowToReticlePointer.md)

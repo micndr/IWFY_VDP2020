@@ -23,7 +23,7 @@ public class SimpleJump : MonoBehaviour
 
     public void Vibrate()
     {
-        Vibration.Vibrate(100);
+        AndroidVibrationManager.Vibrate(100);
     }
 
     public void OnPointerClick()

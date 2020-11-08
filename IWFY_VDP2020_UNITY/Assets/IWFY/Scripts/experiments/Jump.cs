@@ -65,7 +65,7 @@ public class Jump : MonoBehaviour
         // AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity"); 
         // AndroidJavaObject vibrator = currentActivity.Call<AndroidJavaObject>("getSystemService", "vibrator");
         // vibrator.Call("vibrate", 1000);
-        Vibration.Vibrate(100);
+        AndroidVibrationManager.Vibrate(100);
     }
 
     public void OnPointerClick()
