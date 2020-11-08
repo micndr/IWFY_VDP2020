@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script maps the movement of the mouse to the main camera movement for use with PC
+// BUG: Right now, if this is active when compiling for mobile, it ihibits all "SendMessage" instructions (no pointer interaction, no touch input et cetera)
+// If anyone spots the problem please fix it and update documentation :)
+
 public class PCMapping : MonoBehaviour
 {
     public Transform tramsform;

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Comparers;
 
+// This script is a mess, it makes the object jump, change color and flip audiosource like that, all mushed together.
+
 public class Jump : MonoBehaviour
 {
     public Rigidbody rb;

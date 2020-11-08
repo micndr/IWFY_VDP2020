@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Makes the object do a wee tiny jump.
+
 public class SimpleJump : MonoBehaviour
 {
     public Rigidbody rb;
