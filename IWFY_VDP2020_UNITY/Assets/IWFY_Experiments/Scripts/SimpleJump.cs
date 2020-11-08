@@ -5,7 +5,6 @@ using UnityEngine;
 public class SimpleJump : MonoBehaviour
 {
     public Rigidbody rb;
-    private bool _clicked = false;
     private bool _jump = false;
 
     private void FixedUpdate()
