@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IwfyCameraPointer : MonoBehaviour
+public class WIP_IwfyCameraPointer : MonoBehaviour
 {
     private const float _maxDistance = 10;
     private GameObject _gazedAtObject = null;

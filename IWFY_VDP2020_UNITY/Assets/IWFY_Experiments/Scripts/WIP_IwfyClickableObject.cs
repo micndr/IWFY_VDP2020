@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IwfyClickableObject : MonoBehaviour
+public class WIP_IwfyClickableObject : MonoBehaviour
 {
     [SerializeField] private GameObject _reticlePointer;
     public void OnPointerEnter()

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IwfyReticlePointer : MonoBehaviour
+public class WIP_IwfyReticleAnimator : MonoBehaviour
 {
     public Animator animator;
     void OnClickableObjectEnter()
