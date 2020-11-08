@@ -8,6 +8,6 @@ Spiegazioine delle directory:
 
 Come usare git:
 
-Techical references:
-[Cardboard XR Plugin](https://github.com/googlevr/cardboard)
+Techical references:  
+[Cardboard XR Plugin](https://github.com/googlevr/cardboard)  
 [Reticle Pointer](https://github.com/linojon/CardboardInteractor)
