@@ -5,4 +5,3 @@
 
 Techical references:  
 [Cardboard XR Plugin](https://github.com/googlevr/cardboard)  
-[Reticle Pointer](https://github.com/linojon/CardboardInteractor)

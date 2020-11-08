@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMouse : MonoBehaviour
+public class CameraMouseMapping : MonoBehaviour
 {
     public Transform tramsform;
     public float speedH = 2f;
