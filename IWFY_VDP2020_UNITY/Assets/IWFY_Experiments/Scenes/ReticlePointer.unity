@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 273391863}
   - component: {fileID: 273391862}
   - component: {fileID: 273391865}
-  - component: {fileID: 273391869}
   - component: {fileID: 273391868}
   - component: {fileID: 273391867}
   - component: {fileID: 273391866}
@@ -406,27 +405,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 273391861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ee29649a9ab3e49a0f9919d1fc8fa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  makeAllButtonsClickable: 1
-  raycastEveryUpdate: 1
-  interactablesLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  OnTriggerPressed:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &273391869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273391861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aebfb4b86b2e54606894da54f755db2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 78857508f72549d59dbd1e47ab18c235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &591425076
@@ -768,4 +747,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16aec6b8991107e58ae4ca7863c753db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whoAmIForReticle: 1
+  _reticlePointer: {fileID: 1143978}
