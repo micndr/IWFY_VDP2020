@@ -5,5 +5,3 @@
 
 Techical references and info:  
 [Cardboard XR Plugin](https://github.com/googlevr/cardboard)  
-[Reticle Pointer](https://github.com/linojon/CardboardInteractor)
- - N.B. To correctly setup the camera rig with the reticle pointer take the scene ReticlePointerDemo
