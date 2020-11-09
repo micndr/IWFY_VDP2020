@@ -22,6 +22,8 @@ public class PlayerMove : MonoBehaviour {
     GameObject cam;
     PCMapping pcMapping;
 
+    GameObject destination;
+
     Vector3 FindSurface (Rigidbody Planet) {
         float dist = Vector3.Distance(this.transform.position, planet.transform.position);
         Vector3 surfaceNorm = Vector3.zero;
@@ -34,8 +36,7 @@ public class PlayerMove : MonoBehaviour {
     }
     
     void OrientBody (Vector3 surfaceNorm) {
-        transform.rotation = Quaternion.FromToRotation(transform.up, surfaceNorm) 
-            * transform.rotation;
+        transform.rotation = Quaternion.FromToRotation(transform.up, surfaceNorm);
     }
 
     void Attract () {
@@ -49,7 +50,17 @@ public class PlayerMove : MonoBehaviour {
         rigidbody.AddForce(pullVec.normalized * pullForce * Time.deltaTime);
     }
 
+    void RaycastDestination () {
+        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit)) {
+            destination.transform.position = hit.point;
+            destination.transform.rotation = Quaternion.LookRotation(hit.normal);
+        }
+    }
+
     void Start() {
+        destination = GameObject.Find("destination");
         rigidbody = GetComponent<Rigidbody>();
         planet = GameObject.Find("planet").GetComponent<Rigidbody>();
         cam = transform.Find("Camera Offset").Find("Main Camera").gameObject;
@@ -57,13 +68,18 @@ public class PlayerMove : MonoBehaviour {
     }
 
     void Update() {
-        /*
-        Quaternion acc = Quaternion.Euler(
-            Input.GetAxis("Vertical")*0.1f, 0, Input.GetAxis("Horizontal")*0.1f);
-        rot *= acc;
-        transform.rotation = rot;
+        if (Input.GetMouseButtonDown(0)) {
+            RaycastDestination();
+        }
 
-        pcMapping.planetSnapping = rot;*/
+        Vector3 todest = destination.transform.position - transform.position;
+
+        // move to dest, linearly
+        if (todest.sqrMagnitude > 1) {
+            rigidbody.AddForce(todest.normalized * 3000f * Time.deltaTime);
+        }
+
+        pcMapping.planetSnapping = transform.rotation;
     }
 
     private void FixedUpdate() {
