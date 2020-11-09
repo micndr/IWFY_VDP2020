@@ -6,14 +6,18 @@ using UnityEngine;
 // BUG: Right now, if this is active when compiling for mobile, it ihibits all "SendMessage" instructions (no pointer interaction, no touch input et cetera)
 // If anyone spots the problem please fix it and update documentation :)
 
+/* Jacopo: ho aggiunto supporto per far ruotare la cam perpendicolare al pianeta */
+
 public class PCMapping : MonoBehaviour
 {
-    public Transform tramsform;
     public float speedH = 2f;
     public float speedV = 2f;
     
     public float pitch = 0f;
     public float yaw = 0f;
+
+    public Quaternion planetSnapping = Quaternion.identity; /* custom down direction */
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +29,8 @@ public class PCMapping : MonoBehaviour
     {
         yaw += speedH * Input.GetAxis("Mouse X");
         pitch += speedV * Input.GetAxis("Mouse Y");
-        
-        transform.eulerAngles = new Vector3(-pitch, yaw, 0.0f);
+
+        Quaternion newRot = Quaternion.Euler(-pitch, yaw, 0.0f);
+        transform.rotation = planetSnapping * newRot;
     }
 }
