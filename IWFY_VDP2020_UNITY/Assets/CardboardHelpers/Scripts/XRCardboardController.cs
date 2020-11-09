@@ -55,7 +55,7 @@ public class XRCardboardController : MonoBehaviour
         {
             _CastForInteractables();
         }
-
+        
         if (IsTriggerPressed())
         {
             OnClick();
