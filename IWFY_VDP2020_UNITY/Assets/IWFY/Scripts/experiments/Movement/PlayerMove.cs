@@ -1,88 +1,60 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-/* movement prototype: quaternions based on planet center */
+// Sebastian Lague https://github.com/SebLague/Spherical-Gravity
 
-// add physics support (https://mikeloscocco.wordpress.com/2015/10/13/mario-galaxy-physics-in-unity/)
-// * add forces to move player
-// raycast destination
-// path validation
-// path truncation before obstacle
-// interpolation
-
+[RequireComponent(typeof(GravityBody))]
 public class PlayerMove : MonoBehaviour {
 
+    // public vars
+    public float mouseSensitivityX = 1;
+    public float mouseSensitivityY = 1;
+    public float walkSpeed = 6;
+    public float jumpForce = 220;
+    public LayerMask groundedMask;
+
+    // System vars
+    bool grounded;
+    Vector3 moveAmount;
+    Vector3 smoothMoveVelocity;
+    float verticalLookRotation;
+    Transform cameraTransform;
     Rigidbody rigidbody;
 
-    Rigidbody planet;
-    Quaternion rot = Quaternion.identity;
-    float mag = 20;
+    GameObject planet;
 
-    GameObject cam;
-    PCMapping pcMapping;
 
-    GameObject destination;
-
-    Vector3 FindSurface (Rigidbody Planet) {
-        float dist = Vector3.Distance(this.transform.position, planet.transform.position);
-        Vector3 surfaceNorm = Vector3.zero;
-
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, -transform.up, out hit, dist)) {
-            surfaceNorm = hit.normal;
-        }
-        return surfaceNorm;
-    }
-    
-    void OrientBody (Vector3 surfaceNorm) {
-        transform.rotation = Quaternion.FromToRotation(transform.up, surfaceNorm);
-    }
-
-    void Attract () {
-        Vector3 surfaceNorm = FindSurface(planet);
-        OrientBody(surfaceNorm);
-        float dist = Vector3.Distance((transform.position) + planet.transform.position,
-            planet.transform.position);
-        float pullForce = -9.8f * (planet.mass) / (dist*dist);
-
-        Vector3 pullVec = transform.position - planet.transform.position;
-        rigidbody.AddForce(pullVec.normalized * pullForce * Time.deltaTime);
-    }
-
-    void RaycastDestination () {
-        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit)) {
-            destination.transform.position = hit.point;
-            destination.transform.rotation = Quaternion.LookRotation(hit.normal);
-        }
-    }
-
-    void Start() {
-        destination = GameObject.Find("destination");
+    void Awake() {
+        planet = GameObject.FindGameObjectWithTag("Planet");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        cameraTransform = Camera.main.transform;
         rigidbody = GetComponent<Rigidbody>();
-        planet = GameObject.Find("planet").GetComponent<Rigidbody>();
-        cam = transform.Find("Camera Offset").Find("Main Camera").gameObject;
-        pcMapping = cam.GetComponent<PCMapping>();
     }
 
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            RaycastDestination();
-        }
+        // Look rotation:
+        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivityX);
+        verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY;
+        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90, 90);
+        cameraTransform.localEulerAngles = Vector3.left * verticalLookRotation;
 
-        Vector3 todest = destination.transform.position - transform.position;
+        transform.rotation = Quaternion.FromToRotation(
+            transform.up, 
+            (transform.position - planet.transform.position).normalized) * transform.rotation;
 
-        // move to dest, linearly
-        if (todest.sqrMagnitude > 1) {
-            rigidbody.AddForce(todest.normalized * 3000f * Time.deltaTime);
-        }
+        // Calculate movement:
+        float inputX = Input.GetAxisRaw("Horizontal");
+        float inputY = Input.GetAxisRaw("Vertical");
 
-        pcMapping.planetSnapping = transform.rotation;
+        Vector3 moveDir = new Vector3(inputX, 0, inputY).normalized;
+        Vector3 targetMoveAmount = moveDir * walkSpeed;
+        moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
     }
 
-    private void FixedUpdate() {
-        Attract();
+    void FixedUpdate() {
+        // Apply movement to rigidbody
+        Vector3 localMove = transform.TransformDirection(moveAmount) * Time.fixedDeltaTime;
+        rigidbody.MovePosition(rigidbody.position + localMove);
     }
 }
