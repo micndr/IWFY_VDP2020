@@ -13,10 +13,11 @@ using UnityEngine;
 public class IwfyClickableObject : MonoBehaviour
 {
     [SerializeField] private GameObject _reticlePointer;
+    private string id = "ClickableCube1";
     public void OnPointerEnter()
     {
         //Debug.Log("[ClickableObject.cs] AAAH, a ray has hit me, clickable object.");
-        _reticlePointer.SendMessage("OnClickableObjectEnter");
+        _reticlePointer.SendMessage("OnClickableObjectEnter", id);
     }
 
     public void OnPointerExit()
