@@ -9,3 +9,4 @@ Techical references and info:
 Documentation:  
 [How to setup the Main Camera correctly](doc/HowToReticlePointer.md)  
 [How to make IwfyReticlePointer interact with objects](doc/HowToReticlePointer.md)
+[Details on ReticlePointer-ClickableObject interaction](doc/HowToReticleClickableInteraction.md)
