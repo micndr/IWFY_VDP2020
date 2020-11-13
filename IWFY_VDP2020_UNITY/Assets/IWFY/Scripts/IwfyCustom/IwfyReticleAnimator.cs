@@ -14,15 +14,19 @@ using UnityEngine;
 public class IwfyReticleAnimator : MonoBehaviour
 {
     public Animator animator;
-    void OnClickableObjectEnter()
+    public TextMesh tooltip;
+    void OnClickableObjectEnter(String nameOfPointedObject)
     {
         //Debug.Log("[CustomReticlePointer.cs] ReticlePointerEntered a Clickable Object");
         animator.SetBool("PointingClickableObject", true);
+        Debug.Log(nameOfPointedObject);
+        tooltip.text = nameOfPointedObject;
     }
 
     void OnClickableObjectExit()
     {
         //Debug.Log("[CustomReticlePointer.cs] ReticlePointerExited a Clickable Object");
         animator.SetBool("PointingClickableObject", false);
+        tooltip.text = "";
     }
 }
