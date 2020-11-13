@@ -39,7 +39,7 @@ public class IwfyCameraPointer : MonoBehaviour
             _gazedAtObject = null;
         }
         
-        if (Input.GetMouseButtonDown(0) || Google.XR.Cardboard.Api.IsTriggerPressed)
+        if (Input.GetMouseButtonDown(0))
         {
             _gazedAtObject?.SendMessage("OnPointerClick");
         }
