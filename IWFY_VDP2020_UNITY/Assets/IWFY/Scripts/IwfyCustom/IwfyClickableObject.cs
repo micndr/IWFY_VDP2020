@@ -13,7 +13,8 @@ using UnityEngine;
 public class IwfyClickableObject : MonoBehaviour
 {
     [SerializeField] private GameObject _reticlePointer;
-    private string id = "ClickableCube1";
+    //               id = {name, Color}
+    private object[] id = {"ClickableCube1", Color.green};
     public void OnPointerEnter()
     {
         //Debug.Log("[ClickableObject.cs] AAAH, a ray has hit me, clickable object.");
