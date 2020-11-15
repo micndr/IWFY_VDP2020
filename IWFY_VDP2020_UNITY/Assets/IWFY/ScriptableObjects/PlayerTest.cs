@@ -8,14 +8,16 @@ public class PlayerTest : MonoBehaviour
     public InventoryObject inventory;
     private GameObject inventory_display;
     private bool inventoryVisibility = false;
-    //public void OnTriggerEnter(Collider other) //how to add an Item to the inventory we get the component ItemToken, then add the ItemObject to our inventory
-    //{
-    //    var item = other.GetComponent<ItemToken>();
-    //    if (item)
-    //    {
-    //        inventory.AddItem(item.itemToken,1);
-    //    }
-    //}
+    public void OnTriggerEnter(Collider other) //how to add an Item to the inventory we get the component ItemToken, then add the ItemObject to our inventory
+    {
+        var item = other.GetComponent<ItemToken>();
+        if (item)
+        {
+            inventory.AddItem(item.itemToken,1, 666);
+            Destroy(other.gameObject);
+            Debug.Log("Item added to inventory");
+        }
+    }
 
     private void Awake()
     {
@@ -40,7 +42,7 @@ public class PlayerTest : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        //inventory.Container.Clear();
+        //inventory.itemList.Clear();
     }
 }
 
