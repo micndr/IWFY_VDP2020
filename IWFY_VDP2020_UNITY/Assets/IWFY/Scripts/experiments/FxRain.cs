@@ -15,7 +15,7 @@ public class FxRain : MonoBehaviour {
         particles = transform.Find("rainParticles").GetComponent<ParticleSystem>();
         shape = particles.shape;
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("XRRig");
     }
 
     void Update() {
