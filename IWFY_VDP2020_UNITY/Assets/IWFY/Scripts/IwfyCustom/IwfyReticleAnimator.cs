@@ -15,17 +15,19 @@ public class IwfyReticleAnimator : MonoBehaviour
 {
     public Animator animator;
     public TextMesh tooltip;
+    
+    void Animate()
+    {
+        animator.SetBool("PointingClickableObject", true);
+    }
     void OnClickableObjectEnter(System.Object[] id)
     {
-        //Debug.Log("[CustomReticlePointer.cs] ReticlePointerEntered a Clickable Object");
-        animator.SetBool("PointingClickableObject", true);
-        
+        Animate();
         // TOOLTIP
         // Assign name received by clickable Object
         tooltip.text = id[0].ToString();
         // Assign colour received by clickable Object
-        tooltip.color = (Color)id[1];
-
+        tooltip.color = (Color) id[1];
     }
 
     void OnClickableObjectExit()

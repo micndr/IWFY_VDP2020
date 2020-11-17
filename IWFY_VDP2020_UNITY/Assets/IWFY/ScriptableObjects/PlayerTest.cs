@@ -21,7 +21,7 @@ public class PlayerTest : MonoBehaviour
 
     private void Awake()
     {
-        inventory_display = GameObject.Find("InventoryScreen");
+        inventory_display = GameObject.Find("CanvasInventory").transform.Find("InventoryScreen").gameObject;
     }
 
     void Update()

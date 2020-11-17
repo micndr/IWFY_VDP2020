@@ -25,7 +25,7 @@ public class PortalController : MonoBehaviour
 
     IEnumerator teleport()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(0);
         Application.LoadLevel(_newscene);
     }
 }
