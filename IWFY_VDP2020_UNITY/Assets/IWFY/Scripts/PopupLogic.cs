@@ -18,11 +18,6 @@ public class PopupLogic : IwfyClickableObjectNoPopup
     public QuestLock qlock;
     public ItemPickup pickup;
 
-    public static void NAME()
-    {
-
-    }
-
     public override void Start()
     {
         base.Start();
@@ -59,13 +54,11 @@ public class PopupLogic : IwfyClickableObjectNoPopup
 
     public void OnParentEnter()
     {
-        Debug.Log("OverParent set to true");
         overParent = true;
     }
 
     public void OnParentExit()
     {
-        Debug.Log("OverParent set to False");
         overParent = false;
         StartCoroutine(DeathCount());
     }

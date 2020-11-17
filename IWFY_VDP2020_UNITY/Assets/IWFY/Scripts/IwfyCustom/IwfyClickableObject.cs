@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using UnityEditor;
 using UnityEngine;
 
 // All interactive objects which need a popup should inherit from this:
@@ -14,7 +15,7 @@ using UnityEngine;
 
 public class IwfyClickableObject : IwfyClickableObjectNoPopup
 {
-    [SerializeField] private GameObject _popupPrefab;
+    private GameObject _popupPrefab;
     [SerializeField] private string _popupMessage;
     [SerializeField] private Color _popupBackgroundColor;
     
@@ -31,6 +32,9 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
         
         // Initializes object specific properties
         id = new object[] {_name, _color};
+        
+        // Retrieve the prefab
+        _popupPrefab = (GameObject) AssetDatabase.LoadAssetAtPath("Assets/IWFY/Prefabs/PopupPrefab.prefab", typeof(GameObject));
     }
 
     public override void OnPointerEnter()
