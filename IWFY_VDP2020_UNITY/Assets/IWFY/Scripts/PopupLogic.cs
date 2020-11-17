@@ -22,6 +22,8 @@ public class PopupLogic : MonoBehaviour {
         if (playerDiff.sqrMagnitude < activationRange * activationRange) {
             activated = true;
         } else { activated = false; }
+
+
     }
 
     public void OnPointerClick() {
