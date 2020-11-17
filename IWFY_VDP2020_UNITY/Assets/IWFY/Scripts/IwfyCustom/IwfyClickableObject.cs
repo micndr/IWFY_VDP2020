@@ -65,6 +65,7 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
 
     public void OnPopupClick()
     {
+        // THIS METHOD IS OVERRIDDEN BY ANY OBJECT THAT IMPLEMENTS SOME FUNCTIONALITY LINKED TO THE POPUP
         Debug.Log("This element's popup has been clicked");
     }
 }
