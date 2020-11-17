@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Script that handles the behaviour of the popup.
 
@@ -81,4 +82,14 @@ IEnumerator DeathCount()
     {
         SendMessageUpwards("NullifyInstance");
     }
+
+    public void SetMessage(string message)
+    {
+        gameObject.GetComponentInChildren<Text>().text = message;
+    }
+
+    public void SetBackgroundColor(Color color)
+    {
+        gameObject.GetComponentInChildren<Image>().color = color;
+    } 
 }

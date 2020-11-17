@@ -15,6 +15,9 @@ using UnityEngine;
 public class IwfyClickableObject : IwfyClickableObjectNoPopup
 {
     [SerializeField] private GameObject _popupPrefab;
+    [SerializeField] private string _popupMessage;
+    [SerializeField] private Color _popupBackgroundColor;
+    
     private GameObject _popupPrefabInstance;
     //               id = {name, Color}
     [SerializeField] private string _name;
@@ -33,8 +36,10 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
     public override void OnPointerEnter()
     {
         base.OnPointerEnter(); // Triggers pointer animation.
-        base.reticlePointer.SendMessage("OnClickableObjectEnter", id);
+        base.getReticlePointer().SendMessage("OnClickableObjectEnter", id);
         _popupPrefabInstance = Instantiate(_popupPrefab, transform);
+        _popupPrefabInstance.GetComponent<PopupLogic>().SetMessage(_popupMessage);
+        _popupPrefabInstance.GetComponent<PopupLogic>().SetBackgroundColor(_popupBackgroundColor);
         
         // Notifies the popup not to destroy itself as long as the pointer is on the parent.
         if(_popupPrefabInstance) _popupPrefabInstance?.SendMessage("OnParentEnter");

@@ -11,20 +11,25 @@ using UnityEngine;
 
 public class IwfyClickableObjectNoPopup : MonoBehaviour
 {
-    public GameObject reticlePointer;
+    private GameObject _reticlePointer;
     public virtual void Start()
     {
-        reticlePointer = GameObject.Find("IwfyReticlePointer");
+        _reticlePointer = GameObject.Find("IwfyReticlePointer");
     }
 
     public virtual void OnPointerEnter()
     {
-        reticlePointer.SendMessage("Animate");
+        _reticlePointer.SendMessage("Animate");
 
     }
 
     public virtual void OnPointerExit()
     {
-        reticlePointer.SendMessage("OnClickableObjectExit");
+        _reticlePointer.SendMessage("OnClickableObjectExit");
+    }
+
+    public GameObject getReticlePointer()
+    {
+        return _reticlePointer;
     }
 }
