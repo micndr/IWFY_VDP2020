@@ -24,18 +24,18 @@ public class IwfyCameraPointer : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
             // GameObject detected in front of the camera.
-            if (_gazedAtObject != hit.transform.gameObject)
+            if (_gazedAtObject != hit.collider.transform.gameObject)
             {
                 // New GameObject.
-                _gazedAtObject?.SendMessage("OnPointerExit", SendMessageOptions.DontRequireReceiver);
-                _gazedAtObject = hit.transform.gameObject;
+                if (_gazedAtObject) _gazedAtObject?.SendMessage("OnPointerExit", SendMessageOptions.DontRequireReceiver);
+                _gazedAtObject = hit.collider.transform.gameObject;
                 _gazedAtObject?.SendMessage("OnPointerEnter", SendMessageOptions.DontRequireReceiver);
             }
         }
         else
         {
             // No GameObject detected in front of the camera.
-            _gazedAtObject?.SendMessage("OnPointerExit", SendMessageOptions.DontRequireReceiver);
+            if (_gazedAtObject) _gazedAtObject?.SendMessage("OnPointerExit", SendMessageOptions.DontRequireReceiver);
             _gazedAtObject = null;
         }
         
