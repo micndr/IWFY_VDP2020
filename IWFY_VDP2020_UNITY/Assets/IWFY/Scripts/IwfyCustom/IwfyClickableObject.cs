@@ -1,34 +1,61 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
-// All interactive objects should inherit from this:
+// All interactive objects which need a popup should inherit from this:
 // OnPointerEnter -> Called when the pointer enters the object
 // OnPointerExit -> Called when the pointer exits the object
-// OnPointerClick -> Called when the pointer clicks the object
+// NullifyInstance -> Called when the popup destroys itself. It triggers OnPointerExit and resets the _popupPrefabInstance reference to null
+// OnPopupClick -> In case some code relative to the object is needed to be executed here at the popup click
 
-// Receives the messages from the IwfyCameraPointer and bounces the signal back to the IwfyReticlePointer
-// (of which it needs to be linked to in the unity editor)
+// REMEMBER TO LINK THE POPUP PREFAB
 
-public class IwfyClickableObject : MonoBehaviour
+public class IwfyClickableObject : IwfyClickableObjectNoPopup
 {
-    [SerializeField] private GameObject _reticlePointer;
+    [SerializeField] private GameObject _popupPrefab;
+    private GameObject _popupPrefabInstance;
     //               id = {name, Color}
-    private object[] id = {"ClickableCube1", Color.green};
-    public void OnPointerEnter()
+    [SerializeField] private string _name;
+    [SerializeField] private Color _color;
+    private object [] id = new object[2];
+
+    // Initializes calling 
+    public override void Start()
     {
-        //Debug.Log("[ClickableObject.cs] AAAH, a ray has hit me, clickable object.");
-        _reticlePointer.SendMessage("OnClickableObjectEnter", id);
+        base.Start();
+        
+        // Initializes object specific properties
+        id = new object[] {_name, _color};
     }
 
-    public void OnPointerExit()
+    public override void OnPointerEnter()
     {
-        //Debug.Log("[ClickableObject.cs] Bye bye evil ray");
-        _reticlePointer.SendMessage("OnClickableObjectExit");
+        base.OnPointerEnter(); // Triggers pointer animation.
+        base.reticlePointer.SendMessage("OnClickableObjectEnter", id);
+        _popupPrefabInstance = Instantiate(_popupPrefab, transform);
+        
+        // Notifies the popup not to destroy itself as long as the pointer is on the parent.
+        if(_popupPrefabInstance) _popupPrefabInstance?.SendMessage("OnParentEnter");
     }
 
-    public void OnPointerClick()
+    public override void OnPointerExit()
     {
-        //Debug.Log("This element has been clicked");
+        base.OnPointerExit();
+        
+        // Notifies that the pointer is no longer on the parent, the popup can go destroy itself.
+        if(_popupPrefabInstance) _popupPrefabInstance?.SendMessage("OnParentExit");
+    }
+
+    public void NullifyInstance()
+    {
+        base.OnPointerExit(); // Because when the pointer disappears it is as if the pointer exited the object.
+        _popupPrefabInstance = null;
+    }
+
+    public void OnPopupClick()
+    {
+        Debug.Log("This element's popup has been clicked");
     }
 }
