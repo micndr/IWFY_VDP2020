@@ -7,11 +7,11 @@ public class PopupLogic : MonoBehaviour {
     GameObject player;
 
     public float activationRange = 4;
-
     public bool activated = false;
-
-    public bool pressed = false;
     public bool over = false;
+
+    public QuestLock qlock;
+    public ItemPickup pickup;
 
     void Start() {
         player = GameObject.Find("Player");
@@ -25,8 +25,11 @@ public class PopupLogic : MonoBehaviour {
     }
 
     public void OnPointerClick() {
-        if (activated) {
-            pressed = true;
+        if (qlock != null) {
+            qlock.main.NextState(qlock);
+        }
+        if (pickup != null) {
+            pickup.GetItems();
         }
     }
     public void OnPointerEnter() {
