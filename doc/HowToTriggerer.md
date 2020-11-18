@@ -1,4 +1,4 @@
-# I'm triggered
+# How to Triggerer
 
 ## Triggerer
 It's purpose is to activate the components when an input is given. It generalizes the need to have multiple specific calls to progress the story.
