@@ -1,6 +1,7 @@
 # I'm triggered
 
 ## Triggerer
+It's purpose is to activate the components when an input is given. It generalizes the need to have multiple specific calls to progress the story.
 * when triggered, triggers the components assigned.
 * it can autotrigger without input -> used for first dialogue
 * it can autodetect the component attatched to the same gameobject for lazyness
