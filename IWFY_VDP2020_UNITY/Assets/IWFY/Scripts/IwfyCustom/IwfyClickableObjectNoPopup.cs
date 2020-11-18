@@ -14,7 +14,7 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
     private GameObject _reticlePointer;
     public virtual void Start()
     {
-        _reticlePointer = GameObject.Find("IwfyReticlePointer");
+        _reticlePointer = GameObject.FindGameObjectWithTag("IwfyReticlePointer");
     }
 
     public virtual void OnPointerEnter()
