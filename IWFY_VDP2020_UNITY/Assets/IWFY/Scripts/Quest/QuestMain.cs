@@ -8,16 +8,21 @@ public class QuestMain : MonoBehaviour {
     public List<QuestLock> locks = new List<QuestLock>();
     public int state = 0;
 
-    void Start() {
-
-    }
-
     void Update() {
         foreach (QuestLock qlock in locks) {
             if (qlock.state == state) {
                 qlock.gameObject.SetActive(true);
             } else {
-                qlock.gameObject.SetActive(false);
+                if (qlock.gameObject.activeSelf) {
+                    if (qlock.deactivateDelay < 2) {
+                        qlock.deactivateDelay += 1;
+                    } else {
+                        qlock.gameObject.SetActive(false);
+                        qlock.deactivateDelay = 0;
+                    }
+                } else {
+                    qlock.gameObject.SetActive(false);
+                }
             }
         }
     }

@@ -7,7 +7,7 @@ public class PlayerTest : MonoBehaviour
 {
     public InventoryObject inventory;
     private GameObject inventory_display;
-    private bool inventoryVisibility = false;
+    private bool inventoryVisibility = true;
     public void OnTriggerEnter(Collider other) //how to add an Item to the inventory we get the component ItemToken, then add the ItemObject to our inventory
     {
         var item = other.GetComponent<ItemToken>();
@@ -42,7 +42,7 @@ public class PlayerTest : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        //inventory.itemList.Clear();
+        inventory.itemList.Clear();
     }
 }
 
