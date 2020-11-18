@@ -12,10 +12,6 @@ public class PopupLogic : IwfyClickableObjectNoPopup
     // Keep track of wether the pointer is on the popup or on the object which instantiated the popup
     public bool over = false;
     public bool overParent = false;
-    
-    // There are...
-    public QuestLock qlock;
-    public ItemPickup pickup;
 
     public override void Start()
     {
@@ -27,16 +23,6 @@ public class PopupLogic : IwfyClickableObjectNoPopup
 
     public void OnPointerClick()
     {
-        if (qlock != null)
-        {
-            qlock.main.NextState(qlock);
-        }
-
-        if (pickup != null)
-        {
-            pickup.GetItems();
-        }
-        
         // When it is clicked, the popup disappears and notifies its object
         Destroy(gameObject);
         SendMessageUpwards("OnPopupClick");

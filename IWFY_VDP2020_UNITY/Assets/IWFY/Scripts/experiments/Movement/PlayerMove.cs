@@ -23,6 +23,11 @@ public class PlayerMove : MonoBehaviour {
 
     GameObject planet;
 
+    public bool lockUserInput = false;
+    public bool freeCursor = false;
+
+    DialogueManager dialogueManager;
+
 
     void Awake() {
         planet = GameObject.FindGameObjectWithTag("Planet");
@@ -30,22 +35,38 @@ public class PlayerMove : MonoBehaviour {
         Cursor.visible = false;
         cameraTransform = Camera.main.transform;
         rigidbody = GetComponent<Rigidbody>();
+
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     void Update() {
-        // Look rotation:
-        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivityX);
-        verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY;
-        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90, 90);
-        cameraTransform.localEulerAngles = Vector3.left * verticalLookRotation;
+        float inh = lockUserInput ? 0 : 1;
+
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            dialogueManager.DisplayNextSentence();
+        }
+
+        if (!freeCursor) {
+            // Look rotation:
+            transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivityX * inh);
+            verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY * inh;
+            verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90, 90);
+            cameraTransform.localEulerAngles = Vector3.left * verticalLookRotation;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        } else {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
 
         transform.rotation = Quaternion.FromToRotation(
             transform.up, 
             (transform.position - planet.transform.position).normalized) * transform.rotation;
 
         // Calculate movement:
-        float inputX = Input.GetAxisRaw("Horizontal");
-        float inputY = Input.GetAxisRaw("Vertical");
+        float inputX = Input.GetAxisRaw("Horizontal") * inh;
+        float inputY = Input.GetAxisRaw("Vertical") * inh;
 
         Vector3 moveDir = new Vector3(inputX, 0, inputY).normalized;
         Vector3 targetMoveAmount = moveDir * walkSpeed;

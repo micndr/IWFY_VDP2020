@@ -13,8 +13,14 @@ public class QuestLock : MonoBehaviour {
 
     public List<ItemObject> requirements = new List<ItemObject>();
 
+    public int deactivateDelay = 0;
+
     void Start() {
         main = GameObject.Find("QuestMain").GetComponent<QuestMain>();
         main.AddAdvancer(this);
+    }
+
+    public void Advance () {
+        main.NextState(this);
     }
 }

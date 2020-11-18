@@ -15,14 +15,19 @@ public class DialogueManager : MonoBehaviour
 
     private static readonly int IsOpen = Animator.StringToHash("IsOpen");
 
+    // Jacopo -> added a reference to call triggerer from the starting object, 
+    // if another method is found, please use it.
+    private DialogueTrigger startPointRef;
+
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, DialogueTrigger startpoint)
     {
+        startPointRef = startpoint;
         animator.SetBool(IsOpen, true);
         nameText.text = dialogue.name;
         sentences.Clear();
@@ -62,5 +67,10 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue() 
     {
         animator.SetBool(IsOpen, false);
+
+        if (startPointRef) {
+            Triggerer tr = startPointRef.GetComponent<Triggerer>(); 
+            if (tr) tr.Trigger();
+        }
     }
 }
