@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
+
 public class DisplayInventory : MonoBehaviour
 {
     public InventoryObject inventory;
 
-    public int X_START;
-    public int Y_START;
-    public int X_SPACE_BETWEEN_ITEMS;
-    public int Y_SPACE_BETWEEN_ITEMS;
-    public int NUMBER_OF_COLUMN;
+    [FormerlySerializedAs("X_START")] public int xStart;
+    [FormerlySerializedAs("Y_START")] public int yStart;
+    [FormerlySerializedAs("X_SPACE_BETWEEN_ITEMS")] public int xSpaceBetweenItems;
+    [FormerlySerializedAs("Y_SPACE_BETWEEN_ITEMS")] public int ySpaceBetweenItems;
+    [FormerlySerializedAs("NUMBER_OF_COLUMN")] public int numberOfColumn;
     
     
     void Awake()
@@ -46,10 +48,10 @@ public class DisplayInventory : MonoBehaviour
         
     }*/
 
-    private void clearDisplay()
+    private void ClearDisplay()
     {
         var childs = transform.childCount;
-        for (int i = childs - 1; i >= 0; i--)
+        for (var i = childs - 1; i >= 0; i--)
         {
             GameObject.Destroy(transform.GetChild(i).gameObject);
         }
@@ -58,8 +60,8 @@ public class DisplayInventory : MonoBehaviour
     
     public void CreateDisplay()
     {
-        clearDisplay();
-        for (int i = 0; i < inventory.itemList.Count; i++)
+        ClearDisplay();
+        for (var i = 0; i < inventory.itemList.Count; i++)
         {
             var obj = Instantiate(inventory.itemList[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
@@ -69,9 +71,9 @@ public class DisplayInventory : MonoBehaviour
         //Da gestire caso in cui l'inventario contiene un item null
     }
 
-    public Vector3 GetPosition(int i)
+    private Vector3 GetPosition(int i)
     {
-        return new Vector3(X_START+ X_SPACE_BETWEEN_ITEMS*(i% NUMBER_OF_COLUMN),Y_START+ (-Y_SPACE_BETWEEN_ITEMS*(i/NUMBER_OF_COLUMN)), 0f);
+        return new Vector3(xStart+ xSpaceBetweenItems*(i% numberOfColumn),yStart+ (-ySpaceBetweenItems*(i/numberOfColumn)), 0f);
     }
 }
 

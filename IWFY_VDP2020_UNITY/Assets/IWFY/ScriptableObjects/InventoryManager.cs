@@ -2,14 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class InventoryManager : MonoBehaviour
 {
     public InventoryObject inventory;
-    private GameObject inventory_display;
-    private bool inventoryVisibility = true;
+    private GameObject _inventoryDisplay;
+    private bool _inventoryVisibility = true;
 
-    [SerializeField] public bool InventoryOn = true;
+    [FormerlySerializedAs("InventoryOn")] [SerializeField] public bool inventoryOn = true;
     /*public void OnTriggerEnter(Collider other) //how to add an Item to the inventory we get the component ItemToken, then add the ItemObject to our inventory
     {
         var item = other.GetComponent<ItemToken>();
@@ -23,34 +24,25 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        inventory_display = GameObject.Find("CanvasInventory").transform.Find("InventoryScreen").gameObject;
+        _inventoryDisplay = GameObject.Find("CanvasInventory").transform.Find("InventoryScreen").gameObject;
     }
 
-    public void setInventoryState(bool set)
+    public void SetInventoryState(bool set)
     {
-        if (set)
-        {    
-            InventoryOn = true;
-        }
-        else
-        {
-            InventoryOn = false;
-        }
+        inventoryOn = set;
     }
     void Update()
     {
-        if(InventoryOn)
+        if (!inventoryOn) return;
+        if (Input.GetKeyDown(KeyCode.I) && _inventoryVisibility)
         {
-            if (Input.GetKeyDown(KeyCode.I) && inventoryVisibility)
-            {
-                inventory_display.SetActive(true);
-                inventoryVisibility = false;
-            }
-            else if (Input.GetKeyDown(KeyCode.I) && !inventoryVisibility)
-            {
-                inventory_display.SetActive(false);
-                inventoryVisibility = true;
-            }
+            _inventoryDisplay.SetActive(true);
+            _inventoryVisibility = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.I) && !_inventoryVisibility)
+        {
+            _inventoryDisplay.SetActive(false);
+            _inventoryVisibility = true;
         }
     }
 
