@@ -13,8 +13,7 @@ public class DisplayInventory : MonoBehaviour
     public int Y_SPACE_BETWEEN_ITEMS;
     public int NUMBER_OF_COLUMN;
     
-    //Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>(); //Not really used
-    // Start is called before the first frame update
+    
     void Awake()
     {
         CreateDisplay();
@@ -24,7 +23,6 @@ public class DisplayInventory : MonoBehaviour
 
     private void OnEnable()
     {
-        clearDisplay();
         CreateDisplay();
     }
 
@@ -60,6 +58,7 @@ public class DisplayInventory : MonoBehaviour
     
     public void CreateDisplay()
     {
+        clearDisplay();
         for (int i = 0; i < inventory.itemList.Count; i++)
         {
             var obj = Instantiate(inventory.itemList[i].item.prefab, Vector3.zero, Quaternion.identity, transform);

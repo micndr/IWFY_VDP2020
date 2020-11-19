@@ -19,10 +19,13 @@ public class DialogueManager : MonoBehaviour
     // if another method is found, please use it.
     private DialogueTrigger startPointRef;
 
+    private InventoryManager inventoryState;
+    //private GameObject inventoryState;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         sentences = new Queue<string>();
+        inventoryState = FindObjectOfType<InventoryManager>();
     }
 
     public void StartDialogue(Dialogue dialogue, DialogueTrigger startpoint)
@@ -31,7 +34,8 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool(IsOpen, true);
         nameText.text = dialogue.name;
         sentences.Clear();
-
+        //inventoryState.setInventoryState(false);
+        inventoryState.setInventoryState(false);
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
@@ -67,7 +71,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue() 
     {
         animator.SetBool(IsOpen, false);
-
+        inventoryState.setInventoryState(true);
         if (startPointRef) {
             Triggerer tr = startPointRef.GetComponent<Triggerer>(); 
             if (tr) tr.Trigger();
