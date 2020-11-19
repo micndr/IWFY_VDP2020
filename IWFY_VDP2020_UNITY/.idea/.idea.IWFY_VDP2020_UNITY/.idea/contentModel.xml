@@ -2,12 +2,71 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Michele\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Michele\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_IWFY_VDP2020_UNITY.1892686801.00" t="ExcludeRecursive" />
-    <e p="D:\Polimi\Videogame Design and Programming\IWFY_VDP2020\IWFY_VDP2020_UNITY" t="IncludeRecursive">
+    <e p="C:\Users\Michele\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_IWFY_VDP2020_UNITY.-422222246.00" t="ExcludeRecursive" />
+    <e p="D:\IWFY_VDP2020\IWFY_VDP2020_UNITY" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="IWFY" t="Include">
+          <e p="Artwork" t="Include">
+            <e p="3D models" t="Include">
+              <e p="Junk" t="Include">
+                <e p="eWolf" t="Include">
+                  <e p="Common" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="Helpers" t="Include">
+                        <e p="SceneHelpers_UI.cs" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Scripts" t="Include">
+                      <e p="Helper" t="Include">
+                        <e p="ObjectHelper.cs" t="Include" />
+                        <e p="SceneHelpers.cs" t="Include" />
+                      </e>
+                      <e p="Interfaces" t="Include">
+                        <e p="IRandomizer.cs" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Shaders" t="Include">
+                      <e p="eWolf-Double-Standard.shader" t="Include" />
+                      <e p="eWolf-Double-Unlit-Alpha.shader" t="Include" />
+                      <e p="eWolf-Double-Unlit-AlphaTest.shader" t="Include" />
+                      <e p="eWolf-Double-Unlit-Normal.shader" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Sci-Fi_Objects_Pack1" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="ObjectsOnFloor_UI.cs" t="Include" />
+                      <e p="ScifiObjectBase_UI.cs" t="Include" />
+                      <e p="ShelfFiller_UI.cs" t="Include" />
+                      <e p="ShelfObjectJar_UI.cs" t="Include" />
+                    </e>
+                    <e p="Scripts" t="Include">
+                      <e p="Interfaces" t="Include">
+                        <e p="IShelfObject.cs" t="Include" />
+                      </e>
+                      <e p="ObjectsOnFloor.cs" t="Include" />
+                      <e p="PerfabBuilder.cs" t="Include" />
+                      <e p="RandomMaterialHolder.cs" t="Include" />
+                      <e p="ScifiObjectBase.cs" t="Include" />
+                      <e p="Shelf" t="Include">
+                        <e p="ShelfCapacities.cs" t="Include" />
+                        <e p="ShelfCollisionStyles.cs" t="Include" />
+                        <e p="ShelfDetails.cs" t="Include" />
+                        <e p="ShelfFiller.cs" t="Include" />
+                        <e p="ShelfObjectBase.cs" t="Include" />
+                        <e p="ShelfObjectCollection.cs" t="Include" />
+                        <e p="ShelfObjectJar.cs" t="Include" />
+                        <e p="ShelfObjects.cs" t="Include" />
+                        <e p="ShelfSpace.cs" t="Include" />
+                        <e p="ShelfSpaceDetails.cs" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="ScriptableObjects" t="Include">
             <e p="DisplayInventory.cs" t="Include" />
             <e p="Inventory" t="Include">
@@ -15,6 +74,7 @@
                 <e p="InventoryObject.cs" t="Include" />
               </e>
             </e>
+            <e p="InventoryManager.cs" t="Include" />
             <e p="Items" t="Include">
               <e p="Scripts" t="Include">
                 <e p="DefaultObject.cs" t="Include" />
@@ -22,25 +82,20 @@
                 <e p="ItemToken.cs" t="Include" />
               </e>
             </e>
-            <e p="PlayerTest.cs" t="Include" />
           </e>
           <e p="Scripts" t="Include">
-            <e p="Dimension_4" t="Include">
-              <e p="FlowerController.cs" t="Include" />
-              <e p="LightsOutController.cs" t="Include" />
             <e p="DialogueSystem" t="Include">
               <e p="Dialogue.cs" t="Include" />
               <e p="DialogueManager.cs" t="Include" />
               <e p="DialogueTrigger.cs" t="Include" />
             </e>
+            <e p="Dimension_4" t="Include">
+              <e p="FlowerController.cs" t="Include" />
+              <e p="LightsOutController.cs" t="Include" />
+            </e>
             <e p="experiments" t="Include">
               <e p="FxRain.cs" t="Include" />
               <e p="Jump.cs" t="Include" />
-              <e p="Movement" t="Include">
-                <e p="GravityAttractor.cs" t="Include" />
-                <e p="GravityBody.cs" t="Include" />
-                <e p="PlayerMove.cs" t="Include" />
-              </e>
               <e p="SimpleJump.cs" t="Include" />
             </e>
             <e p="IwfyCustom" t="Include">
@@ -49,6 +104,11 @@
               <e p="IwfyClickableObjectNoPopup.cs" t="Include" />
               <e p="IwfyReticleAnimator.cs" t="Include" />
             </e>
+            <e p="Movement" t="Include">
+              <e p="GravityAttractor.cs" t="Include" />
+              <e p="GravityBody.cs" t="Include" />
+              <e p="PlayerMove.cs" t="Include" />
+            </e>
             <e p="PopupLogic.cs" t="Include" />
             <e p="PortalController.cs" t="Include" />
             <e p="Quest" t="Include">
@@ -56,11 +116,17 @@
               <e p="QuestLock.cs" t="Include" />
               <e p="QuestMain.cs" t="Include" />
             </e>
+            <e p="Triggers" t="Include">
+              <e p="Triggerer.cs" t="Include" />
+              <e p="TriggerKey.cs" t="Include" />
+              <e p="TriggerVolume.cs" t="Include" />
+            </e>
             <e p="Utility" t="Include">
               <e p="AndroidVibrationManager.cs" t="Include" />
               <e p="FaceTowards.cs" t="Include" />
               <e p="PCMapping.cs" t="Include" />
             </e>
+            <e p="videoController.cs" t="Include" />
           </e>
         </e>
         <e p="ResonanceAudio" t="Include">
