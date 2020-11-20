@@ -6,6 +6,7 @@ public class Triggerer : MonoBehaviour {
 
     public bool autoTrigger = false;
     public bool findComponents = false;
+    public bool destroyAfterTrigger = false;
 
     public QuestLock qlock;
     public ItemPickup pickup;
@@ -31,10 +32,12 @@ public class Triggerer : MonoBehaviour {
     }
 
     public void Trigger() {
-        print("triggered");
         if (qlock) qlock.Advance();
         if (pickup) pickup.GetItems();
         if (dialogue) dialogue.TriggerDialogue();
         if (triggerer) triggerer.Trigger();
+        if (destroyAfterTrigger) {
+            Destroy(gameObject, 0.02f);
+        }
     }
 }

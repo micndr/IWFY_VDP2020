@@ -10,7 +10,8 @@ public class QuestMain : MonoBehaviour {
 
     void Update() {
         foreach (QuestLock qlock in locks) {
-            if (qlock.state == state) {
+            if (qlock.state == state || 
+                    (qlock.activeUntilState && state < qlock.state)) {
                 qlock.gameObject.SetActive(true);
             } else {
                 if (qlock.gameObject.activeSelf) {
@@ -30,16 +31,28 @@ public class QuestMain : MonoBehaviour {
     public void AddAdvancer (QuestLock qa) {
         // called by locks in the scene
         locks.Add(qa);
+        if (qa.state != state) { qa.gameObject.SetActive(false); }
+    }
+    public void RemoveAdvancer(QuestLock qa) {
+        // called by locks in the scene
+        locks.Remove(qa);
     }
 
     public bool CheckRequirements (QuestLock ql) {
+        var checkd = new List<int>();
         bool flag = true;
         for (int j = 0; j < ql.requirements.Count; j++) {
             bool found = false;
             for (int i = 0; i < inventory.itemList.Count; i++) {
-                if (inventory.itemList[i].item.itemID 
-                    == ql.requirements[j].itemID) {
-                    found = true;
+                if (inventory.itemList[i].item.itemID == ql.requirements[j].itemID) {
+                    int itemcount = inventory.itemList[i].amount;
+                    for (int k = 0; k < checkd.Count; k++) {
+                        if (checkd[k] == i) { itemcount--; }
+                    }
+                    if (itemcount > 0) {
+                        found = true;
+                        checkd.Add(i);
+                    }
                 }
             }
             if (!found) { flag = false; }

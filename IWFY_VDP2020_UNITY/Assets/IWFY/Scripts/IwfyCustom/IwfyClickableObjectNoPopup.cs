@@ -22,6 +22,12 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
         _reticlePointer.SendMessage("Animate");
 
     }
+    public virtual void OnPointerClick() {
+        // Jacopo -> ho messo anche qua l'attivazione dei trigger. Se si vuole si può spostare
+        Triggerer triggerer = GetComponent<Triggerer>();
+        if (triggerer) triggerer.Trigger();
+    }
+
 
     public virtual void OnPointerExit()
     {

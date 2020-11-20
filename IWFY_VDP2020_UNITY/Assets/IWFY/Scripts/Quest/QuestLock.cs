@@ -10,6 +10,7 @@ public class QuestLock : MonoBehaviour {
     public QuestMain main;
     public int state = 0;
     public int nextState = 0;
+    public bool activeUntilState = false;
 
     public List<ItemObject> requirements = new List<ItemObject>();
 
@@ -22,5 +23,9 @@ public class QuestLock : MonoBehaviour {
 
     public void Advance () {
         main.NextState(this);
+    }
+
+    public void OnDestroy() {
+        main.RemoveAdvancer(this);
     }
 }

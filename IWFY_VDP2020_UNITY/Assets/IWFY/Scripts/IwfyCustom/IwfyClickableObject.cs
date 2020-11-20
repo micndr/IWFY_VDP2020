@@ -67,9 +67,5 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
     {
         // THIS METHOD IS OVERRIDDEN BY ANY OBJECT THAT IMPLEMENTS SOME FUNCTIONALITY LINKED TO THE POPUP
         Debug.Log("This element's popup has been clicked");
-
-        // Jacopo -> ho messo qua l'attivazione dei trigger. Se si vuole si può spostare
-        Triggerer triggerer = GetComponent<Triggerer>();
-        if (triggerer) triggerer.Trigger();
     }
 }
