@@ -13,7 +13,11 @@ public class DialogueManager : MonoBehaviour
     
     private Queue<string> _names;
     private Queue<string> _sentences; //Fifo collection
-    
+
+    [SerializeField]
+    public float _typespeed = 0.05f;
+    [SerializeField]
+    public float _autoadvancespeed = 0.5f;
     
     private static readonly int IsOpen = Animator.StringToHash("IsOpen");
 
@@ -56,6 +60,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (_sentences.Count == 0 && _names.Count == 0)
         {
+            _names.Clear();
+            _sentences.Clear();
             EndDialogue();
             return;
         }
@@ -67,7 +73,8 @@ public class DialogueManager : MonoBehaviour
         }
         
         var sentence = _sentences.Dequeue();
-        if (_sentencesAnimation != null) StopCoroutine(_sentencesAnimation); 
+        //if (_sentencesAnimation != null) StopCoroutine(_sentencesAnimation); 
+        StopAllCoroutines(); //To avoid on creating another instance of AutoAdvance
         _sentencesAnimation = StartCoroutine(TypeSentence(sentence));
     }
 
@@ -79,8 +86,16 @@ public class DialogueManager : MonoBehaviour
         foreach (var letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(_typespeed);
         }
+
+        StartCoroutine(AutoAdvance());
+    }
+
+    private IEnumerator AutoAdvance()
+    {
+        yield return new WaitForSeconds(_autoadvancespeed);
+        DisplayNextSentence();
     }
 
     private void EndDialogue() 
