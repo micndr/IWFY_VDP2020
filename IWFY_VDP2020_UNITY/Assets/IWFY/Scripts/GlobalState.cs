@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GlobalState : MonoBehaviour { 
     public static GlobalState Instance;
 
-    public Transform playerPos;
     public List<string> completedQuests = new List<string>();
 
     void Awake() {
@@ -25,7 +25,7 @@ public class GlobalState : MonoBehaviour {
         }
     }
 
-    void OnLoadCallback(Scene scene, LoadSceneMode sceneMode) { 
+    void OnLoadCallback(Scene scene, LoadSceneMode sceneMode) {
         var qms = FindObjectsOfType<QuestMain>();
         foreach (QuestMain qm in qms) {
             if (completedQuests.Contains(qm.questName)) {

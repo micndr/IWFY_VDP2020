@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PortalController : MonoBehaviour
 {
@@ -26,6 +27,6 @@ public class PortalController : MonoBehaviour
     IEnumerator teleport()
     {
         yield return new WaitForSeconds(0);
-        Application.LoadLevel(_newscene);
+        SceneManager.LoadScene(_newscene);
     }
 }
