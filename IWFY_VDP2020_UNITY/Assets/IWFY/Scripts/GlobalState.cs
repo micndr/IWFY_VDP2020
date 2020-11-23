@@ -20,7 +20,9 @@ public class GlobalState : MonoBehaviour {
     }
 
     public void AddQuest (QuestMain qm) {
-        completedQuests.Add(qm.questName);
+        if (!completedQuests.Contains(qm.questName)) {
+            completedQuests.Add(qm.questName);
+        }
     }
 
     void OnLoadCallback(Scene scene, LoadSceneMode sceneMode) { 
@@ -29,7 +31,7 @@ public class GlobalState : MonoBehaviour {
             if (completedQuests.Contains(qm.questName)) {
                 // TODO: change quest completion
                 qm.state = qm.stateNames.Length - 1;
-                qm.completed = true;
+                qm.CheckCompletion();
             }
         }
     }

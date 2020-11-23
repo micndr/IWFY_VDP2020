@@ -12,7 +12,6 @@ public class QuestLock : MonoBehaviour {
     public int nextState = 0;
     public bool activeUntilState = false;
     public bool invert = false;
-    public bool lastState = false;
 
     public List<ItemObject> requirements = new List<ItemObject>();
 
