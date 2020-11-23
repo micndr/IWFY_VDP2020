@@ -26,6 +26,7 @@ public class PopupLogic : IwfyClickableObjectNoPopup
         // When it is clicked, the popup disappears and notifies its object
         Destroy(gameObject);
         SendMessageUpwards("OnPopupClick");
+        SendMessageUpwards("OnPointerExit");
     }
 
     public override void OnPointerEnter()
@@ -69,10 +70,6 @@ public class PopupLogic : IwfyClickableObjectNoPopup
     
     // When the popup is destroyed, it notifies the parent that it must set its reference to null (or bad things happen)
     // And behave as if the pointer exited the object (as it disappears before the pointer)
-    private void OnDestroy()
-    {
-        SendMessageUpwards("NullifyInstance");
-    }
 
     // Setters for the modifiable popup properties
     public void SetMessage(string message)
