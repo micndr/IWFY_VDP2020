@@ -6,7 +6,6 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
-    public Text dialogueText;
     public GameObject dialogue;
     public TextMeshProUGUI dialogueTMP;
     
@@ -84,15 +83,11 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeSentence(string sentence)
     {
-        string txt = "";
-        //dialogueText.text = "";
         dialogueTMP.text = "";
         
         foreach (var letter in sentence.ToCharArray())
         {
-            txt += letter;
             dialogueTMP.text += letter;
-            //dialogueTMP.SetText(txt);
             yield return new WaitForSeconds(_typespeed);
         }
 
