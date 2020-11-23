@@ -270,6 +270,7 @@ MonoBehaviour:
   state: 4
   nextState: 5
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &110053483
@@ -314,7 +315,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &110380240
 GameObject:
@@ -497,7 +498,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192858813
 GameObject:
@@ -719,6 +720,7 @@ MonoBehaviour:
   state: 11
   nextState: 0
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1001 &250251794
@@ -1648,6 +1650,7 @@ MonoBehaviour:
   state: 11
   nextState: 0
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &620682244
@@ -1663,7 +1666,7 @@ Transform:
   m_Children:
   - {fileID: 346983420}
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: -1.1520001, y: -80.633, z: -44.867}
 --- !u!1 &655121373
 GameObject:
@@ -2004,7 +2007,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &758129651
 BoxCollider:
@@ -2232,6 +2235,7 @@ MonoBehaviour:
   state: 7
   nextState: 0
   activeUntilState: 1
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &941409037
@@ -2438,7 +2442,7 @@ Transform:
   m_Children:
   - {fileID: 1535178296}
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &958482010
 MonoBehaviour:
@@ -2456,6 +2460,7 @@ MonoBehaviour:
   state: 1
   nextState: 0
   activeUntilState: 1
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &966813693
@@ -2624,7 +2629,7 @@ Transform:
   m_Children:
   - {fileID: 1260476179}
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &970842451
 MonoBehaviour:
@@ -2642,6 +2647,7 @@ MonoBehaviour:
   state: 5
   nextState: 6
   activeUntilState: 0
+  invert: 0
   requirements:
   - {fileID: 11400000, guid: c9c15f5b31cacad498c3c6d7c26dcc98, type: 2}
   deactivateDelay: 0
@@ -2750,6 +2756,7 @@ MonoBehaviour:
   state: 6
   nextState: 7
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &1072794236
@@ -2795,7 +2802,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1074858333 stripped
 MonoBehaviour:
@@ -2924,6 +2931,7 @@ MonoBehaviour:
   state: 11
   nextState: 0
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1169818959
@@ -2958,6 +2966,19 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: a92c94666c7639643880de472d5e087e, type: 2}
   locks: []
   state: 0
+  stateNames:
+  - Hello
+  - Pick up the food
+  - Completed!
+  - Press the I key to open the inventory
+  - Completed!
+  - Feed Jimmy
+  - Completed!
+  - Pick up the shovel and the seeds
+  - Go outside
+  - Completed!
+  - Head to the garden and plant the seeds.
+  - Tutorial Complete
 --- !u!4 &1169818961
 Transform:
   m_ObjectHideFlags: 0
@@ -2970,7 +2991,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 17
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1195892915
 GameObject:
@@ -3051,7 +3072,7 @@ Transform:
   m_Children:
   - {fileID: 2080196024}
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1195892920
 MonoBehaviour:
@@ -3195,6 +3216,7 @@ MonoBehaviour:
   state: 11
   nextState: 0
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1001 &1260476178
@@ -3998,6 +4020,7 @@ MonoBehaviour:
   state: 11
   nextState: 0
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1508764923
@@ -4259,6 +4282,7 @@ MonoBehaviour:
   state: 1
   nextState: 2
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1551583638
@@ -4274,7 +4298,7 @@ Transform:
   m_Children:
   - {fileID: 1793401263}
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1551583639
 MonoBehaviour:
@@ -4406,6 +4430,7 @@ MonoBehaviour:
   state: 9
   nextState: 0
   activeUntilState: 1
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!23 &1671687163
@@ -4485,7 +4510,7 @@ Transform:
   - {fileID: 969370265}
   - {fileID: 1742410174}
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1691481395
 GameObject:
@@ -4662,6 +4687,7 @@ MonoBehaviour:
   state: 8
   nextState: 9
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1713539134
@@ -4676,7 +4702,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -22.001001, z: 0}
 --- !u!1 &1717289580
 GameObject:
@@ -4734,6 +4760,7 @@ MonoBehaviour:
   state: 9
   nextState: 10
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &1717289583
@@ -4780,7 +4807,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1738313749
 GameObject:
@@ -5020,7 +5047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835658491}
   m_Layer: 0
-  m_Name: Main Quest
+  m_Name: Progression
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5037,6 +5064,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1169818961}
   - {fileID: 1195892919}
   - {fileID: 958482009}
   - {fileID: 758129650}
@@ -5054,7 +5082,6 @@ Transform:
   - {fileID: 1717289585}
   - {fileID: 1964254006}
   - {fileID: 620682244}
-  - {fileID: 1169818961}
   - {fileID: 941409037}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -5226,7 +5253,7 @@ Transform:
   m_Children:
   - {fileID: 1319985851}
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1880847888
 MonoBehaviour:
@@ -5244,6 +5271,7 @@ MonoBehaviour:
   state: 7
   nextState: 8
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &1880847889
@@ -5374,7 +5402,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1908947251
 MonoBehaviour:
@@ -5412,6 +5440,7 @@ MonoBehaviour:
   state: 0
   nextState: 1
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1963909632
@@ -5540,7 +5569,7 @@ Transform:
   m_Children:
   - {fileID: 663093080}
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -1.1520001, y: -80.633, z: -44.867}
 --- !u!114 &1964254007
 MonoBehaviour:
@@ -5558,6 +5587,7 @@ MonoBehaviour:
   state: 10
   nextState: 11
   activeUntilState: 0
+  invert: 0
   requirements:
   - {fileID: 11400000, guid: ab941fa81cd4c9b4a9aafd29a545a795, type: 2}
   - {fileID: 11400000, guid: 9c06b8c02b138824e8d56040f382d0a5, type: 2}
@@ -5759,6 +5789,7 @@ MonoBehaviour:
   state: 3
   nextState: 4
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1996560564
@@ -5773,7 +5804,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1996560565
 MonoBehaviour:
@@ -6146,6 +6177,7 @@ MonoBehaviour:
   state: 2
   nextState: 3
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &2067678605
@@ -6190,7 +6222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835658491}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2078300432
 GameObject:
@@ -6492,6 +6524,7 @@ MonoBehaviour:
   state: 11
   nextState: 0
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &175308926247961303

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestMain : MonoBehaviour {
 
@@ -8,7 +9,23 @@ public class QuestMain : MonoBehaviour {
     public List<QuestLock> locks = new List<QuestLock>();
     public int state = 0;
 
+    public string[] stateNames;
+
+    Text QuestText;
+
+    private void Start() {
+        QuestText = GameObject.Find("QuestText").GetComponent<Text>();
+    }
+
     void Update() {
+        if (stateNames.Length > state) {
+            QuestText.text = stateNames[state];
+        } else { 
+            Debug.LogWarning("set name to state in QuestMain plz");
+            stateNames = new string[stateNames.Length + 1];
+            stateNames[stateNames.Length - 1] = "No Current Objective";
+        }
+
         foreach (QuestLock qlock in locks) {
             if (qlock.state == state || 
                     (qlock.activeUntilState && state < qlock.state)) {

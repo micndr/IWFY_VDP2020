@@ -282,6 +282,7 @@ MonoBehaviour:
   state: 5
   nextState: 6
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &272724737
@@ -297,6 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 0}
@@ -426,6 +428,7 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: a92c94666c7639643880de472d5e087e, type: 2}
   locks: []
   state: 0
+  stateNames: []
 --- !u!1 &343638585
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 1
   qlock: {fileID: 343638590}
@@ -526,6 +530,7 @@ MonoBehaviour:
   state: 0
   nextState: 1
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &458536506
@@ -654,6 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 0}
@@ -676,6 +682,7 @@ MonoBehaviour:
   state: 2
   nextState: 3
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &483416144
@@ -965,6 +972,7 @@ MonoBehaviour:
   state: 4
   nextState: 5
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &1235571224
@@ -980,6 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 1235571223}
@@ -1057,17 +1066,17 @@ PrefabInstance:
     - target: {fileID: 3893502994152972539, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.99753
+      value: 11.06
       objectReference: {fileID: 0}
     - target: {fileID: 3893502994152972539, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -99.03079
+      value: -99.61
       objectReference: {fileID: 0}
     - target: {fileID: 3893502994152972539, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42.071953
+      value: 42.32
       objectReference: {fileID: 0}
     - target: {fileID: 3893502994152972539, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
@@ -1233,6 +1242,7 @@ MonoBehaviour:
   state: 10
   nextState: 10
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1429065487
@@ -1280,6 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 1
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 0}
@@ -1302,6 +1313,7 @@ MonoBehaviour:
   state: 1
   nextState: 2
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1624356347
@@ -1383,6 +1395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 1624356352}
@@ -1405,6 +1418,7 @@ MonoBehaviour:
   state: 1
   nextState: 2
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1665662244 stripped
@@ -1491,6 +1505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 1695965292}
@@ -1513,6 +1528,7 @@ MonoBehaviour:
   state: 3
   nextState: 4
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1713405976
@@ -1609,6 +1625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 1713405981}
@@ -1631,6 +1648,7 @@ MonoBehaviour:
   state: 2
   nextState: 3
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1748164177
@@ -1688,6 +1706,7 @@ MonoBehaviour:
   state: 5
   nextState: 6
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &1748164180
@@ -1703,6 +1722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 1748164179}
@@ -1853,6 +1873,7 @@ MonoBehaviour:
   state: 6
   nextState: 7
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &1913266388
@@ -1899,6 +1920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 1913266387}
@@ -2032,6 +2054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 0}
@@ -2054,6 +2077,7 @@ MonoBehaviour:
   state: 3
   nextState: 4
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &2063285031
@@ -2270,6 +2294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 1
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 0}
@@ -2292,6 +2317,7 @@ MonoBehaviour:
   state: 0
   nextState: 0
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &2138699023
@@ -2363,6 +2389,7 @@ MonoBehaviour:
   state: 4
   nextState: 5
   activeUntilState: 0
+  invert: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &2138699027
@@ -2378,6 +2405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
+  autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 0
   qlock: {fileID: 0}
