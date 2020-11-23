@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
-    public GameObject dialogue;
-    public TextMeshProUGUI dialogueTMP;
-    
+
     public Animator animator;
     
     private Coroutine _sentencesAnimation;
@@ -36,7 +33,6 @@ public class DialogueManager : MonoBehaviour
         _names = new Queue<string>();
         _sentences = new Queue<string>();
         _inventoryState = FindObjectOfType<InventoryManager>();
-        dialogueTMP = dialogue.GetComponent<TextMeshProUGUI>();
     }
 
     public void StartDialogue(Dialogue dialogue, DialogueTrigger startpoint)
@@ -84,15 +80,12 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeSentence(string sentence)
     {
-        string txt = "";
-        //dialogueText.text = "";
-        dialogueTMP.text = "";
+        dialogueText.text = "";
+        
         
         foreach (var letter in sentence.ToCharArray())
         {
-            txt += letter;
-            dialogueTMP.text += letter;
-            //dialogueTMP.SetText(txt);
+            dialogueText.text += letter;
             yield return new WaitForSeconds(_typespeed);
         }
 
