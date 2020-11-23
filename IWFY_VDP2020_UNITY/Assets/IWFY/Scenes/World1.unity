@@ -177,6 +177,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &101566180
@@ -342,6 +343,7 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &113520172
@@ -632,6 +634,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &312333437
@@ -907,6 +910,7 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements:
   - {fileID: 11400000, guid: 8fda7127c8e133a4cb645e8ce2123aa1, type: 2}
   - {fileID: 11400000, guid: 8fda7127c8e133a4cb645e8ce2123aa1, type: 2}
@@ -982,6 +986,7 @@ MonoBehaviour:
   nextState: 10
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &490360450
@@ -1115,6 +1120,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &491061688
@@ -1270,7 +1276,7 @@ PrefabInstance:
     - target: {fileID: 4701259639332438843, guid: f8baaea0ccf515e41bf1705d1efc463a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4701259639332438843, guid: f8baaea0ccf515e41bf1705d1efc463a,
         type: 3}
@@ -1332,6 +1338,7 @@ MonoBehaviour:
   nextState: 10
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &535639062 stripped
@@ -1420,6 +1427,7 @@ MonoBehaviour:
   nextState: 7
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements:
   - {fileID: 11400000, guid: e6597c8320842eb4997110f6d6f8f5cb, type: 2}
   deactivateDelay: 0
@@ -1493,7 +1501,7 @@ PrefabInstance:
     - target: {fileID: 3893502994152972539, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3893502994152972539, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
@@ -1642,6 +1650,7 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &656284902
@@ -1853,6 +1862,7 @@ MonoBehaviour:
   nextState: 8
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &927106801
@@ -1929,6 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637422079d57742459b796bc862c2267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questName: Chasm
   inventory: {fileID: 11400000, guid: a92c94666c7639643880de472d5e087e, type: 2}
   locks: []
   state: 0
@@ -1944,6 +1955,7 @@ MonoBehaviour:
   - Run away!
   - Completed!
   - Return home
+  completed: 0
 --- !u!1 &980279133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,7 +2008,7 @@ Transform:
   - {fileID: 1664663004}
   - {fileID: 490360451}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &989854599
 GameObject:
@@ -2236,6 +2248,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &1061081416
@@ -2521,6 +2534,7 @@ MonoBehaviour:
   nextState: 7
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1351740010
@@ -2812,6 +2826,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1620017156
@@ -2927,6 +2942,7 @@ MonoBehaviour:
   nextState: 6
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1664553299
@@ -2995,6 +3011,7 @@ MonoBehaviour:
   nextState: 9
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1734234567
@@ -3053,6 +3070,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &1734234570
@@ -3251,6 +3269,7 @@ MonoBehaviour:
   nextState: 3
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1799504459
@@ -3350,6 +3369,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1802578686
@@ -3454,6 +3474,7 @@ MonoBehaviour:
   nextState: 2
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1894241298
@@ -3493,6 +3514,7 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &1894241300
@@ -3622,6 +3644,7 @@ MonoBehaviour:
   nextState: 8
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1001 &1950596651
@@ -4043,6 +4066,7 @@ MonoBehaviour:
   nextState: 3
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &2098871710
@@ -4128,6 +4152,7 @@ MonoBehaviour:
   nextState: 1
   activeUntilState: 0
   invert: 0
+  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &2098871715
