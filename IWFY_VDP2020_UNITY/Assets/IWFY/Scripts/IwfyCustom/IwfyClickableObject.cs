@@ -41,6 +41,10 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
     {
         base.OnPointerEnter(); // Triggers pointer animation.
         base.getReticlePointer().SendMessage("OnClickableObjectEnter", id);
+        
+        foreach (Transform child in transform)
+            DestroyImmediate(child.gameObject);
+        
         _popupPrefabInstance = Instantiate(_popupPrefab, transform);
         _popupPrefabInstance.GetComponent<PopupLogic>().SetMessage(_popupMessage);
         _popupPrefabInstance.GetComponent<PopupLogic>().SetBackgroundColor(_popupBackgroundColor);
