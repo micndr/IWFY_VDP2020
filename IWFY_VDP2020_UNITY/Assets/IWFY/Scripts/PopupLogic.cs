@@ -71,7 +71,10 @@ public class PopupLogic : IwfyClickableObjectNoPopup
     // And behave as if the pointer exited the object (as it disappears before the pointer)
     private void OnDestroy()
     {
-        SendMessageUpwards("NullifyInstance");
+        if (transform.parent != null)
+        {
+            SendMessageUpwards("NullifyInstance");   
+        }
     }
 
     // Setters for the modifiable popup properties
