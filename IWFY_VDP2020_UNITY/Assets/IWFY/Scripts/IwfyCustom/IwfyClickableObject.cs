@@ -41,6 +41,15 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
     {
         base.OnPointerEnter(); // Triggers pointer animation.
         base.getReticlePointer().SendMessage("OnClickableObjectEnter", id);
+        
+        foreach (Transform child in transform)
+            DestroyImmediate(child.gameObject);
+
+        if (transform.childCount == 0)
+        {
+            _popupPrefabInstance = null;
+        }
+        
         _popupPrefabInstance = Instantiate(_popupPrefab, transform);
         _popupPrefabInstance.GetComponent<PopupLogic>().SetMessage(_popupMessage);
         _popupPrefabInstance.GetComponent<PopupLogic>().SetBackgroundColor(_popupBackgroundColor);
@@ -55,12 +64,6 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
         
         // Notifies that the pointer is no longer on the parent, the popup can go destroy itself.
         if(_popupPrefabInstance) _popupPrefabInstance?.SendMessage("OnParentExit");
-    }
-
-    public void NullifyInstance()
-    {
-        base.OnPointerExit(); // Because when the pointer disappears it is as if the pointer exited the object.
-        _popupPrefabInstance = null;
     }
 
     public void OnPopupClick()

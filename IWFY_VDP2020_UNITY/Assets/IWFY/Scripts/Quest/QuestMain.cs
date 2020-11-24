@@ -1,17 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestMain : MonoBehaviour {
+
+    public string questName;
 
     public InventoryObject inventory;
     public List<QuestLock> locks = new List<QuestLock>();
     public int state = 0;
 
+    public string[] stateNames;
+    public bool completed = false;
+
+    int lenght = 0;
+
+    Text QuestText;
+
+    private void Start() {
+        if (questName.Length == 0 && stateNames.Length > 0) { questName = stateNames[0]; }
+        QuestText = GameObject.Find("QuestText").GetComponent<Text>();
+    }
+
     void Update() {
+        if (!completed) {
+            if (stateNames.Length > state) {
+                QuestText.text = stateNames[state];
+            } else {
+                Debug.LogWarning("set name to state in QuestMain plz");
+                stateNames = new string[stateNames.Length + 1];
+                stateNames[stateNames.Length - 1] = "No Current Objective";
+            }
+        }
+
         foreach (QuestLock qlock in locks) {
-            if (qlock.state == state || 
-                    (qlock.activeUntilState && state < qlock.state)) {
+            bool check = qlock.state == state 
+                || (qlock.activeUntilState && state < qlock.state);
+            if (qlock.invert) check = !check;
+            if (check) {
                 qlock.gameObject.SetActive(true);
             } else {
                 if (qlock.gameObject.activeSelf) {
@@ -26,12 +53,18 @@ public class QuestMain : MonoBehaviour {
                 }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.N) && state < lenght) {
+            state++;
+            CheckCompletion();
+        }
     }
 
     public void AddAdvancer (QuestLock qa) {
         // called by locks in the scene
         locks.Add(qa);
         if (qa.state != state) { qa.gameObject.SetActive(false); }
+        if (qa.nextState >= lenght) lenght = qa.nextState;
     }
     public void RemoveAdvancer(QuestLock qa) {
         // called by locks in the scene
@@ -66,10 +99,18 @@ public class QuestMain : MonoBehaviour {
         }
     }
 
+    public void CheckCompletion() {
+        if (state >= lenght) {
+            completed = true;
+            FindObjectOfType<GlobalState>().AddQuest(this);
+        }
+    }
+
     public void NextState(QuestLock ql) {
         if (CheckRequirements(ql)) {
             RemoveItems(ql);
             state = ql.nextState;
+            CheckCompletion();
         }
     }
 }

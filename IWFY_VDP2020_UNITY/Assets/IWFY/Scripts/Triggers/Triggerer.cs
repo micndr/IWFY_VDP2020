@@ -5,6 +5,8 @@ using UnityEngine;
 public class Triggerer : MonoBehaviour {
 
     public bool autoTrigger = false;
+    public float autoTriggerDelay;
+    float autoTriggerTimer;
     public bool findComponents = false;
     public bool destroyAfterTrigger = false;
 
@@ -20,14 +22,19 @@ public class Triggerer : MonoBehaviour {
             if (!pickup) pickup = GetComponent<ItemPickup>();
             if (!dialogue) dialogue = GetComponent<DialogueTrigger>();
         }
+
+        autoTriggerTimer = Time.time + autoTriggerDelay;
     }
 
     void Update() {
         if (autoTrigger) {
-            // here instead of in start to not break everything 
-            // (dialogue has to call start before this)
-            Trigger();
-            autoTrigger = false;
+            if (autoTriggerTimer <= Time.time) {
+                // here instead of in start to not break everything 
+                // (dialogue has to call start before this)
+                Trigger();
+                autoTrigger = false;
+                autoTriggerTimer = Time.time + autoTriggerDelay;
+            }
         }
     }
 
