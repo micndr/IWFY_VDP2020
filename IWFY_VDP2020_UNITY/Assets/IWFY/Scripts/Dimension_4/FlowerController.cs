@@ -6,7 +6,8 @@ public class FlowerController : IwfyClickableObjectNoPopup
 {
     // Position of the current flower: [row, column]
     [SerializeField] private int[] _pos;
-    
+    [SerializeField] private Light light;
+
     // UP -> Towards the well
     // DOWN -> Away from the well
     // RIGHT -> On the right looking at the well
@@ -22,7 +23,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
     public override void Start()
     {
         base.Start();
-        _controllerFlower = GameObject.FindGameObjectWithTag("LightsOutController");
+        _controllerFlower = GameObject.FindGameObjectWithTag("LightsOutController"); 
     }
 
     // Update is called once per frame
@@ -40,7 +41,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
         if(_flowerLeft) _flowerLeft?.SendMessage("SwitchColor");
         
         // Notify the controller to update the state
-        _controllerFlower.SendMessage("OnFlowerClick");
+        _controllerFlower?.SendMessage("OnFlowerClick");
     }
 
     public void SwitchColor()
@@ -48,16 +49,18 @@ public class FlowerController : IwfyClickableObjectNoPopup
         if (isOn)
         {
             isOn = false;
-            gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            //gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            light.intensity = 0;
         }
         else
         {
             isOn = true;
-            gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+            //gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+            light.intensity = 1;
         }
 
         // Update LightsOutController
         object[] state = {_pos, isOn};
-        _controllerFlower.SendMessage("UpdateFlower", state);
+        _controllerFlower?.SendMessage("UpdateFlower", state);
     }
 }
