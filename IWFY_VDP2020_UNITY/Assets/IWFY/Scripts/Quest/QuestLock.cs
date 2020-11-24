@@ -18,7 +18,9 @@ public class QuestLock : MonoBehaviour {
     public int deactivateDelay = 0;
 
     void Start() {
-        main = GameObject.Find("QuestMain").GetComponent<QuestMain>();
+        if (!main) {
+            main = GameObject.Find("QuestMain").GetComponent<QuestMain>();
+        }
         main.AddAdvancer(this);
     }
 

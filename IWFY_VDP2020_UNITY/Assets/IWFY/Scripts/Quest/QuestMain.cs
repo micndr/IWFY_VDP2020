@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class QuestMain : MonoBehaviour {
 
+    GlobalState globalState;
+
     public string questName;
 
     public InventoryObject inventory;
+
     public List<QuestLock> locks = new List<QuestLock>();
     public int state = 0;
 
     public string[] stateNames;
     public bool completed = false;
+
+    public List<string> questRequirements = new List<string>();
 
     int lenght = 0;
 
@@ -21,9 +26,17 @@ public class QuestMain : MonoBehaviour {
     private void Start() {
         if (questName.Length == 0 && stateNames.Length > 0) { questName = stateNames[0]; }
         QuestText = GameObject.Find("QuestText").GetComponent<Text>();
+        globalState = FindObjectOfType<GlobalState>();
     }
 
     void Update() {
+        if (!CheckQuestRequirements()) {
+            foreach (QuestLock qlock in locks) {
+                qlock.gameObject.SetActive(false);
+            }
+            return;
+        }
+
         if (!completed) {
             if (stateNames.Length > state) {
                 QuestText.text = stateNames[state];
@@ -102,8 +115,20 @@ public class QuestMain : MonoBehaviour {
     public void CheckCompletion() {
         if (state >= lenght) {
             completed = true;
-            FindObjectOfType<GlobalState>().AddQuest(this);
+            if (!globalState) globalState = FindObjectOfType<GlobalState>();
+            globalState.AddQuest(this);
         }
+    }
+
+    public bool CheckQuestRequirements() {
+        foreach (string req in questRequirements) {
+            bool found = false;
+            foreach (string completed in globalState.completedQuests) {
+                if (completed == req) { found = true; break; }
+            }
+            if (!found) return false;
+        }
+        return true;
     }
 
     public void NextState(QuestLock ql) {

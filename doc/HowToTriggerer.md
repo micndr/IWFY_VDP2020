@@ -6,7 +6,8 @@ It's purpose is to activate the components when an input is given. It generalize
 * it can autotrigger without input -> used for first dialogue
 * it can autodetect the component attatched to the same gameobject for lazyness
 * if a component is set, it's not autodetected.
-* trigger can be called from anywhere
+* Trigger() can be called from anywhere
+* autotrigger delay controls how long to wait before calling Trigger if autotrigger is true.
 
 ## Key Trigger
 * triggers a triggerer when a key is pressed

@@ -21,6 +21,7 @@ public class GlobalState : MonoBehaviour {
 
     public void AddQuest (QuestMain qm) {
         if (!completedQuests.Contains(qm.questName)) {
+            print("added completed quest name " + qm.name);
             completedQuests.Add(qm.questName);
         }
     }
@@ -29,6 +30,7 @@ public class GlobalState : MonoBehaviour {
         var qms = FindObjectsOfType<QuestMain>();
         foreach (QuestMain qm in qms) {
             if (completedQuests.Contains(qm.questName)) {
+                print("restoring completed quest name " + qm.name);
                 // TODO: change quest completion
                 qm.state = qm.stateNames.Length - 1;
                 qm.CheckCompletion();
