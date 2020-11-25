@@ -177,7 +177,6 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &101566180
@@ -343,7 +342,6 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &113520172
@@ -634,7 +632,6 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &312333437
@@ -910,7 +907,6 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements:
   - {fileID: 11400000, guid: 8fda7127c8e133a4cb645e8ce2123aa1, type: 2}
   - {fileID: 11400000, guid: 8fda7127c8e133a4cb645e8ce2123aa1, type: 2}
@@ -986,7 +982,6 @@ MonoBehaviour:
   nextState: 10
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &490360450
@@ -1120,7 +1115,6 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &491061688
@@ -1338,7 +1332,6 @@ MonoBehaviour:
   nextState: 10
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &535639062 stripped
@@ -1427,7 +1420,6 @@ MonoBehaviour:
   nextState: 7
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements:
   - {fileID: 11400000, guid: e6597c8320842eb4997110f6d6f8f5cb, type: 2}
   deactivateDelay: 0
@@ -1650,7 +1642,6 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &656284902
@@ -1862,7 +1853,6 @@ MonoBehaviour:
   nextState: 8
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &927106801
@@ -1956,6 +1946,7 @@ MonoBehaviour:
   - Completed!
   - Return home
   completed: 0
+  questRequirements: []
 --- !u!1 &980279133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,7 +2239,6 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &1061081416
@@ -2534,7 +2524,6 @@ MonoBehaviour:
   nextState: 7
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1351740010
@@ -2826,7 +2815,6 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1620017156
@@ -2942,7 +2930,6 @@ MonoBehaviour:
   nextState: 6
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1664553299
@@ -3011,7 +2998,6 @@ MonoBehaviour:
   nextState: 9
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1734234567
@@ -3070,7 +3056,6 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &1734234570
@@ -3269,7 +3254,6 @@ MonoBehaviour:
   nextState: 3
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1799504459
@@ -3369,7 +3353,6 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &1802578686
@@ -3474,7 +3457,6 @@ MonoBehaviour:
   nextState: 2
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1894241298
@@ -3514,7 +3496,6 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &1894241300
@@ -3644,7 +3625,6 @@ MonoBehaviour:
   nextState: 8
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1001 &1950596651
@@ -4066,7 +4046,6 @@ MonoBehaviour:
   nextState: 3
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &2098871710
@@ -4152,7 +4131,6 @@ MonoBehaviour:
   nextState: 1
   activeUntilState: 0
   invert: 0
-  lastState: 0
   requirements: []
   deactivateDelay: 0
 --- !u!4 &2098871715
@@ -4243,6 +4221,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600983637773232954, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -3441492313242690119, guid: 144e9a722c70c2143b212ac2f96f9b2c,
+        type: 3}
+    - target: {fileID: 2600983637773232954, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2600983639723994788, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}

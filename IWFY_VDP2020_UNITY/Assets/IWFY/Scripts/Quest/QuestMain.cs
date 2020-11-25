@@ -116,6 +116,11 @@ public class QuestMain : MonoBehaviour {
         if (state >= lenght) {
             completed = true;
             if (!globalState) globalState = FindObjectOfType<GlobalState>();
+            if (!globalState) {
+                Debug.LogWarning("game was not started from hub! making new globalstate instance");
+                GameObject gs = GameObject.Instantiate(new GameObject());
+                globalState = gs.AddComponent<GlobalState>();
+            } 
             globalState.AddQuest(this);
         }
     }

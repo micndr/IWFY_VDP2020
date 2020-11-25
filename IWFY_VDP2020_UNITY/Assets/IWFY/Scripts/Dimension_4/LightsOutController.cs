@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class LightsOutController : MonoBehaviour
 {
+    public Triggerer triggererOutput;
+
     private bool[,] _gameState;
     private bool[] _rowsCompletelyOn;
     private bool[] _rowsCompletelyOff;
@@ -214,6 +216,7 @@ public class LightsOutController : MonoBehaviour
     private void GameOn()
     {
         // TODO: All the code to execute when the game is fully switched on, now subsituted by console prints
+        triggererOutput.Trigger();
         Debug.Log("The game is fully on."); // Open bridge
     }
     
