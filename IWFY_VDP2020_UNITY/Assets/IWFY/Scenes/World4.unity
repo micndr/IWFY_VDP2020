@@ -3409,7 +3409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggererOutput: {fileID: 0}
-  _layersGoUp: 0
   animatorOfLayer:
   - {fileID: 2146812771}
   - {fileID: 1813720230}
@@ -3530,17 +3529,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6c5d37a48145c2547aa02155707f9bba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0118
+      value: -0.018
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c5d37a48145c2547aa02155707f9bba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0159
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c5d37a48145c2547aa02155707f9bba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1217
+      value: 0.1089
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c5d37a48145c2547aa02155707f9bba,
         type: 3}
@@ -5764,6 +5763,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.08, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1847328067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c5d37a48145c2547aa02155707f9bba,
+    type: 3}
+  m_PrefabInstance: {fileID: 992482634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1847328068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847328067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563b941aa77654439778fbee45906ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowersToSwitchOn: []
+  controllerFlower: {fileID: 961685876}
+  semplified: 0
 --- !u!1001 &1882458919
 PrefabInstance:
   m_ObjectHideFlags: 0
