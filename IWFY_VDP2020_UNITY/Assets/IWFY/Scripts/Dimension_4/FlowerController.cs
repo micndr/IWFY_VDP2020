@@ -16,14 +16,21 @@ public class FlowerController : IwfyClickableObjectNoPopup
     [SerializeField] private GameObject _flowerLeft;
     [SerializeField] private GameObject _flowerUp;
     [SerializeField] private GameObject _flowerDown;
-    
+
+    [SerializeField] private Material matOn;
+    [SerializeField] private Material matOff;
+
     private bool isOn = false;
 
     private GameObject _controllerFlower;
+    private Renderer graphicRenderer0;
+    private Renderer graphicRenderer1;
     public override void Start()
     {
         base.Start();
-        _controllerFlower = GameObject.FindGameObjectWithTag("LightsOutController"); 
+        _controllerFlower = GameObject.FindGameObjectWithTag("LightsOutController");
+        graphicRenderer0 = transform.Find("pPipe19").GetComponent<Renderer>();
+        graphicRenderer1 = transform.Find("pCylinder3").GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -50,13 +57,17 @@ public class FlowerController : IwfyClickableObjectNoPopup
         {
             isOn = false;
             //gameObject.GetComponent<Renderer>().material.color = Color.blue;
-            light.intensity = 0;
+            //light.intensity = 0;
+            graphicRenderer0.material = matOff;
+            graphicRenderer1.material = matOff;
         }
         else
         {
             isOn = true;
-            //gameObject.GetComponent<Renderer>().material.color = Color.cyan;
-            light.intensity = 1;
+            //gameObject.GetComponent<Renderer>().material. = Color.cyan;
+            //light.intensity = 1;
+            graphicRenderer0.material = matOn;
+            graphicRenderer1.material = matOn;
         }
 
         // Update LightsOutController

@@ -212,6 +212,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 309709045}
   _flowerUp: {fileID: 52653979}
   _flowerDown: {fileID: 1641002765}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!65 &35816940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -262,6 +264,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 2122613062}
   _flowerUp: {fileID: 563808126}
   _flowerDown: {fileID: 35816936}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &52653981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -379,6 +383,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 553184693}
   _flowerUp: {fileID: 0}
   _flowerDown: {fileID: 1690675878}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &67998858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -565,6 +571,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1679728772}
   _flowerUp: {fileID: 1330729529}
   _flowerDown: {fileID: 1827190846}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &90901852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -669,12 +677,12 @@ GameObject:
   - component: {fileID: 110380242}
   - component: {fileID: 110380241}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &110380241
 Light:
   m_ObjectHideFlags: 0
@@ -686,8 +694,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.8392157, g: 0.9116909, b: 1, a: 1}
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -729,7 +737,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -743,13 +751,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110380240}
-  m_LocalRotation: {x: 0.6289199, y: -0.19828199, z: -0.5646487, w: 0.4963022}
+  m_LocalRotation: {x: 0.44217557, y: -0.61641514, z: 0.2692239, w: -0.5933226}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 156.4, y: 98.173996, z: -657.896}
+  m_LocalEulerAnglesHint: {x: 191.116, y: -81.14899, z: -601.779}
 --- !u!1 &166141356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 821158ae724ce854e920539f935295b8,
@@ -841,6 +849,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 35816936}
   _flowerUp: {fileID: 1679728772}
   _flowerDown: {fileID: 1233593883}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!65 &166141360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1431,6 +1441,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1322982110}
   _flowerUp: {fileID: 2122613062}
   _flowerDown: {fileID: 961685876}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!65 &309709050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1481,6 +1493,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 90901850}
   _flowerUp: {fileID: 1574475566}
   _flowerDown: {fileID: 1322982110}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &321154112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -1742,6 +1756,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1419832503}
   _flowerUp: {fileID: 0}
   _flowerDown: {fileID: 1992115453}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!108 &381261879
 Light:
   m_ObjectHideFlags: 0
@@ -2279,6 +2295,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 381261875}
   _flowerUp: {fileID: 0}
   _flowerDown: {fileID: 563808126}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &553184695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -2396,6 +2414,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1992115453}
   _flowerUp: {fileID: 553184693}
   _flowerDown: {fileID: 52653979}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &563808128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -2877,6 +2897,7 @@ GameObject:
   - component: {fileID: 756258633}
   - component: {fileID: 756258632}
   - component: {fileID: 756258631}
+  - component: {fileID: 756258635}
   m_Layer: 0
   m_Name: WellGetCoin
   m_TagString: Untagged
@@ -2965,6 +2986,22 @@ MonoBehaviour:
   invert: 0
   requirements: []
   deactivateDelay: 0
+--- !u!114 &756258635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756258629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fee7487fb2085029ef1a3ba9902923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _popupMessage: Get Coin
+  _popupBackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  _name: 
+  _color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &758286498
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,6 +3474,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1924273692}
   _flowerUp: {fileID: 309709045}
   _flowerDown: {fileID: 0}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!65 &961685880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3986,6 +4025,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1641002765}
   _flowerUp: {fileID: 166141356}
   _flowerDown: {fileID: 0}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!65 &1233593886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4133,6 +4174,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1827190846}
   _flowerUp: {fileID: 321154110}
   _flowerDown: {fileID: 0}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!65 &1322982114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4183,6 +4226,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1690675878}
   _flowerUp: {fileID: 2127246941}
   _flowerDown: {fileID: 90901850}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &1330729531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -4482,6 +4527,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 2127246941}
   _flowerUp: {fileID: 0}
   _flowerDown: {fileID: 1574475566}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &1419832505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -4955,6 +5002,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1330729529}
   _flowerUp: {fileID: 1419832503}
   _flowerDown: {fileID: 321154110}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &1574475568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -5202,6 +5251,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 961685876}
   _flowerUp: {fileID: 35816936}
   _flowerDown: {fileID: 0}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!65 &1641002768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5321,6 +5372,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 52653979}
   _flowerUp: {fileID: 1690675878}
   _flowerDown: {fileID: 166141356}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &1679728774 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -5438,6 +5491,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 563808126}
   _flowerUp: {fileID: 67998856}
   _flowerDown: {fileID: 1679728772}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &1690675880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -5742,6 +5797,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 166141356}
   _flowerUp: {fileID: 90901850}
   _flowerDown: {fileID: 1928338219}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!65 &1827190850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5789,6 +5846,20 @@ MonoBehaviour:
   flowersToSwitchOn: []
   controllerFlower: {fileID: 961685876}
   semplified: 0
+--- !u!64 &1847328069
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847328067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1882458919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5882,6 +5953,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1928338219}
   _flowerUp: {fileID: 1322982110}
   _flowerDown: {fileID: 0}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!108 &1924273694
 Light:
   m_ObjectHideFlags: 0
@@ -6019,6 +6092,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1233593883}
   _flowerUp: {fileID: 1827190846}
   _flowerDown: {fileID: 0}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!108 &1928338225
 Light:
   m_ObjectHideFlags: 0
@@ -6247,6 +6322,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 1574475566}
   _flowerUp: {fileID: 381261875}
   _flowerDown: {fileID: 2122613062}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &1992115455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -6502,6 +6579,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 321154110}
   _flowerUp: {fileID: 1992115453}
   _flowerDown: {fileID: 309709045}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &2122613064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
@@ -6619,6 +6698,8 @@ MonoBehaviour:
   _flowerLeft: {fileID: 67998856}
   _flowerUp: {fileID: 0}
   _flowerDown: {fileID: 1330729529}
+  matOn: {fileID: 2100000, guid: 851aa401dbc928d478e8507c18116592, type: 2}
+  matOff: {fileID: 2100000, guid: 4ab1c9703d1997e46854309804b1ccac, type: 2}
 --- !u!4 &2127246943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 821158ae724ce854e920539f935295b8,
