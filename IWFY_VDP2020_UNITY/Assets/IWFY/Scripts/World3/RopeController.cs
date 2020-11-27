@@ -6,7 +6,7 @@ public class RopeController : MonoBehaviour
 {
     [SerializeField] private GameObject father;
     [SerializeField] private GameObject son;
-
+    
     public void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("prova"))
@@ -15,7 +15,7 @@ public class RopeController : MonoBehaviour
             this.transform.SetParent(father.transform);
         }
 
-        if (collider.CompareTag("miniponte"))
+        if (collider.CompareTag("ponte"))
         {
             son.transform.SetParent(this.transform);
         }
@@ -33,15 +33,16 @@ public class RopeController : MonoBehaviour
             this.transform.SetParent(null);
         }
         
-        if (Input.GetButton("k"))
+        if (Input.GetMouseButton(0))
         {
             this.transform.localScale = this.transform.localScale + new Vector3(0f, 0f, 3f * Time.fixedDeltaTime);
         }
 
-        if (Input.GetButton("h"))
+        if (Input.GetMouseButton(0))
         {
             this.transform.localScale = this.transform.localScale - new Vector3(0f, 0f, 3f * Time.fixedDeltaTime);
         }
+        
     }
 
 }

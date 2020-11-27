@@ -15,6 +15,8 @@ public class Triggerer : MonoBehaviour {
     public DialogueTrigger dialogue;
     public Triggerer triggerer;
 
+    public MirrorController mirrorcont;
+
 
     void Start() {
         if (findComponents) {
@@ -46,5 +48,6 @@ public class Triggerer : MonoBehaviour {
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }
+        if (mirrorcont) mirrorcont.RotateMirror();
     }
 }
