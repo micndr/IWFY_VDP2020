@@ -11,6 +11,7 @@ public class LightsOutController : MonoBehaviour
 {
     public Triggerer triggererOutput;
     [SerializeField] private Animator[] animatorOfLayer; // array of length 4 which contains the 4 animators that animate the 4 moving layers
+    [SerializeField] GameObject[] layers; // array of length 4 which contains the 4 layers (on order to either make them change color or glow)
     
     private bool[,] _gameState; // Grid containing the exact current state of the game (true if flower is ON, false if OFF)
     private bool[] _rowsCompletelyOn; // array of length 5 containing true if corresponding layer has all flowers ON, false otherwise
@@ -26,7 +27,7 @@ public class LightsOutController : MonoBehaviour
     // Global modifiers
     private bool _layersGoUp; // If true layers go UP when ON, if false DOWN when ON 
     private bool _simplified; // TODO: Evaluate if this shall be true or false. If true only 4 layers have to be completed in order to win the game.  
-    
+
     private void Start()
     {
         _layersGoUp = false;
@@ -51,7 +52,7 @@ public class LightsOutController : MonoBehaviour
         _layersGoUp = newLayersGoUp;
     }
 
-    public void setSimplified(bool newSimplified)
+    public void SetSimplified(bool newSimplified)
     {
         _simplified = newSimplified;
     }
@@ -78,6 +79,15 @@ public class LightsOutController : MonoBehaviour
     {
         _rowsCompletelyOn = UniformRows(true);
         _rowsCompletelyOff = UniformRows(false);
+        
+        // Color (glow)
+        for (int i = 0; i < 4; i++)
+        {
+            if (_rowsCompletelyOn[i]) layers[i].GetComponent<Renderer>().material.color = Color.red;
+            else if (_rowsCompletelyOff[i]) layers[i].GetComponent<Renderer>().material.color = Color.black;
+            else layers[i].GetComponent<Renderer>().material.color = Color.blue;
+        }
+        
 
         _gameOnSimplified = _rowsCompletelyOn[0] && _rowsCompletelyOn[1] && _rowsCompletelyOn[2] && _rowsCompletelyOn[3];
         _gameOffSimplified = _rowsCompletelyOff[0] && _rowsCompletelyOff[1] && _rowsCompletelyOff[2] && _rowsCompletelyOff[3];
