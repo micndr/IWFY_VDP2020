@@ -12,7 +12,9 @@ public abstract class ItemObject : ScriptableObject
     public ItemType type;
     [TextArea(15,20)]
     public string description;
+    
     [SerializeField]
     public int itemID;
-    
+
+    [SerializeField] public string itemName;
 }

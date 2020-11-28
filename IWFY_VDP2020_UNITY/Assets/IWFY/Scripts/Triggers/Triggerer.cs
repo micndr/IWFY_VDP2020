@@ -50,4 +50,9 @@ public class Triggerer : MonoBehaviour {
         }
         if (mirrorcont) mirrorcont.RotateMirror();
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        Trigger();
+    }
 }
