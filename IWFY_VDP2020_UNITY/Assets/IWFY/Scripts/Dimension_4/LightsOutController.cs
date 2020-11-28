@@ -30,7 +30,7 @@ public class LightsOutController : MonoBehaviour
 
     private void Start()
     {
-        _layersGoUp = false;
+        _layersGoUp = true;
         _gameState = new bool[,] {
             {false, false, false, false, false},
             {false, false, false, false, false},
