@@ -129,9 +129,13 @@ public class QuestMain : MonoBehaviour {
             completed = true;
             if (!globalState) globalState = FindObjectOfType<GlobalState>();
             if (!globalState) {
+                // REMOVE ON DEPLOY
                 Debug.LogWarning("game was not started from hub! making new globalstate instance");
                 GameObject gs = GameObject.Instantiate(new GameObject());
                 globalState = gs.AddComponent<GlobalState>();
+                globalState.GetComponent<GlobalState>().completedQuests.Add("Tutorial");
+                if (questName == "Pixie")
+                    globalState.GetComponent<GlobalState>().completedQuests.Add("Chasm");
             } 
             globalState.AddQuest(this);
         }

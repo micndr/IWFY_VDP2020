@@ -28,13 +28,13 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         if (!inventoryOn) return;
-        if (Input.GetKeyDown(KeyCode.I) && _inventoryOff) //
+        if (Input.GetKeyDown(KeyCode.E) && _inventoryOff) //
         {
             _inventoryDisplay.SetActive(true);
             _backpackText.SetActive(true);
             _inventoryOff = false;
         }
-        else if (Input.GetKeyDown(KeyCode.I) && !_inventoryOff)
+        else if (Input.GetKeyDown(KeyCode.E) && !_inventoryOff)
         {
             _inventoryDisplay.SetActive(false);
             _backpackText.SetActive(false);
