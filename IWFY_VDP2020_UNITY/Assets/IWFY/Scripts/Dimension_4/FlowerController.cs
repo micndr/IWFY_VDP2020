@@ -25,6 +25,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
     private GameObject _controllerFlower;
     private Renderer graphicRenderer0;
     private Renderer graphicRenderer1;
+    public GameObject fxFlashPrefab;
     public override void Start()
     {
         base.Start();
@@ -46,7 +47,13 @@ public class FlowerController : IwfyClickableObjectNoPopup
         if(_flowerUp) _flowerUp?.SendMessage("SwitchColor");
         if(_flowerRight) _flowerRight?.SendMessage("SwitchColor");
         if(_flowerLeft) _flowerLeft?.SendMessage("SwitchColor");
-        
+
+        // Light effect.
+        if (_flowerDown) FxFlash(_flowerDown.transform);
+        if (_flowerUp) FxFlash(_flowerUp.transform);
+        if (_flowerRight) FxFlash(_flowerRight.transform);
+        if (_flowerLeft) FxFlash(_flowerLeft.transform);
+
         // Notify the controller to update the state
         _controllerFlower?.SendMessage("OnFlowerClick");
     }
@@ -73,5 +80,19 @@ public class FlowerController : IwfyClickableObjectNoPopup
         // Update LightsOutController
         object[] state = {_pos, isOn};
         _controllerFlower?.SendMessage("UpdateFlower", state);
+    }
+
+    public void FxFlash (Transform target) {
+        GameObject fxline = Instantiate(fxFlashPrefab, transform.position, transform.rotation);
+        Destroy(fxline, 0.25f);
+        var line = fxFlashPrefab.GetComponent<LineRenderer>();
+        Vector3[] poss = new Vector3[2];
+        poss[0] = transform.position;
+        //arc commented out
+        //Vector3 midpoint = (transform.position + target.position) / 2f;
+        //poss[1] = midpoint + midpoint.normalized;
+        poss[1] = target.position;
+        line.SetPositions(poss);
+        line.positionCount = 2;
     }
 }
