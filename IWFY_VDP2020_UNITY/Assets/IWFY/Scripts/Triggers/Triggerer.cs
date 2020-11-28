@@ -17,6 +17,7 @@ public class Triggerer : MonoBehaviour {
     public Animator animator;
 
     public MirrorController mirrorcont;
+    public RopeController rc;
 
 
     void Start() {
@@ -49,7 +50,9 @@ public class Triggerer : MonoBehaviour {
         if (triggerer) triggerer.Trigger();
         if (animator) animator.SetTrigger("trigger");
         if (mirrorcont) mirrorcont.RotateMirror();
-        if (destroyAfterTrigger) {
+        if (rc) rc.activateRope();
+        if (destroyAfterTrigger)
+        {
             Destroy(gameObject, 0.02f);
         }
     }
