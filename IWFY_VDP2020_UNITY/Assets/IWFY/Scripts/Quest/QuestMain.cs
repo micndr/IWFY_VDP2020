@@ -77,7 +77,12 @@ public class QuestMain : MonoBehaviour {
         // called by locks in the scene
         locks.Add(qa);
         if (qa.state != state) { qa.gameObject.SetActive(false); }
-        if (qa.nextState >= lenght) lenght = qa.nextState;
+
+        if (qa.nextState >= lenght)
+        {
+            lenght = qa.nextState;
+            //Debug.Log(qa.nextState);
+        }
     }
     public void RemoveAdvancer(QuestLock qa) {
         // called by locks in the scene

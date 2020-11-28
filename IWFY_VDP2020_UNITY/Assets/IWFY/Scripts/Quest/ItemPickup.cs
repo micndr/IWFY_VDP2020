@@ -13,7 +13,7 @@ public class ItemPickup : MonoBehaviour {
 
     public void GetItems () {
         foreach (ItemObject item in pickups) {
-            main.inventory.AddItem(item, 1, item.itemID);
+            main.inventory.AddItem(item, 1, item.itemID, item.itemName);
         }
     }
 }

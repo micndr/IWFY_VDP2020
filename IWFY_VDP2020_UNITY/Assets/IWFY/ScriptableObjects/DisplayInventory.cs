@@ -20,7 +20,6 @@ public class DisplayInventory : MonoBehaviour
     {
         CreateDisplay();
         gameObject.SetActive(false);
-        //inventory.RemoveItem(666); //method to remove an Item by its ID from the inventory and destroy it
     }
 
     private void OnEnable()
@@ -28,25 +27,7 @@ public class DisplayInventory : MonoBehaviour
         CreateDisplay();
     }
 
-    // Update is called once per frame
-    /*void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            
-            clearDisplay();
-            
-            //Destroy(transform.GetChild(0).gameObject);
-            //Debug.Log("Ho distrutto un figlio");
-            
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            clearDisplay();
-            CreateDisplay();
-        }
-        
-    }*/
+   
 
     private void ClearDisplay()
     {
@@ -65,7 +46,7 @@ public class DisplayInventory : MonoBehaviour
         {
             var obj = Instantiate(inventory.itemList[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-            obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.itemList[i].amount.ToString("n0");
+            obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.itemList[i].amount.ToString("n0") + " " + inventory.itemList[i].itemName;
         }
         
         //Da gestire caso in cui l'inventario contiene un item null

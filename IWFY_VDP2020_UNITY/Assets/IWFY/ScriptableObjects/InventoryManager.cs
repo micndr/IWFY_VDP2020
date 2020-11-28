@@ -7,20 +7,11 @@ using UnityEngine.Serialization;
 public class InventoryManager : MonoBehaviour
 {
     public InventoryObject inventory;
-    private GameObject _inventoryDisplay;
-    private bool _inventoryVisibility = true;
+    public GameObject _inventoryDisplay;
+    public bool _inventoryOff = true;
 
     [FormerlySerializedAs("InventoryOn")] [SerializeField] public bool inventoryOn = true;
-    /*public void OnTriggerEnter(Collider other) //how to add an Item to the inventory we get the component ItemToken, then add the ItemObject to our inventory
-    {
-        var item = other.GetComponent<ItemToken>();
-        if (item)
-        {
-            inventory.AddItem(item.itemToken,1, 666);
-            Destroy(other.gameObject);
-            Debug.Log("Item added to inventory");
-        }
-    }*/
+    
 
     private void Awake()
     {
@@ -34,15 +25,15 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         if (!inventoryOn) return;
-        if (Input.GetKeyDown(KeyCode.I) && _inventoryVisibility)
+        if (Input.GetKeyDown(KeyCode.I) && _inventoryOff) //
         {
             _inventoryDisplay.SetActive(true);
-            _inventoryVisibility = false;
+            _inventoryOff = false;
         }
-        else if (Input.GetKeyDown(KeyCode.I) && !_inventoryVisibility)
+        else if (Input.GetKeyDown(KeyCode.I) && !_inventoryOff)
         {
             _inventoryDisplay.SetActive(false);
-            _inventoryVisibility = true;
+            _inventoryOff = true;
         }
     }
 
@@ -52,3 +43,14 @@ public class InventoryManager : MonoBehaviour
     }
 }
 
+
+/*public void OnTriggerEnter(Collider other) //how to add an Item to the inventory we get the component ItemToken, then add the ItemObject to our inventory
+    {
+        var item = other.GetComponent<ItemToken>();
+        if (item)
+        {
+            inventory.AddItem(item.itemToken,1, 666);
+            Destroy(other.gameObject);
+            Debug.Log("Item added to inventory");
+        }
+    }*/
