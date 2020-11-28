@@ -32,12 +32,12 @@ public class InitialSetup : MonoBehaviour
             
             flowers[20].SendMessage("OnFlowerClick");
             
-            flowers[16].SendMessage("SwitchColor");
+            flowers[15].SendMessage("SwitchColor");
             flowers[17].SendMessage("SwitchColor");
             flowers[18].SendMessage("SwitchColor");
             flowers[19].SendMessage("SwitchColor");
         
-            flowers[21].SendMessage("SwitchColor");
+            flowers[20].SendMessage("SwitchColor");
             flowers[22].SendMessage("SwitchColor");
             flowers[23].SendMessage("SwitchColor");
             flowers[24].SendMessage("SwitchColor");
