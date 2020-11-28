@@ -181,6 +181,7 @@ MonoBehaviour:
   pickup: {fileID: 1913266389}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &32156112
 MonoBehaviour:
@@ -377,6 +378,7 @@ MonoBehaviour:
   pickup: {fileID: 1913266389}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &254390005
 MonoBehaviour:
@@ -482,6 +484,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1748164181}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!54 &272724738
 Rigidbody:
@@ -609,16 +612,16 @@ MonoBehaviour:
   state: 0
   stateNames:
   - 0
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8.
+  - 1. Go inside your tent
+  - 2. Search around
+  - 3. Find him
+  - 4. Find him
+  - 5. Find him
+  - 6. Pick up the stair
+  - 7. Interact with the stair to fix them
+  - 8. Go inside your tent
   - 9. Place the phonograph on the bedside table
-  - 10
+  - 10. Play the phonograph
   - 11. Completed Go Back to your portal
   completed: 0
   questRequirements: []
@@ -707,6 +710,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &343638590
 MonoBehaviour:
@@ -860,6 +864,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1713405978}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &458536513
 MonoBehaviour:
@@ -975,6 +980,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1235571225}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &534217693
 MonoBehaviour:
@@ -1889,6 +1895,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1695965289}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &973816506
 MonoBehaviour:
@@ -1929,6 +1936,7 @@ GameObject:
   - component: {fileID: 1029605862}
   - component: {fileID: 1029605861}
   - component: {fileID: 1029605864}
+  - component: {fileID: 1029605865}
   m_Layer: 0
   m_Name: TriggerScale
   m_TagString: Untagged
@@ -1943,9 +1951,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029605859}
-  m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.516, y: -20.05, z: 0.068}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.89, y: -8.62, z: -0.13}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 543450653607484825}
   m_RootOrder: 1
@@ -2030,7 +2038,21 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1624356349}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
+--- !u!114 &1029605865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029605859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60730a8dff7033f48b34cbf0533c2358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 1029605864}
 --- !u!1 &1070221826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,6 +2140,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!64 &1070221831
 MeshCollider:
@@ -2367,6 +2390,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1713405978}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1198644148
 MonoBehaviour:
@@ -2550,11 +2574,12 @@ MonoBehaviour:
   autoTrigger: 0
   autoTriggerDelay: 0
   findComponents: 0
-  destroyAfterTrigger: 0
+  destroyAfterTrigger: 1
   qlock: {fileID: 1235571223}
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1235571225
 MonoBehaviour:
@@ -2660,11 +2685,12 @@ MonoBehaviour:
   autoTrigger: 0
   autoTriggerDelay: 0
   findComponents: 0
-  destroyAfterTrigger: 0
+  destroyAfterTrigger: 1
   qlock: {fileID: 1302637997}
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1302637996
 MonoBehaviour:
@@ -2963,6 +2989,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1624356349}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1429065490
 MonoBehaviour:
@@ -3028,6 +3055,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1748164181}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1455321494
 MonoBehaviour:
@@ -3111,6 +3139,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1302637996}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1535690991
 MonoBehaviour:
@@ -3321,11 +3350,12 @@ MonoBehaviour:
   autoTrigger: 0
   autoTriggerDelay: 0
   findComponents: 0
-  destroyAfterTrigger: 0
+  destroyAfterTrigger: 1
   qlock: {fileID: 1624356352}
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1624356352
 MonoBehaviour:
@@ -3432,6 +3462,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1685409599
 MonoBehaviour:
@@ -3664,11 +3695,12 @@ MonoBehaviour:
   autoTrigger: 0
   autoTriggerDelay: 0
   findComponents: 0
-  destroyAfterTrigger: 0
+  destroyAfterTrigger: 1
   qlock: {fileID: 1695965292}
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1695965292
 MonoBehaviour:
@@ -3785,11 +3817,12 @@ MonoBehaviour:
   autoTrigger: 0
   autoTriggerDelay: 0
   findComponents: 0
-  destroyAfterTrigger: 0
+  destroyAfterTrigger: 1
   qlock: {fileID: 1713405981}
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1713405981
 MonoBehaviour:
@@ -3888,6 +3921,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1748164181
 MonoBehaviour:
@@ -3976,6 +4010,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1819712998
 MonoBehaviour:
@@ -4314,6 +4349,7 @@ MonoBehaviour:
   pickup: {fileID: 1913266389}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!1 &2063285023
 GameObject:
@@ -4449,6 +4485,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1695965289}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &2063285030
 MonoBehaviour:
@@ -4575,11 +4612,12 @@ MonoBehaviour:
   autoTrigger: 1
   autoTriggerDelay: 0.5
   findComponents: 0
-  destroyAfterTrigger: 0
+  destroyAfterTrigger: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
   dialogue: {fileID: 343638587}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &2132178157
 MonoBehaviour:
@@ -4692,6 +4730,7 @@ MonoBehaviour:
   pickup: {fileID: 0}
   dialogue: {fileID: 1235571225}
   triggerer: {fileID: 0}
+  animator: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!54 &2138699028
 Rigidbody:
