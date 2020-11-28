@@ -934,6 +934,7 @@ Transform:
   - {fileID: 1148644707}
   - {fileID: 1819712996}
   - {fileID: 1535690988}
+  - {fileID: 1302637994}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2636,6 +2637,96 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -37.059002, y: 1.355, z: -178.856}
+--- !u!1 &1302637993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1302637994}
+  - component: {fileID: 1302637996}
+  - component: {fileID: 1302637995}
+  - component: {fileID: 1302637997}
+  m_Layer: 0
+  m_Name: DialoguePhonograph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1302637994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302637993}
+  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 1.91, y: -0.26000214, z: -3.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 483416145}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302637995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302637993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 0
+  qlock: {fileID: 1302637997}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 0}
+  triggerer: {fileID: 0}
+  mirrorcont: {fileID: 0}
+--- !u!114 &1302637996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302637993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0bc7a513d890846886a37631ce762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  dialogue:
+    names: []
+    sentences:
+    - Oh... I love this song, I didn't find anything useful here. I should go back.
+--- !u!114 &1302637997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302637993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  state: 10
+  nextState: 11
+  activeUntilState: 0
+  invert: 0
+  requirements: []
+  deactivateDelay: 0
 --- !u!4 &1307267610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6eb83ffc136826d4e96f2f6ac67f4e9e,
@@ -3002,9 +3093,8 @@ GameObject:
   - component: {fileID: 1535690994}
   - component: {fileID: 1535690993}
   - component: {fileID: 1535690992}
-  - component: {fileID: 1535690991}
   - component: {fileID: 1535690990}
-  - component: {fileID: 1535690989}
+  - component: {fileID: 1535690991}
   m_Layer: 0
   m_Name: Play the phonograph
   m_TagString: Untagged
@@ -3026,23 +3116,6 @@ Transform:
   m_Father: {fileID: 483416145}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!114 &1535690989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535690987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd0bc7a513d890846886a37631ce762f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: playing the phonograph
-  dialogue:
-    names: []
-    sentences:
-    - Oh... I love this song, I didn't find anything useful here. I should go back.
 --- !u!114 &1535690990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3059,9 +3132,9 @@ MonoBehaviour:
   autoTriggerDelay: 0
   findComponents: 0
   destroyAfterTrigger: 1
-  qlock: {fileID: 1535690992}
+  qlock: {fileID: 0}
   pickup: {fileID: 0}
-  dialogue: {fileID: 1535690989}
+  dialogue: {fileID: 1302637996}
   triggerer: {fileID: 0}
   mirrorcont: {fileID: 0}
 --- !u!114 &1535690991
