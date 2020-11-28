@@ -933,7 +933,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueText
       value: 
-      objectReference: {fileID: 1074858333}
+      objectReference: {fileID: 0}
     - target: {fileID: 7331217547090406953, guid: 65035f2db2311b14bb2ceac57e15d5e8,
         type: 3}
       propertyPath: m_IsActive
@@ -3079,7 +3079,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2052484038}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &949964598
+--- !u!114 &949964601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3608,18 +3608,6 @@ Transform:
   m_Father: {fileID: 1835658491}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1074858333 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7331217547836224083, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 250251794}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1138246595
 GameObject:
   m_ObjectHideFlags: 0
@@ -5611,7 +5599,7 @@ GameObject:
   - component: {fileID: 1671687163}
   - component: {fileID: 1671687162}
   m_Layer: 0
-  m_Name: HouseCaptivityState9
+  m_Name: HouseCaptivityState8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5630,7 +5618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1169818960}
-  state: 9
+  state: 8
   nextState: 0
   activeUntilState: 1
   invert: 0
@@ -7275,6 +7263,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2563170150045782556, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563170150045782556, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563170150045782556, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6642087754457836783, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: m_LocalPosition.x

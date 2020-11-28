@@ -23,6 +23,8 @@ public class QuestMain : MonoBehaviour {
 
     Text QuestText;
 
+    private bool resetQuestText = true;
+
     private void Start() {
         if (questName.Length == 0 && stateNames.Length > 0) { questName = stateNames[0]; }
         QuestText = GameObject.Find("QuestText").GetComponent<Text>();
@@ -41,9 +43,14 @@ public class QuestMain : MonoBehaviour {
             if (stateNames.Length > state) {
                 QuestText.text = stateNames[state];
             } else {
-                Debug.LogWarning("set name to state in QuestMain plz");
+                Debug.LogWarning("set name to states in QuestMain plz");
                 stateNames = new string[stateNames.Length + 1];
                 stateNames[stateNames.Length - 1] = "No Current Objective";
+            }
+        } else {
+            if (resetQuestText) {
+                resetQuestText = false;
+                QuestText.text = stateNames[stateNames.Length-1];
             }
         }
 
