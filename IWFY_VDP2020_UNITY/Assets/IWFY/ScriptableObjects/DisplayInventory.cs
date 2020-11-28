@@ -46,7 +46,8 @@ public class DisplayInventory : MonoBehaviour
         {
             var obj = Instantiate(inventory.itemList[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-            obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.itemList[i].amount.ToString("n0") + " " + inventory.itemList[i].itemName;
+            obj.GetComponentInChildren<TextMeshProUGUI>().text =  inventory.itemList[i].itemName;
+            //inventory.itemList[i].amount.ToString("n0") + " " +
         }
         
         //Da gestire caso in cui l'inventario contiene un item null
