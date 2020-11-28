@@ -26,6 +26,7 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
         // Jacopo -> ho messo anche qua l'attivazione dei trigger. Se si vuole si può spostare
         Triggerer triggerer = GetComponent<Triggerer>();
         if (triggerer) triggerer.Trigger();
+        _reticlePointer.SendMessage("OnPointerExit");
     }
 
 
