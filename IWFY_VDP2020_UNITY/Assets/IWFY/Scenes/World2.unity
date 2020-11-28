@@ -2042,7 +2042,6 @@ GameObject:
   - component: {fileID: 1070221827}
   - component: {fileID: 1070221834}
   - component: {fileID: 1070221833}
-  - component: {fileID: 1070221832}
   - component: {fileID: 1070221831}
   - component: {fileID: 1070221830}
   - component: {fileID: 1070221829}
@@ -2131,25 +2130,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2919498514429124136, guid: 5e02ac7bb366a954ea1ca8c4e7cfef9a, type: 3}
---- !u!54 &1070221832
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070221826}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 62
-  m_CollisionDetection: 0
 --- !u!23 &1070221833
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2918,8 +2901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 10
-  nextState: 10
+  state: 11
+  nextState: 11
   activeUntilState: 0
   invert: 0
   requirements: []
@@ -3243,22 +3226,6 @@ MonoBehaviour:
   invert: 0
   requirements: []
   deactivateDelay: 0
---- !u!54 &1620735417
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5360758931334984917}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 62
-  m_CollisionDetection: 0
 --- !u!64 &1620735418
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3270,7 +3237,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2919498514429124136, guid: 5e02ac7bb366a954ea1ca8c4e7cfef9a, type: 3}
 --- !u!1 &1624356347
@@ -4995,7 +4962,6 @@ GameObject:
   - component: {fileID: 4331837383482138502}
   - component: {fileID: 5642930314585563373}
   - component: {fileID: 3247657536434957458}
-  - component: {fileID: 1620735417}
   - component: {fileID: 1620735418}
   - component: {fileID: 1620735415}
   m_Layer: 0
