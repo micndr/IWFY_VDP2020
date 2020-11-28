@@ -34,7 +34,7 @@ public class RopeController : MonoBehaviour
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 12f) && presa == false)
+        if (Physics.Raycast(ray, out hit, 30f) && presa == false)
         {
             if (hit.transform.gameObject.CompareTag("ponte"))
             {
@@ -47,7 +47,7 @@ public class RopeController : MonoBehaviour
     public void activateRope()
     {
         this.transform.SetParent(father.transform);
-        this.transform.localPosition = new Vector3(0f, -0.1f, 0f);
+        this.transform.localPosition = new Vector3(1f, 1f, 1f);
     }
 
 }
