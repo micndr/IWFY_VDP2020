@@ -8,6 +8,7 @@ public class InventoryManager : MonoBehaviour
 {
     public InventoryObject inventory;
     public GameObject _inventoryDisplay;
+    public GameObject _backpackText;
     public bool _inventoryOff = true;
 
     [FormerlySerializedAs("InventoryOn")] [SerializeField] public bool inventoryOn = true;
@@ -16,6 +17,8 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         _inventoryDisplay = GameObject.Find("CanvasInventory").transform.Find("InventoryScreen").gameObject;
+        _backpackText = GameObject.Find("CanvasInventory").transform.Find("Backpack text").gameObject;
+        _backpackText.SetActive(false);
     }
 
     public void SetInventoryState(bool set)
@@ -28,18 +31,20 @@ public class InventoryManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I) && _inventoryOff) //
         {
             _inventoryDisplay.SetActive(true);
+            _backpackText.SetActive(true);
             _inventoryOff = false;
         }
         else if (Input.GetKeyDown(KeyCode.I) && !_inventoryOff)
         {
             _inventoryDisplay.SetActive(false);
+            _backpackText.SetActive(false);
             _inventoryOff = true;
         }
     }
 
     private void OnApplicationQuit()
     {
-        inventory.itemList.Clear();
+        //inventory.itemList.Clear();
     }
 }
 
