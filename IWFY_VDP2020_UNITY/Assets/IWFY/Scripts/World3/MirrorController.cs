@@ -13,12 +13,13 @@ public class MirrorController : MonoBehaviour
         CheckAngles(this.transform.rotation.y);
     }
 
-    
+
 
     public void RotateMirror()
     {
         if (this.transform.rotation.y != y_axis)
         {
+            Debug.Log("dentro rotate");
             this.transform.Rotate(0, 90, 0);
             CheckAngles(this.transform.rotation.y);
         }
@@ -35,11 +36,15 @@ public class MirrorController : MonoBehaviour
         {
             angle = angle + 360f;
             CheckAngles(angle);
+            Debug.Log("primo if");
         }
 
         if (angle > 360f)
         {
             angle = angle % 360f;
+            Debug.Log("secondo if");
         }
+
+        Debug.Log("nulla");
     }
 }
