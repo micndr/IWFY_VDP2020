@@ -982,6 +982,7 @@ MonoBehaviour:
   nextState: 5
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &182680519
@@ -1071,6 +1072,7 @@ MonoBehaviour:
   nextState: 2
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &182680524
@@ -1250,6 +1252,7 @@ MonoBehaviour:
   nextState: 9
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1001 &274259806
@@ -2020,6 +2023,7 @@ MonoBehaviour:
   nextState: 6
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!65 &412194551
@@ -2917,6 +2921,7 @@ MonoBehaviour:
   nextState: 7
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements:
   - {fileID: 11400000, guid: 42436aafea79a4144a77f8667fc99fef, type: 2}
   deactivateDelay: 0
@@ -3023,6 +3028,7 @@ MonoBehaviour:
   nextState: 8
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!114 &756258635
@@ -3130,6 +3136,7 @@ MonoBehaviour:
   nextState: 3
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1001 &798425362
@@ -4731,6 +4738,32 @@ CapsuleCollider:
   m_Height: 155.24
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1336224299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7061969719563191681, guid: 340d0f73dc71c8e4280b02005e2fe36d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1336224295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1336224300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336224299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  state: 6
+  nextState: 0
+  activeUntilState: 1
+  invert: 1
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
 --- !u!1001 &1418847914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4848,6 +4881,7 @@ MonoBehaviour:
   nextState: 0
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1419832503 stripped
@@ -5070,6 +5104,7 @@ MonoBehaviour:
   nextState: 1
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1001 &1521814738
@@ -6047,6 +6082,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &1813720225
@@ -7366,6 +7402,7 @@ MonoBehaviour:
   nextState: 4
   activeUntilState: 0
   invert: 0
+  toCompass: 0
   requirements: []
   deactivateDelay: 0
 --- !u!1 &2146812766
