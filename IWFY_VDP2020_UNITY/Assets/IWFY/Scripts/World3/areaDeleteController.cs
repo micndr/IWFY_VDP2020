@@ -10,9 +10,10 @@ public class areaDeleteController : MonoBehaviour
     [SerializeField] private GameObject casuale2;
    public void OnTriggerEnter(Collider other)
    {
-       if (other.CompareTag("Player"))
+       if (other.CompareTag("prova"))
        {
-           Destroy(this);
+           GetComponent<Triggerer>().Trigger();
+           Destroy(this.gameObject);
            if (casuale)
                Destroy(casuale);
            if (casuale1)

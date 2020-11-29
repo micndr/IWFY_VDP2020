@@ -25,10 +25,22 @@ public class QuestMain : MonoBehaviour {
 
     private bool resetQuestText = true;
 
+    private Compass compass;
+
     private void Start() {
         if (questName.Length == 0 && stateNames.Length > 0) { questName = stateNames[0]; }
         QuestText = GameObject.Find("QuestText").GetComponent<Text>();
         globalState = FindObjectOfType<GlobalState>();
+
+        GameObject compassObj = GameObject.Find("CompassPrefab");
+        if (compassObj) compass = compassObj.GetComponent<Compass>();
+    }
+
+    public bool CheckQuestLockState(QuestLock qlock) {
+        bool check = qlock.state == state
+                || (qlock.activeUntilState && state < qlock.state);
+        if (qlock.invert) check = !check;
+        return check;
     }
 
     void Update() {
@@ -47,18 +59,30 @@ public class QuestMain : MonoBehaviour {
                 stateNames = new string[stateNames.Length + 1];
                 stateNames[stateNames.Length - 1] = "No Current Objective";
             }
+
+            if (compass) {
+                QuestLock target = null;
+                foreach (QuestLock l in locks) {
+                    if (CheckQuestLockState(l)) {
+                        if (l.toCompass) {
+                            target = l;
+                            break;
+                        }
+                    }
+                }
+                if (target) compass.target = target.transform;
+            }
+
         } else {
             if (resetQuestText) {
                 resetQuestText = false;
+                compass.target = null;
                 QuestText.text = stateNames[stateNames.Length-1];
             }
         }
 
         foreach (QuestLock qlock in locks) {
-            bool check = qlock.state == state 
-                || (qlock.activeUntilState && state < qlock.state);
-            if (qlock.invert) check = !check;
-            if (check) {
+            if (CheckQuestLockState(qlock)) {
                 qlock.gameObject.SetActive(true);
             } else {
                 if (qlock.gameObject.activeSelf) {
@@ -129,9 +153,13 @@ public class QuestMain : MonoBehaviour {
             completed = true;
             if (!globalState) globalState = FindObjectOfType<GlobalState>();
             if (!globalState) {
+                // REMOVE ON DEPLOY
                 Debug.LogWarning("game was not started from hub! making new globalstate instance");
                 GameObject gs = GameObject.Instantiate(new GameObject());
                 globalState = gs.AddComponent<GlobalState>();
+                globalState.GetComponent<GlobalState>().completedQuests.Add("Tutorial");
+                if (questName == "Pixie")
+                    globalState.GetComponent<GlobalState>().completedQuests.Add("Chasm");
             } 
             globalState.AddQuest(this);
         }

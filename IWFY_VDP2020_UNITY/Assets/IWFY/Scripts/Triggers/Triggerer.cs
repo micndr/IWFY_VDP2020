@@ -14,8 +14,10 @@ public class Triggerer : MonoBehaviour {
     public ItemPickup pickup;
     public DialogueTrigger dialogue;
     public Triggerer triggerer;
+    public Animator animator;
 
     public MirrorController mirrorcont;
+    public RopeController rc;
 
 
     void Start() {
@@ -23,6 +25,7 @@ public class Triggerer : MonoBehaviour {
             if (!qlock) qlock = GetComponent<QuestLock>();
             if (!pickup) pickup = GetComponent<ItemPickup>();
             if (!dialogue) dialogue = GetComponent<DialogueTrigger>();
+            if (!animator) animator = GetComponent<Animator>();
         }
 
         autoTriggerTimer = Time.time + autoTriggerDelay;
@@ -45,10 +48,12 @@ public class Triggerer : MonoBehaviour {
         if (pickup) pickup.GetItems();
         if (dialogue) dialogue.TriggerDialogue();
         if (triggerer) triggerer.Trigger();
-        if (destroyAfterTrigger) {
+        if (animator) animator.SetTrigger("trigger");
+        if (mirrorcont) mirrorcont.RotateMirror();
+        if (rc) rc.activateRope();
+        if (destroyAfterTrigger)
+        {
             Destroy(gameObject, 0.02f);
         }
-        if (mirrorcont) mirrorcont.RotateMirror();
     }
-    
 }
