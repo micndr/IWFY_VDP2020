@@ -7,6 +7,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
     // Position of the current flower: [row, column]
     [SerializeField] private int[] _pos;
     [SerializeField] private Light light;
+    [SerializeField] private Animator _animator;
 
     // UP -> Towards the well
     // DOWN -> Away from the well
@@ -76,6 +77,9 @@ public class FlowerController : IwfyClickableObjectNoPopup
             graphicRenderer0.material = matOn;
             graphicRenderer1.material = matOn;
         }
+        
+        // Update animation
+        _animator?.SetBool("isON", isOn);
 
         // Update LightsOutController
         object[] state = {_pos, isOn};
