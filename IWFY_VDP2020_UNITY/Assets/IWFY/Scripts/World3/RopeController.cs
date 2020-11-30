@@ -40,6 +40,9 @@ public class RopeController : MonoBehaviour
             {
                 presa = true;
                 animator.SetTrigger("amt");
+                this.transform.SetParent(null);
+                Destroy(this);
+                Debug.Log("oggetto distrutto");
             }
         }
     }
@@ -47,7 +50,7 @@ public class RopeController : MonoBehaviour
     public void activateRope()
     {
         this.transform.SetParent(father.transform);
-        this.transform.localPosition = new Vector3(1f, 1f, 1f);
+        this.transform.localPosition = new Vector3(-1.5f, -1.5f, -1.5f);
     }
 
 }

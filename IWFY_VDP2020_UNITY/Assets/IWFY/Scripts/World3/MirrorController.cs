@@ -42,9 +42,7 @@ public class MirrorController : MonoBehaviour
         if (angle > 360f)
         {
             angle = angle % 360f;
-            Debug.Log("secondo if");
-        }
 
-        Debug.Log("nulla");
+        }
     }
 }
