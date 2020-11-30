@@ -811,7 +811,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8ccf3308e313b004db369e8f7b65ce19,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ccf3308e313b004db369e8f7b65ce19,
         type: 3}
@@ -897,7 +897,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   qlock: {fileID: 144165958}
   pickup: {fileID: 0}
-  dialogue: {fileID: 1458952111}
+  dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
   mirrorcont: {fileID: 0}
@@ -1028,7 +1028,6 @@ MonoBehaviour:
     names: []
     sentences:
     - '"But... this seems exactly as my dimension..."'
-    - '"GOAL: find what is different from your dimension"'
 --- !u!1 &171657057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1122,6 @@ MonoBehaviour:
     sentences:
     - '"Oh yes! In this dimension the planet is mirrored! Let''s see if there is
       something else mirrored"'
-    - '"GOAL: find a way to bring the bridge on the river"'
 --- !u!1 &178480183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 922965670}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &255512629
 MonoBehaviour:
@@ -1839,7 +1837,7 @@ MonoBehaviour:
     names: []
     sentences:
     - '"Oh... I can direct the mirrors so to burn the rope with the sun!"'
-    - '"GOAL: Orient the mirrors correctly to cut the rope"'
+    - 
 --- !u!1 &316936798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,6 +2143,139 @@ Transform:
   m_Father: {fileID: 461439814}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 12.135, y: 114.13601, z: 155.574}
+--- !u!1 &338862828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338862829}
+  - component: {fileID: 338862834}
+  - component: {fileID: 338862833}
+  - component: {fileID: 338862832}
+  - component: {fileID: 338862831}
+  - component: {fileID: 338862830}
+  m_Layer: 0
+  m_Name: areaWaterwellPreBridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338862829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338862828}
+  m_LocalRotation: {x: 0.07207827, y: -0.042805873, z: -0.0030834489, w: 0.9964753}
+  m_LocalPosition: {x: 7.28, y: 28.68, z: -44.98}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 922965670}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 8.244, y: -4.971, z: -0.71300006}
+--- !u!114 &338862830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338862828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6ad2be20f233a4ba91cb5a62bdd290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casuale: {fileID: 0}
+  casuale1: {fileID: 0}
+  casuale2: {fileID: 0}
+--- !u!114 &338862831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338862828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 0
+  qlock: {fileID: 0}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 2099263007}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  rc: {fileID: 0}
+--- !u!65 &338862832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338862828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &338862833
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338862828}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &338862834
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338862828}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &346948572
 GameObject:
   m_ObjectHideFlags: 0
@@ -4753,10 +4884,11 @@ Transform:
   - {fileID: 1605339251}
   - {fileID: 580158929}
   - {fileID: 292138475}
-  - {fileID: 1458952108}
   - {fileID: 144165954}
   - {fileID: 255512628}
   - {fileID: 1566689661}
+  - {fileID: 338862829}
+  - {fileID: 2099263004}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5440,17 +5572,17 @@ MonoBehaviour:
   locks: []
   state: 0
   stateNames:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - '"GOAL: find what is different from your dimension"'
+  - '"GOAL: find what is different from your dimension"'
+  - '"GOAL: find what is different from your dimension"'
+  - '"GOAL: find what is different from your dimension"'
+  - '"GOAL: find a way to bring the bridge on the river"'
+  - '"GOAL: find a way to bring the bridge on the river"'
+  - '"GOAL: find a way to bring the bridge on the river"'
+  - '"GOAL: find a way to bring the bridge on the river"'
+  - '"GOAL: Orient the mirrors correctly to cut the rope"'
+  - '"GOAL: Position the bridge and cross the river"'
+  - '"GOAL: Position the bridge and cross the river"'
   - 
   - 
   - 
@@ -7493,99 +7625,6 @@ Transform:
   m_Father: {fileID: 1145071691}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1458952107
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1458952108}
-  - component: {fileID: 1458952111}
-  - component: {fileID: 1458952110}
-  - component: {fileID: 1458952109}
-  m_Layer: 0
-  m_Name: dialogue (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1458952108
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458952107}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 922965670}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1458952109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458952107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoTrigger: 0
-  autoTriggerDelay: 0
-  findComponents: 0
-  destroyAfterTrigger: 0
-  qlock: {fileID: 1458952110}
-  pickup: {fileID: 0}
-  dialogue: {fileID: 0}
-  triggerer: {fileID: 0}
-  animator: {fileID: 0}
-  mirrorcont: {fileID: 0}
-  rc: {fileID: 0}
---- !u!114 &1458952110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458952107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  main: {fileID: 1085118470}
-  state: 9
-  nextState: 10
-  activeUntilState: 0
-  invert: 0
-  toCompass: 0
-  requirements: []
-  deactivateDelay: 0
---- !u!114 &1458952111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458952107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd0bc7a513d890846886a37631ce762f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: 
-  dialogue:
-    names: []
-    sentences:
-    - '"GOAL: Position the bridge and cross the river"'
 --- !u!1 &1486818031
 GameObject:
   m_ObjectHideFlags: 0
@@ -7999,7 +8038,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 922965670}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1566689662
 MonoBehaviour:
@@ -10620,6 +10659,99 @@ Transform:
   m_Father: {fileID: 461439814}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 12.521001, y: 44.250004, z: 60.293003}
+--- !u!1 &2099263003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2099263004}
+  - component: {fileID: 2099263007}
+  - component: {fileID: 2099263006}
+  - component: {fileID: 2099263005}
+  m_Layer: 0
+  m_Name: dialogue (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2099263004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099263003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 922965670}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2099263005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099263003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 0
+  qlock: {fileID: 2099263006}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 0}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  rc: {fileID: 0}
+--- !u!114 &2099263006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099263003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 1085118470}
+  state: 5
+  nextState: 6
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
+--- !u!114 &2099263007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099263003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0bc7a513d890846886a37631ce762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  dialogue:
+    names: []
+    sentences:
+    - '"I don''t need it now"'
 --- !u!1001 &2114066211
 PrefabInstance:
   m_ObjectHideFlags: 0
