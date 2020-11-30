@@ -6,7 +6,6 @@ public class FlowerController : IwfyClickableObjectNoPopup
 {
     // Position of the current flower: [row, column]
     [SerializeField] private int[] _pos;
-    [SerializeField] private Light light;
     [SerializeField] private Animator _animator;
 
     // UP -> Towards the well
@@ -22,6 +21,8 @@ public class FlowerController : IwfyClickableObjectNoPopup
     [SerializeField] private Material matOff;
 
     private bool isOn = false;
+    public float amplitude = 0.001f;
+    public float speed = 1f;
 
     private GameObject _controllerFlower;
     private Renderer graphicRenderer0;
@@ -36,6 +37,12 @@ public class FlowerController : IwfyClickableObjectNoPopup
     }
 
     // Update is called once per frame
+    void FixedUpdate() {
+        
+        //if (isOn == false) transform.position += transform.position.normalized * Mathf.Sin(Time.time * speed) * amplitude;
+        
+    }
+    
     void OnPointerClick()
     {
         Debug.Log($"Flower ({_pos[0]}, {_pos[1]}) clicked.");
@@ -64,22 +71,18 @@ public class FlowerController : IwfyClickableObjectNoPopup
         if (isOn)
         {
             isOn = false;
-            //gameObject.GetComponent<Renderer>().material.color = Color.blue;
-            //light.intensity = 0;
             graphicRenderer0.material = matOff;
             graphicRenderer1.material = matOff;
         }
         else
         {
             isOn = true;
-            //gameObject.GetComponent<Renderer>().material. = Color.cyan;
-            //light.intensity = 1;
             graphicRenderer0.material = matOn;
             graphicRenderer1.material = matOn;
         }
         
-        // Update animation
-        _animator?.SetBool("isON", isOn);
+        // Update the animator
+        if(_animator) _animator?.SetBool("isOn", isOn);
 
         // Update LightsOutController
         object[] state = {_pos, isOn};

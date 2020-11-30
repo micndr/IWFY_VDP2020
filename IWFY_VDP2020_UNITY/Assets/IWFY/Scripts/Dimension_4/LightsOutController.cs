@@ -128,7 +128,7 @@ public class LightsOutController : MonoBehaviour
         }
 
         UpdateMaterialPositions();
-        
+
         // They must be different from the old version in order to only send the message once.
 
         if (_simplified)
@@ -181,6 +181,7 @@ public class LightsOutController : MonoBehaviour
     // TODO: see if this code can be semplified only using one indicator _isMoved
     private void UpdateMaterialPositions()
     {
+        // TODO: Useless message can not be sent.
         for (int i = 0; i < 4; i++)
         {
             if (_isRecessed[i]) animatorOfLayer[i].SetBool("isDown", true);
