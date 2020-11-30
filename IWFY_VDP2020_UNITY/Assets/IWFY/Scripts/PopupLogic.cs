@@ -21,7 +21,7 @@ public class PopupLogic : IwfyClickableObjectNoPopup
         StartCoroutine(DeathCount());
     }
 
-    public void OnPointerClick()
+    public override void OnPointerClick()
     {
         // When it is clicked, the popup disappears and notifies its object
         Destroy(gameObject);

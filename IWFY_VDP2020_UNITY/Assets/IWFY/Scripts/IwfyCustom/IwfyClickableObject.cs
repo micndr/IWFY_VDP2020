@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using UnityEditor;
 using UnityEngine;
 
 // All interactive objects which need a popup should inherit from this:
@@ -37,7 +36,7 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
         // Retrieve the prefab
         //_popupPrefab = (GameObject) AssetDatabase.LoadAssetAtPath("Assets/IWFY/Prefabs/PopupPrefab.prefab", typeof(GameObject));
     }
-
+    
     public override void OnPointerEnter()
     {
         base.OnPointerEnter(); // Triggers pointer animation.

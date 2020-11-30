@@ -7,6 +7,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
     // Position of the current flower: [row, column]
     [SerializeField] private int[] _pos;
     [SerializeField] private Animator _animator;
+    [SerializeField] private AudioSource _audio;
 
     // UP -> Towards the well
     // DOWN -> Away from the well
@@ -43,7 +44,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
         
     }
     
-    void OnPointerClick()
+    public override void OnPointerClick()
     {
         Debug.Log($"Flower ({_pos[0]}, {_pos[1]}) clicked.");
 
@@ -83,6 +84,9 @@ public class FlowerController : IwfyClickableObjectNoPopup
         
         // Update the animator
         if(_animator) _animator?.SetBool("isOn", isOn);
+        
+        // Play sound
+        if (isOn) _audio.Play();
 
         // Update LightsOutController
         object[] state = {_pos, isOn};

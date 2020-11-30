@@ -158,7 +158,6 @@ public class LightsOutController : MonoBehaviour
     // Checks if a given 'row' is all either ON or OFF depending on the value of the passed argument 'on'
     private bool All(int row, bool on)
     {
-        bool all;
         if (on)
         {
             return _gameState[row, 0] &&
