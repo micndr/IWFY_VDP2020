@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour {
     public float mouseSensitivityX = 1;
     public float mouseSensitivityY = 1;
     public float walkSpeed = 6;
+    public float runSpeed = 10;
     public float jumpForce = 220;
     public LayerMask groundedMask;
 
@@ -64,12 +65,17 @@ public class PlayerMove : MonoBehaviour {
             transform.up, 
             (transform.position - planet.transform.position).normalized) * transform.rotation;
 
+        float speed = walkSpeed;
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            speed = runSpeed;
+        }
+
         // Calculate movement:
         float inputX = Input.GetAxisRaw("Horizontal") * inh;
         float inputY = Input.GetAxisRaw("Vertical") * inh;
 
         Vector3 moveDir = new Vector3(inputX, 0, inputY).normalized;
-        Vector3 targetMoveAmount = moveDir * walkSpeed;
+        Vector3 targetMoveAmount = moveDir * speed;
         moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
     }
 
