@@ -13,7 +13,6 @@ public class AreaController : MonoBehaviour
             {
                 Debug.Log("Aggiunto");
                 active = true;
-                GlobalWorld3.increaseMirror();
             }
     }
     

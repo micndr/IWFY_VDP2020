@@ -1936,7 +1936,6 @@ MonoBehaviour:
     names: []
     sentences:
     - '"Oh... I can direct the mirrors so to burn the rope with the sun!"'
-    - 
 --- !u!1 &316936798
 GameObject:
   m_ObjectHideFlags: 0
@@ -4067,6 +4066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y_axis: 0
+  globe: {fileID: 0}
 --- !u!65 &725668571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6431,7 +6431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa075b73b23d67747b631a37415b52f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rope: {fileID: 1676708396}
+  rope: {fileID: 144165955}
+  trigger: {fileID: 0}
 --- !u!4 &1188967188
 Transform:
   m_ObjectHideFlags: 0
@@ -7860,6 +7861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y_axis: 0
+  globe: {fileID: 0}
 --- !u!65 &1443147802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9498,6 +9500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y_axis: 135
+  globe: {fileID: 1188967187}
 --- !u!65 &1709111856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9783,7 +9786,7 @@ MonoBehaviour:
   casuale: {fileID: 338862828}
   casuale1: {fileID: 2099263003}
   casuale2: {fileID: 0}
-  toBeBuild: {fileID: 786098276}
+  toBeBuild: {fileID: 0}
 --- !u!114 &1853056417
 MonoBehaviour:
   m_ObjectHideFlags: 0

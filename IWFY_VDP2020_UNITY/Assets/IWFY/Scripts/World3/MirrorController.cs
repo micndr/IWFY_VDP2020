@@ -6,6 +6,7 @@ public class MirrorController : MonoBehaviour
 {
     private bool active = false;
     [SerializeField] private float y_axis;
+    [SerializeField] private GlobalWorld3 globe;
 
     void Awake()
     {
@@ -22,11 +23,12 @@ public class MirrorController : MonoBehaviour
             Debug.Log("dentro rotate");
             this.transform.Rotate(0, 90, 0);
             CheckAngles(this.transform.rotation.y);
+            
         }
         else
         {
             active = true;
-            GlobalWorld3.increaseMirror();
+            globe.increaseMirror();
         }
     }
 
