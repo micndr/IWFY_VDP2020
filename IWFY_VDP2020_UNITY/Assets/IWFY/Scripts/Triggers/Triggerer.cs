@@ -45,7 +45,7 @@ public class Triggerer : MonoBehaviour {
         if (autoTrigger) {
             if (autoTriggerTimer <= Time.time) {
                 // here instead of in start to not break everything 
-                // (dialogue has to call start before this)
+                // (dialogue has to call start before this) 
                 Trigger();
                 autoTrigger = false;
                 autoTriggerTimer = Time.time + autoTriggerDelay;
