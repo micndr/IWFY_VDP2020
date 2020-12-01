@@ -19,6 +19,7 @@ public class videoController : MonoBehaviour {
     }
 
     public void Play () {
+        videoPlayer.Play();
         timer = Time.time;
         rawImage.color = new Color(1, 1, 1, 1);
     }
