@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3081cb476bdcaf54b912e7c433715e71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3081cb476bdcaf54b912e7c433715e71,
         type: 3}
@@ -322,13 +322,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 4
+  state: 6
   nextState: 0
   activeUntilState: 1
   invert: 1
   toCompass: 0
   requirements: []
   deactivateDelay: 0
+--- !u!1 &128605772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128605773}
+  - component: {fileID: 128605776}
+  - component: {fileID: 128605775}
+  - component: {fileID: 128605774}
+  m_Layer: 0
+  m_Name: AwayFromHoleTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128605773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128605772}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0000000037252903, w: 1}
+  m_LocalPosition: {x: -0, y: 3.5, z: -13.4}
+  m_LocalScale: {x: 43.941612, y: 33.176, z: 3.3034904}
+  m_Children: []
+  m_Father: {fileID: 567460468}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &128605774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128605772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60730a8dff7033f48b34cbf0533c2358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 128605775}
+--- !u!114 &128605775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128605772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 0
+  qlock: {fileID: 567460470}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 490360450}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 567460469}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 0
+--- !u!65 &128605776
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128605772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &131588428
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,8 +1024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 4
-  nextState: 4
+  state: 5
+  nextState: 6
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -1307,8 +1394,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 4
-  nextState: 5
+  state: 6
+  nextState: 7
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -1391,8 +1478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 9
-  nextState: 10
+  state: 11
+  nextState: 12
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -1428,7 +1515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 980279134}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &491061682
 GameObject:
@@ -1532,8 +1619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 4
-  nextState: 4
+  state: 6
+  nextState: 6
   activeUntilState: 0
   invert: 0
   toCompass: 1
@@ -1662,8 +1749,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 10
-  nextState: 10
+  state: 12
+  nextState: 12
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -1752,8 +1839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 6
-  nextState: 7
+  state: 8
+  nextState: 9
   activeUntilState: 0
   invert: 0
   toCompass: 1
@@ -1788,6 +1875,74 @@ MonoBehaviour:
   video: {fileID: 0}
   lockPlayer: 0
   unlockPlayer: 0
+--- !u!1 &567460467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 567460468}
+  - component: {fileID: 567460470}
+  - component: {fileID: 567460469}
+  m_Layer: 0
+  m_Name: AwayTriggerSafenet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &567460468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567460467}
+  m_LocalRotation: {x: 0.1457487, y: -0.1728489, z: -0.58254886, w: 0.780716}
+  m_LocalPosition: {x: 80.82, y: 29.11, z: 45}
+  m_LocalScale: {x: 3.1804214, y: 3.1804218, z: 3.1804218}
+  m_Children:
+  - {fileID: 128605773}
+  - {fileID: 918172843}
+  - {fileID: 1945689822}
+  - {fileID: 1351001455}
+  m_Father: {fileID: 980279134}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567460469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567460467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2623f809b7ec74698d2cea98915dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &567460470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567460467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  state: 10
+  nextState: 12
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
 --- !u!1001 &633662681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2015,7 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 8
+  state: 10
   nextState: 0
   activeUntilState: 1
   invert: 1
@@ -2141,6 +2296,93 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7296010487707739113, guid: 3081cb476bdcaf54b912e7c433715e71, type: 3}
+--- !u!1 &918172842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918172843}
+  - component: {fileID: 918172846}
+  - component: {fileID: 918172845}
+  - component: {fileID: 918172844}
+  m_Layer: 0
+  m_Name: AwayFromHoleTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &918172843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918172842}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -13.4, y: 3.5, z: 0}
+  m_LocalScale: {x: 43.941612, y: 33.176, z: 3.3034904}
+  m_Children: []
+  m_Father: {fileID: 567460468}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &918172844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918172842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60730a8dff7033f48b34cbf0533c2358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 918172845}
+--- !u!114 &918172845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918172842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 0
+  qlock: {fileID: 567460470}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 490360450}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 567460469}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 0
+--- !u!65 &918172846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918172842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &927106798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,8 +2443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 7
-  nextState: 8
+  state: 9
+  nextState: 10
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -2291,8 +2533,10 @@ MonoBehaviour:
   - 
   - What else is changed?
   - Completed!
-  - Find some boxes to reach the top of the tent
-  - Climb the boxes and get the antenna
+  - Search something to attract the thunderbolt
+  - Completed!
+  - Find the boxes
+  - Take the antenna
   - Plant the antenna in the chasm
   - Completed!
   - Run away!
@@ -2344,6 +2588,7 @@ Transform:
   - {fileID: 1513651758}
   - {fileID: 927106802}
   - {fileID: 1664663004}
+  - {fileID: 567460468}
   - {fileID: 490360451}
   - {fileID: 112419591}
   m_Father: {fileID: 0}
@@ -2704,11 +2949,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 4
-  nextState: 4
+  state: 6
+  nextState: 6
   activeUntilState: 0
   invert: 0
-  toCompass: 0
+  toCompass: 1
   requirements: []
   deactivateDelay: 0
 --- !u!65 &1061081416
@@ -3214,6 +3459,93 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350937672}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1351001454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1351001455}
+  - component: {fileID: 1351001458}
+  - component: {fileID: 1351001457}
+  - component: {fileID: 1351001456}
+  m_Layer: 0
+  m_Name: AwayFromHoleTrigger (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1351001455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351001454}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0000000037252903, w: 1}
+  m_LocalPosition: {x: -0, y: 3.5, z: 13.4}
+  m_LocalScale: {x: 43.941612, y: 33.176, z: 3.3034904}
+  m_Children: []
+  m_Father: {fileID: 567460468}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1351001456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351001454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60730a8dff7033f48b34cbf0533c2358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 1351001457}
+--- !u!114 &1351001457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351001454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 0
+  qlock: {fileID: 567460470}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 490360450}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 567460469}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 0
+--- !u!65 &1351001458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351001454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1351740008
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,7 +3557,7 @@ GameObject:
   - component: {fileID: 1351740010}
   - component: {fileID: 1351740009}
   m_Layer: 0
-  m_Name: tempantennastate7
+  m_Name: tempantennastate9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3244,8 +3576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 7
-  nextState: 7
+  state: 9
+  nextState: 9
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -3509,7 +3841,7 @@ GameObject:
   - component: {fileID: 1513651758}
   - component: {fileID: 1513651759}
   m_Layer: 0
-  m_Name: tempantennastate8
+  m_Name: tempantennastate10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3547,8 +3879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 8
-  nextState: 8
+  state: 10
+  nextState: 10
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -3743,8 +4075,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 4
-  nextState: 4
+  state: 6
+  nextState: 6
   activeUntilState: 0
   invert: 0
   toCompass: 1
@@ -4047,8 +4379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 5
-  nextState: 6
+  state: 7
+  nextState: 8
   activeUntilState: 0
   invert: 0
   toCompass: 1
@@ -4117,8 +4449,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 8
-  nextState: 9
+  state: 10
+  nextState: 12
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -4155,7 +4487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 8
+  state: 10
   nextState: 0
   activeUntilState: 1
   invert: 1
@@ -4275,7 +4607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 8
+  state: 10
   nextState: 0
   activeUntilState: 1
   invert: 0
@@ -4657,7 +4989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main: {fileID: 0}
   state: 4
-  nextState: 4
+  nextState: 5
   activeUntilState: 0
   invert: 0
   toCompass: 0
@@ -4776,6 +5108,93 @@ MonoBehaviour:
   toCompass: 0
   requirements: []
   deactivateDelay: 0
+--- !u!1 &1945689821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945689822}
+  - component: {fileID: 1945689825}
+  - component: {fileID: 1945689824}
+  - component: {fileID: 1945689823}
+  m_Layer: 0
+  m_Name: AwayFromHoleTrigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1945689822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945689821}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 13.4, y: 3.5, z: 0}
+  m_LocalScale: {x: 43.941612, y: 33.176, z: 3.3034904}
+  m_Children: []
+  m_Father: {fileID: 567460468}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1945689823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945689821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60730a8dff7033f48b34cbf0533c2358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 1945689824}
+--- !u!114 &1945689824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945689821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 0
+  qlock: {fileID: 567460470}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 490360450}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 567460469}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 0
+--- !u!65 &1945689825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945689821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1950596651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5555,7 +5974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 5
+  state: 7
   nextState: 0
   activeUntilState: 1
   invert: 0
@@ -5575,7 +5994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 5
+  state: 7
   nextState: 0
   activeUntilState: 1
   invert: 0
@@ -5595,7 +6014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 5
+  state: 7
   nextState: 0
   activeUntilState: 1
   invert: 0
@@ -5615,7 +6034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 5
+  state: 7
   nextState: 0
   activeUntilState: 1
   invert: 0
@@ -5635,7 +6054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
-  state: 5
+  state: 7
   nextState: 0
   activeUntilState: 1
   invert: 0
