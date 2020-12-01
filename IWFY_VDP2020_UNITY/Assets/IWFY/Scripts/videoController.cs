@@ -1,25 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
-public class videoController : MonoBehaviour
-{
+public class videoController : MonoBehaviour {
 
-    [SerializeField] private GameObject _videoPlayer;
-    [SerializeField] private int _timeToStop;
+    private RawImage rawImage;
+    private VideoPlayer videoPlayer;
+    private float videoLenght;
+    public Triggerer triggerer;
+    float timer;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        _videoPlayer.SetActive(false);
+    void Start() {
+        rawImage = GameObject.Find("RawImage").GetComponent<RawImage>();
+        videoPlayer = gameObject.GetComponent<VideoPlayer>();
+        videoLenght = (float)(videoPlayer.clip.frameCount / videoPlayer.clip.frameRate);
     }
 
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.CompareTag("prova"))
-        {
-            _videoPlayer.SetActive(true);
-            Destroy(_videoPlayer, _timeToStop);
+    public void Play () {
+        timer = Time.time;
+        rawImage.color = new Color(1, 1, 1, 1);
+    }
+
+    private void Update() {
+        if (Time.time - timer > videoLenght) {
+            triggerer.Trigger();
+            rawImage.color = new Color(1, 1, 1, 0);
         }
     }
 }

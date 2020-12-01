@@ -21,9 +21,15 @@ public class Triggerer : MonoBehaviour {
     public AudioSource audioSource;
     public FxThunderTrigger thunder;
     public OpenLink link;
+    public videoController video;
 
+    public bool lockPlayer = false;
+    public bool unlockPlayer = false;
+    PlayerMove playerMove;
 
     void Start() {
+        playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
+
         if (findComponents) {
             if (!qlock) qlock = GetComponent<QuestLock>();
             if (!pickup) pickup = GetComponent<ItemPickup>();
@@ -57,6 +63,9 @@ public class Triggerer : MonoBehaviour {
         if (audioSource) audioSource.Play();
         if (thunder) thunder.Strike();
         if (link) link.Open();
+        if (video) video.Play();
+        if (lockPlayer) playerMove.lockUserInput = true;
+        if (unlockPlayer) playerMove.lockUserInput = false;
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }
