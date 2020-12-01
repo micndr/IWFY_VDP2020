@@ -86,7 +86,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
         if(_animator) _animator?.SetBool("isOn", isOn);
         
         // Play sound
-        if (isOn) _audio.Play();
+        if (isOn) if (_audio) _audio.Play();
 
         // Update LightsOutController
         object[] state = {_pos, isOn};
@@ -94,9 +94,10 @@ public class FlowerController : IwfyClickableObjectNoPopup
     }
 
     public void FxFlash (Transform target) {
+        Debug.Log("from " + gameObject.name + " to "+ target.gameObject.name);
         GameObject fxline = Instantiate(fxFlashPrefab, transform.position, transform.rotation);
         Destroy(fxline, 0.25f);
-        var line = fxFlashPrefab.GetComponent<LineRenderer>();
+        var line = fxline.GetComponent<LineRenderer>();
         Vector3[] poss = new Vector3[2];
         poss[0] = transform.position;
         //arc commented out
