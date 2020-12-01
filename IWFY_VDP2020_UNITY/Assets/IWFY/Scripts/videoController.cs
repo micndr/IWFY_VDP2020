@@ -11,6 +11,8 @@ public class videoController : MonoBehaviour {
     private float videoLenght;
     public Triggerer triggerer;
     float timer;
+
+    bool play;
     
     void Start() {
         rawImage = GameObject.Find("RawImage").GetComponent<RawImage>();
@@ -19,15 +21,25 @@ public class videoController : MonoBehaviour {
     }
 
     public void Play () {
+        if (!play) { play = true; return; }
         videoPlayer.Play();
         timer = Time.time;
         rawImage.color = new Color(1, 1, 1, 1);
     }
 
+    public void Stop() {
+        videoPlayer.Stop();
+        triggerer.Trigger();
+        rawImage.color = new Color(1, 1, 1, 0);
+    }
+
     private void Update() {
+        if (play) { Play(); play = false; }
         if (Time.time - timer > videoLenght) {
-            triggerer.Trigger();
-            rawImage.color = new Color(1, 1, 1, 0);
+            Stop();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Stop();
         }
     }
 }
