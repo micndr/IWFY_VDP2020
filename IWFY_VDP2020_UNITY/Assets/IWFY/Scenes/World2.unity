@@ -888,17 +888,17 @@ MonoBehaviour:
   state: 0
   stateNames:
   - 0
-  - 1. Go inside your tent
-  - 2. Search around
-  - 3. Find him
-  - 4. Find him
-  - 5. Find him
-  - 6. Pick up the stair
-  - 7. Interact with the stair to fix them
-  - 8. Go inside your tent
-  - 9. Place the phonograph on the bedside table
-  - 10. Play the phonograph
-  - 11. Completed Go Back to your portal
+  - What else is different from my dimension?
+  - Search around
+  - Find him
+  - Find him
+  - Find him
+  - Pick up the stair
+  - Interact with the stair to fix them
+  - Go inside your tent
+  - Place the phonograph on the bedside table
+  - Play the phonograph
+  - Completed Go Back to your portal
   completed: 0
   questRequirements: []
 --- !u!1 &343638585
@@ -3330,6 +3330,7 @@ GameObject:
   - component: {fileID: 1302637996}
   - component: {fileID: 1302637995}
   - component: {fileID: 1302637997}
+  - component: {fileID: 1302637998}
   m_Layer: 0
   m_Name: DialoguePhonograph
   m_TagString: Untagged
@@ -3416,6 +3417,102 @@ MonoBehaviour:
   toCompass: 0
   requirements: []
   deactivateDelay: 0
+--- !u!82 &1302637998
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302637993}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9ce655db90d4040c6987440705516224, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1336959319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3795,7 +3892,6 @@ GameObject:
   - component: {fileID: 1535690992}
   - component: {fileID: 1535690990}
   - component: {fileID: 1535690991}
-  - component: {fileID: 1535690989}
   m_Layer: 0
   m_Name: Play the phonograph
   m_TagString: Untagged
@@ -3817,102 +3913,6 @@ Transform:
   m_Father: {fileID: 483416145}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!82 &1535690989
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535690987}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9ce655db90d4040c6987440705516224, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &1535690990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3935,7 +3935,7 @@ MonoBehaviour:
   triggerer: {fileID: 0}
   animator: {fileID: 0}
   mirrorcont: {fileID: 0}
-  audioSource: {fileID: 1535690989}
+  audioSource: {fileID: 0}
   thunder: {fileID: 0}
   link: {fileID: 0}
   video: {fileID: 0}
@@ -4791,15 +4791,15 @@ MonoBehaviour:
     - B
     - Eia
     sentences:
-    - "\"Hi, who are you?\"\r"
-    - "\"HI, I'm R_404 , who are you\"\r"
-    - "\"My name is Eia, have you seen the steps of my stairs?\"\r"
-    - "\"Mmh.. maybe yes, maybe not, it depends..\"\r"
-    - "\"What?!\"\r"
-    - "\"If you play catch with me, I will tell you where the steps are...\"\r"
-    - ' "What?! I have no time to play with you!"'
-    - "\"Ok.. you will never know where the steps are.. \"\r"
-    - '" Uff ok! Let''s play..."'
+    - "Hi, who are you?\t"
+    - Hi, I'm R_404 , who are you
+    - My name is Eia, do you have an idea about what happend to my the stairs?
+    - Mmh.. maybe yes, maybe not, it depends.."
+    - Tell me!
+    - If you play catch with me, I will tell you what happened
+    - What?! I have no time to play with you!
+    - Ok.. you will never know...
+    - Uff ok! Let's play...
 --- !u!222 &1713405979
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4962,10 +4962,10 @@ MonoBehaviour:
     - Eia
     - B
     sentences:
-    - '"Oh, you caught me! Here are your steps."'
-    - '"Have you always had them?!"'
-    - '"Oh yes, I was just bored, some time ago a kind person comes here often to
-      play with me, but I haven''t seen him for a while..."'
+    - Oh, you caught me! Actually I removed the steps of your house!
+    - WHAT THE HELL!
+    - Oh yes, I was just bored, some time ago a kind person comes here often to play
+      with me, but I haven't seen her for a while...
 --- !u!222 &1748164182
 CanvasRenderer:
   m_ObjectHideFlags: 0
