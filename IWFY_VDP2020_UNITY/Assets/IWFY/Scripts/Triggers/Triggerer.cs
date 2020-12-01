@@ -17,7 +17,6 @@ public class Triggerer : MonoBehaviour {
     public Animator animator;
 
     public MirrorController mirrorcont;
-    public RopeController rc;
 
     public AudioSource audioSource;
 
@@ -53,7 +52,6 @@ public class Triggerer : MonoBehaviour {
         if (triggerer) triggerer.Trigger();
         if (animator) animator.SetTrigger("trigger");
         if (mirrorcont) mirrorcont.RotateMirror();
-        if (rc) rc.activateRope();
         if (audioSource) audioSource.Play();
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);

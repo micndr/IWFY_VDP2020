@@ -21,8 +21,6 @@ public class areaDeleteController : MonoBehaviour
                Destroy(casuale1);
            if (casuale2)
                Destroy(casuale2);
-           
-           
        }
    }
 }
