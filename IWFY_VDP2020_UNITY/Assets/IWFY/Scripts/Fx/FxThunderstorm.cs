@@ -6,6 +6,7 @@ public class FxThunderstorm : MonoBehaviour {
 
     public GameObject player;
     public GameObject FxThunder;
+    public GameObject FxAudio;
 
     public float spreadPlanetDegrees = 20;
     public float frequency = 0.1f;
@@ -22,6 +23,9 @@ public class FxThunderstorm : MonoBehaviour {
         FxThunder thunder = thunderObj.GetComponent<FxThunder>();
         thunder.height = 100;
         thunder.GenerateThunder(pos, head);
+
+        GameObject audioObj = Instantiate(FxAudio, pos, Quaternion.identity);
+        Destroy(audioObj, 8);
     }
 
     void Update() {
