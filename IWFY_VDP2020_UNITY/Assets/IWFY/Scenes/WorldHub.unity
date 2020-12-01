@@ -3407,8 +3407,8 @@ MonoBehaviour:
   locks: []
   state: 0
   stateNames:
-  - Go to the well
-  - Drop the bucket
+  - Go to the well and drop in the coin
+  - Get the boots
   - Go to the next portal
   completed: 0
   questRequirements:
@@ -6928,7 +6928,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1e0b0f3bd53b142a58293ed7434b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completedQuests: []
+  completedQuests:
+  - Tutorial
+  - AfterWorld1
+  - AfterWorld2
+  - AfterWorld3
+  - Pixie
+  - Chasm
+  - Mirror
+  - Coin
   globalVolume: 0.1
 --- !u!4 &1589480158
 Transform:

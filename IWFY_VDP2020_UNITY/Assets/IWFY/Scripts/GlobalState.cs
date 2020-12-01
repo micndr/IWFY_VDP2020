@@ -28,7 +28,19 @@ public class GlobalState : MonoBehaviour {
         }
     }
 
+    public void SpawnpointPlayer() {
+        if (SceneManager.GetActiveScene().name == "WorldHub") {
+            if (completedQuests.Contains("Tutorial")) {
+                Transform player = GameObject.Find("Player").transform;
+                Transform spawnpoint = GameObject.Find("PlayerPortalSpawnpoint").transform;
+                player.position = spawnpoint.position;
+                player.rotation = spawnpoint.rotation;
+            }
+        }
+    }
+
     void OnLoadCallback(Scene scene, LoadSceneMode sceneMode) {
+        SpawnpointPlayer();
         var qms = FindObjectsOfType<QuestMain>();
         foreach (QuestMain qm in qms) {
             if (completedQuests.Contains(qm.questName)) {
