@@ -39,6 +39,11 @@ public class GlobalState : MonoBehaviour {
             }
         }
 
+        UpdateAudioVideo();
+    }
+
+    private void UpdateAudioVideo()
+    {
         AudioSource[] audios = FindObjectsOfType<AudioSource>();
         VideoPlayer[] videos = FindObjectsOfType<VideoPlayer>();
         
@@ -56,5 +61,6 @@ public class GlobalState : MonoBehaviour {
     public void OnVolumeChanged(float volume)
     {
         globalVolume = volume;
+        UpdateAudioVideo();
     }
 }
