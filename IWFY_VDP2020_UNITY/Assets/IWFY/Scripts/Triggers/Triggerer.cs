@@ -19,6 +19,7 @@ public class Triggerer : MonoBehaviour {
     public MirrorController mirrorcont;
 
     public AudioSource audioSource;
+    public FxThunderTrigger thunder;
 
 
     void Start() {
@@ -53,6 +54,7 @@ public class Triggerer : MonoBehaviour {
         if (animator) animator.SetTrigger("trigger");
         if (mirrorcont) mirrorcont.RotateMirror();
         if (audioSource) audioSource.Play();
+        if (thunder) thunder.Strike();
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }
