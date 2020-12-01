@@ -30,7 +30,7 @@ public class RopeController : MonoBehaviour
                         if (this.transform.localScale.z < 2)
                             break;
                     }
-                    Destroy(this);
+                    Destroy(this.gameObject);
                     Debug.Log("oggetto distrutto");
              //   }
             }

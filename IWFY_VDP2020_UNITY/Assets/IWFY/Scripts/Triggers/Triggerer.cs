@@ -17,6 +17,7 @@ public class Triggerer : MonoBehaviour {
     public Animator animator;
 
     public MirrorController mirrorcont;
+    public ropeActivator ropeActivator;
 
     public AudioSource audioSource;
     public FxThunderTrigger thunder;
@@ -66,6 +67,7 @@ public class Triggerer : MonoBehaviour {
         if (video) video.Play();
         if (lockPlayer) playerMove.lockUserInput = true;
         if (unlockPlayer) playerMove.lockUserInput = false;
+        if (ropeActivator) ropeActivator.activateRope();
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }

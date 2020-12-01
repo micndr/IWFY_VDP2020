@@ -7,26 +7,15 @@ public class MirrorController : MonoBehaviour
     private bool active = false;
     [SerializeField] private float y_axis;
     [SerializeField] private GlobalWorld3 globe;
-
-    void Awake()
-    {
-        CheckAngles(y_axis);
-        CheckAngles(this.transform.rotation.y);
-    }
-
-
-
+    
     public void RotateMirror()
     {
         if (this.transform.rotation.y != y_axis)
         {
-            Debug.Log("dentro rotate");
             this.transform.Rotate(0, 90, 0);
             //CheckAngles(this.transform.rotation.y);
-            Debug.Log("l'angolo è " + transform.rotation.y);
-            if (this.transform.rotation.y == y_axis)
+            if (Mathf.Approximately(this.transform.rotation.y, y_axis))
             {
-                Debug.Log("specchio corretto");
                 globe.increaseMirror();
             }
         }
@@ -37,7 +26,7 @@ public class MirrorController : MonoBehaviour
         }
     }
 
-    private void CheckAngles(float angle)
+    /*private void CheckAngles(float angle)
     {
         if (angle < 0)
         {
@@ -51,5 +40,5 @@ public class MirrorController : MonoBehaviour
             angle = angle % 360f;
 
         }
-    }
+    }*/
 }

@@ -5,14 +5,15 @@ using UnityEngine;
 public class GlobalWorld3 : MonoBehaviour
 {
     private int mirror;
-    [SerializeField] private GameObject rope;
+    [SerializeField] private GameObject ropeRepresentation;
+    [SerializeField] private GameObject realRope;
     public Triggerer trigger;
 
     void Start()
     {
-        if (rope.activeSelf)
+        if (ropeRepresentation.activeSelf)
         {
-            rope.SetActive(false);
+            ropeRepresentation.SetActive(false);
 
         }
     }
@@ -25,10 +26,12 @@ public class GlobalWorld3 : MonoBehaviour
     public void increaseMirror()
     {
         mirror++;
-        Debug.Log("aggiunta");
         if (mirror == 3)
         {
-            trigger.Trigger();
+            Debug.Log("corda aggiunta");
+            // trigger.Trigger();
+            ropeRepresentation.SetActive(true);
+            //realRope.SetActive(true);
         }
     }
 }
