@@ -9,7 +9,6 @@ public class PlayHoverAndClickButton : MonoBehaviour
 
     public void PlayHover()
     {
-        Debug.Log("HOVERRRRRRR");
         uiSounds[0].Play();
     }
 
