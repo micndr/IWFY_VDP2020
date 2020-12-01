@@ -150,6 +150,7 @@ Transform:
   m_Children:
   - {fileID: 1497563138}
   - {fileID: 768361669}
+  - {fileID: 1189960590}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -550,8 +551,8 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   thunder: {fileID: 0}
   link: {fileID: 0}
-  video: {fileID: 0}
-  lockPlayer: 0
+  video: {fileID: 892861913}
+  lockPlayer: 1
   unlockPlayer: 0
 --- !u!114 &131353268
 MonoBehaviour:
@@ -628,6 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138893580}
   - component: {fileID: 138893579}
+  - component: {fileID: 138893581}
   m_Layer: 0
   m_Name: StartTrigger
   m_TagString: Untagged
@@ -661,7 +663,7 @@ MonoBehaviour:
   thunder: {fileID: 0}
   link: {fileID: 0}
   video: {fileID: 2073594224}
-  lockPlayer: 0
+  lockPlayer: 1
   unlockPlayer: 0
 --- !u!4 &138893580
 Transform:
@@ -677,6 +679,26 @@ Transform:
   m_Father: {fileID: 1835658491}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138893581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138893578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 1169818960}
+  state: 0
+  nextState: 0
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
 --- !u!1 &192858813
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 269541274}
-  state: 2
+  state: 3
   nextState: 0
   activeUntilState: 0
   invert: 0
@@ -1229,6 +1251,135 @@ MonoBehaviour:
   completed: 0
   questRequirements:
   - Mirror
+--- !u!1 &280966327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280966328}
+  - component: {fileID: 280966332}
+  - component: {fileID: 280966331}
+  - component: {fileID: 280966330}
+  - component: {fileID: 280966329}
+  m_Layer: 0
+  m_Name: VideoFlashback1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &280966328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280966327}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1521582085}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &280966329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280966327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 1041400231}
+  state: 2
+  nextState: 3
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
+--- !u!114 &280966330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280966327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 1
+  qlock: {fileID: 280966329}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 0}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 0}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 1
+--- !u!114 &280966331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280966327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9634242e7d4190541a207de39a7ba635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 280966330}
+--- !u!328 &280966332
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280966327}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 2629c296c008d3242bc65242c5253e19, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 603fc0a0c5829434aa4608e0c8297875, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 0.05
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!1001 &332060979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1514,8 +1665,8 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   thunder: {fileID: 0}
   link: {fileID: 0}
-  video: {fileID: 0}
-  lockPlayer: 0
+  video: {fileID: 1189960593}
+  lockPlayer: 1
   unlockPlayer: 0
 --- !u!114 &379886543
 MonoBehaviour:
@@ -1931,6 +2082,7 @@ Transform:
   - {fileID: 788471450}
   - {fileID: 1904963045}
   - {fileID: 2086643587}
+  - {fileID: 959757151}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1965,6 +2117,7 @@ Transform:
   - {fileID: 1899082746}
   - {fileID: 1348435863}
   - {fileID: 131353266}
+  - {fileID: 892861910}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2349,8 +2502,8 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   thunder: {fileID: 0}
   link: {fileID: 0}
-  video: {fileID: 0}
-  lockPlayer: 0
+  video: {fileID: 280966331}
+  lockPlayer: 1
   unlockPlayer: 0
 --- !u!114 &657403950
 MonoBehaviour:
@@ -2996,8 +3149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1497563139}
-  state: 1
-  nextState: 1
+  state: 2
+  nextState: 2
   activeUntilState: 1
   invert: 0
   toCompass: 0
@@ -3358,6 +3511,135 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863880633}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &892861909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892861910}
+  - component: {fileID: 892861914}
+  - component: {fileID: 892861913}
+  - component: {fileID: 892861912}
+  - component: {fileID: 892861911}
+  m_Layer: 0
+  m_Name: VideoFlashback3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &892861910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892861909}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 533497054}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892861911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892861909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 269541274}
+  state: 2
+  nextState: 3
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
+--- !u!114 &892861912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892861909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 1
+  qlock: {fileID: 892861911}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 0}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 0}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 1
+--- !u!114 &892861913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892861909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9634242e7d4190541a207de39a7ba635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 892861912}
+--- !u!328 &892861914
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892861909}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 3eb1c2fa60103ea48a28dbde1f488ad3, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 603fc0a0c5829434aa4608e0c8297875, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 0.05
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!1001 &928346847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3533,7 +3815,7 @@ Transform:
   m_Children:
   - {fileID: 928346848}
   m_Father: {fileID: 1521582085}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &943091482
 MonoBehaviour:
@@ -3789,6 +4071,135 @@ MonoBehaviour:
   toCompass: 0
   requirements: []
   deactivateDelay: 0
+--- !u!1 &959757150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959757151}
+  - component: {fileID: 959757155}
+  - component: {fileID: 959757154}
+  - component: {fileID: 959757153}
+  - component: {fileID: 959757152}
+  m_Layer: 0
+  m_Name: VideoFlashback4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959757151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959757150}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 485943052}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &959757152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959757150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 788471451}
+  state: 2
+  nextState: 3
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
+--- !u!114 &959757153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959757150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 1
+  qlock: {fileID: 959757152}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 0}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 0}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 1
+--- !u!114 &959757154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959757150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9634242e7d4190541a207de39a7ba635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 959757153}
+--- !u!328 &959757155
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959757150}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 28c53116943f0974aa44c87095691bc1, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 603fc0a0c5829434aa4608e0c8297875, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 0.05
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!1 &966813693
 GameObject:
   m_ObjectHideFlags: 0
@@ -4384,6 +4795,135 @@ Transform:
   m_Father: {fileID: 1835658491}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1189960589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189960590}
+  - component: {fileID: 1189960594}
+  - component: {fileID: 1189960593}
+  - component: {fileID: 1189960592}
+  - component: {fileID: 1189960591}
+  m_Layer: 0
+  m_Name: VideoFlashback2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1189960590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189960589}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 40362367}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1189960591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189960589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 1497563139}
+  state: 1
+  nextState: 2
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
+--- !u!114 &1189960592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189960589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 1
+  qlock: {fileID: 1189960591}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 0}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 0}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 1
+--- !u!114 &1189960593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189960589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9634242e7d4190541a207de39a7ba635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerer: {fileID: 1189960592}
+--- !u!328 &1189960594
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189960589}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: c7d2b7ef733a0b54387aef6b5da69514, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 603fc0a0c5829434aa4608e0c8297875, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 0.05
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!1 &1195892915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,7 +5154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1041400231}
-  state: 2
+  state: 3
   nextState: 0
   activeUntilState: 0
   invert: 0
@@ -5265,8 +5805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1041400231}
-  state: 2
-  nextState: 2
+  state: 3
+  nextState: 3
   activeUntilState: 1
   invert: 0
   toCompass: 0
@@ -5639,7 +6179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 788471451}
-  state: 2
+  state: 3
   nextState: 0
   activeUntilState: 0
   invert: 0
@@ -5945,6 +6485,7 @@ Transform:
   - {fileID: 852264370}
   - {fileID: 1363274191}
   - {fileID: 657403948}
+  - {fileID: 280966328}
   - {fileID: 943091478}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -6239,7 +6780,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1e0b0f3bd53b142a58293ed7434b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completedQuests: []
+  completedQuests:
+  - Tutorial
+  - Chasm
+  - Pixie
+  - Mirror
+  - AfterWorld1
+  - AfterWorld2
+  - Coin
+  - AfterWorld3
 --- !u!4 &1589480158
 Transform:
   m_ObjectHideFlags: 0
@@ -9052,6 +9601,7 @@ GameObject:
   - component: {fileID: 2073594222}
   - component: {fileID: 2073594224}
   - component: {fileID: 2073594225}
+  - component: {fileID: 2073594226}
   m_Layer: 0
   m_Name: VideoIntro
   m_TagString: Untagged
@@ -9148,6 +9698,26 @@ MonoBehaviour:
   video: {fileID: 0}
   lockPlayer: 0
   unlockPlayer: 0
+--- !u!114 &2073594226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073594221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 1169818960}
+  state: 0
+  nextState: 0
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
 --- !u!1 &2078300432
 GameObject:
   m_ObjectHideFlags: 0
@@ -9358,7 +9928,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   thunder: {fileID: 0}
   link: {fileID: 0}
-  video: {fileID: 0}
+  video: {fileID: 959757154}
   lockPlayer: 0
   unlockPlayer: 0
 --- !u!114 &2086643590
@@ -9373,7 +9943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 0}
+  main: {fileID: 788471451}
   state: 1
   nextState: 2
   activeUntilState: 0
@@ -9588,7 +10158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1497563139}
-  state: 1
+  state: 2
   nextState: 0
   activeUntilState: 0
   invert: 0
@@ -9719,7 +10289,7 @@ PrefabInstance:
     - target: {fileID: 3893502994152972512, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
       propertyPath: lockUserInput
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3893502994152972514, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
