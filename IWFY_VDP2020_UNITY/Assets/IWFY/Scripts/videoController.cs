@@ -14,6 +14,8 @@ public class videoController : MonoBehaviour {
 
     bool play;
 
+    bool isplaying = false;
+
     private AudioSource _worldAudioSource;
     
     void Start() {
@@ -21,7 +23,6 @@ public class videoController : MonoBehaviour {
         videoPlayer = gameObject.GetComponent<VideoPlayer>();
         videoLenght = (float)(videoPlayer.clip.frameCount / videoPlayer.clip.frameRate);
         _worldAudioSource = GameObject.Find("PlanetPrefab").GetComponent<AudioSource>();
-        Debug.Log(_worldAudioSource);
     }
 
     public void Play () {
@@ -32,20 +33,21 @@ public class videoController : MonoBehaviour {
         
         // Mute ost
         _worldAudioSource.Stop();
+        isplaying = true;
     }
 
     public void Stop() {
         videoPlayer.Stop();
         triggerer.Trigger();
         rawImage.color = new Color(1, 1, 1, 0);
-        
+
         // Restart ost
-        _worldAudioSource.Play();
+        if (isplaying) _worldAudioSource.Play();
     }
 
     private void Update() {
         if (play) { Play(); play = false; }
-        if (Time.time - timer > videoLenght) {
+        if (isplaying && Time.time - timer > videoLenght) {
             Stop();
         }
         if (Input.GetKeyDown(KeyCode.Escape)) {
