@@ -22,8 +22,13 @@ public class MirrorController : MonoBehaviour
         {
             Debug.Log("dentro rotate");
             this.transform.Rotate(0, 90, 0);
-            CheckAngles(this.transform.rotation.y);
-            
+            //CheckAngles(this.transform.rotation.y);
+            Debug.Log("l'angolo è " + transform.rotation.y);
+            if (this.transform.rotation.y == y_axis)
+            {
+                Debug.Log("specchio corretto");
+                globe.increaseMirror();
+            }
         }
         else
         {
