@@ -11,7 +11,10 @@ public class GlobalWorld3 : MonoBehaviour
     void Start()
     {
         if (rope.activeSelf)
+        {
             rope.SetActive(false);
+
+        }
     }
 
     public int getMirror()
@@ -22,6 +25,7 @@ public class GlobalWorld3 : MonoBehaviour
     public void increaseMirror()
     {
         mirror++;
+        Debug.Log("aggiunta");
         if (mirror == 3)
         {
             trigger.Trigger();
