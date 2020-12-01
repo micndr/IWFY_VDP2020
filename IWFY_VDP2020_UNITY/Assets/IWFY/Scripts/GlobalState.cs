@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 
 public class GlobalState : MonoBehaviour { 
     public static GlobalState Instance;
 
     public List<string> completedQuests = new List<string>();
+    public float globalVolume;
 
     void Awake() {
         if (Instance == null) {
@@ -36,5 +38,23 @@ public class GlobalState : MonoBehaviour {
                 qm.CheckCompletion();
             }
         }
+
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        VideoPlayer[] videos = FindObjectsOfType<VideoPlayer>();
+        
+        for (int i = 0; i < audios.Length; i++)
+        {
+            audios[i].volume = globalVolume; 
+        }
+        
+        for (int i = 0; i < videos.Length; i++)
+        {
+            videos[i].SetDirectAudioVolume(0, globalVolume); 
+        }
+    }
+
+    public void OnVolumeChanged(float volume)
+    {
+        globalVolume = volume;
     }
 }
