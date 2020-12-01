@@ -86,7 +86,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
         if(_animator) _animator?.SetBool("isOn", isOn);
         
         // Play sound
-        if (isOn) _audio.Play();
+        if (isOn) if (_audio) _audio.Play();
 
         // Update LightsOutController
         object[] state = {_pos, isOn};

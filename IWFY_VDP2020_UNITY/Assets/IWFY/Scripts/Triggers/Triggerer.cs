@@ -19,6 +19,8 @@ public class Triggerer : MonoBehaviour {
     public MirrorController mirrorcont;
     public RopeController rc;
 
+    public AudioSource audioSource;
+
 
     void Start() {
         if (findComponents) {
@@ -26,6 +28,7 @@ public class Triggerer : MonoBehaviour {
             if (!pickup) pickup = GetComponent<ItemPickup>();
             if (!dialogue) dialogue = GetComponent<DialogueTrigger>();
             if (!animator) animator = GetComponent<Animator>();
+            if (!audioSource) audioSource = GetComponent<AudioSource>();
         }
 
         autoTriggerTimer = Time.time + autoTriggerDelay;
@@ -51,8 +54,8 @@ public class Triggerer : MonoBehaviour {
         if (animator) animator.SetTrigger("trigger");
         if (mirrorcont) mirrorcont.RotateMirror();
         if (rc) rc.activateRope();
-        if (destroyAfterTrigger)
-        {
+        if (audioSource) audioSource.Play();
+        if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }
     }
