@@ -13,7 +13,7 @@ public class areaDeleteController : MonoBehaviour
    {
        if (other.CompareTag("prova"))
        {
-           //GetComponent<Triggerer>().Trigger();
+           GetComponent<Triggerer>().Trigger();
            Destroy(this.gameObject);
            if (casuale)
                Destroy(casuale);
@@ -21,12 +21,6 @@ public class areaDeleteController : MonoBehaviour
                Destroy(casuale1);
            if (casuale2)
                Destroy(casuale2);
-           if (toBeBuild)
-           {
-               Instantiate(toBeBuild);
-               Debug.Log("box collider creato");
-           }
-           
        }
    }
 }

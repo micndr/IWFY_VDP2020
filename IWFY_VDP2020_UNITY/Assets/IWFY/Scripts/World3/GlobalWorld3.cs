@@ -4,32 +4,27 @@ using UnityEngine;
 
 public class GlobalWorld3 : MonoBehaviour
 {
-    public static int mirror;
+    private int mirror;
     [SerializeField] private GameObject rope;
+    public Triggerer trigger;
 
     void Start()
     {
         if (rope.activeSelf)
             rope.SetActive(false);
     }
-    
-    public static int getMirror()
+
+    public int getMirror()
     {
         return mirror;
     }
 
-    public static void increaseMirror()
+    public void increaseMirror()
     {
         mirror++;
-    }
-
-    void Update()
-    {
         if (mirror == 3)
         {
-            rope.SetActive(true);
+            trigger.Trigger();
         }
-            
     }
-    
 }

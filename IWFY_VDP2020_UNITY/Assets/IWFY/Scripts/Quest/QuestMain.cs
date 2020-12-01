@@ -181,6 +181,7 @@ public class QuestMain : MonoBehaviour {
             RemoveItems(ql);
             state = ql.nextState;
             CheckCompletion();
+            if (compass) compass.target = null;
         }
     }
 }
