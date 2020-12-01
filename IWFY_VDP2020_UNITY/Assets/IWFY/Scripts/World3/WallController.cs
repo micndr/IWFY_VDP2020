@@ -9,7 +9,6 @@ public class WallController : MonoBehaviour
         if (collider.CompareTag("ponte"))
         {
             Destroy(this);
-            Debug.Log("area distrutta");
         }
     }
 }
