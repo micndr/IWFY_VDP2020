@@ -6,6 +6,8 @@ public class FxThunderstorm : MonoBehaviour {
 
     public GameObject player;
     public GameObject FxThunder;
+    public GameObject FxAudio;
+    public GlobalState globalState;
 
     public float spreadPlanetDegrees = 20;
     public float frequency = 0.1f;
@@ -15,13 +17,22 @@ public class FxThunderstorm : MonoBehaviour {
     void Start() {
         player = GameObject.Find("Player");
         timer = Time.time;
+
+        GameObject globalStateObj = GameObject.Find("GlobalState");
+        if (globalStateObj) globalState = globalStateObj.GetComponent<GlobalState>();
     }
 
-    public void Strike (Vector3 pos, Vector3 head) {
+    public void Strike(Vector3 pos, Vector3 head) {
         GameObject thunderObj = Instantiate(FxThunder, pos, Quaternion.identity);
         FxThunder thunder = thunderObj.GetComponent<FxThunder>();
         thunder.height = 100;
         thunder.GenerateThunder(pos, head);
+
+        GameObject audioObj = Instantiate(FxAudio, pos, Quaternion.identity);
+        Destroy(audioObj, 8);
+        if (globalState) { 
+            audioObj.GetComponent<AudioSource>().volume = globalState.globalVolume;
+        }
     }
 
     void Update() {

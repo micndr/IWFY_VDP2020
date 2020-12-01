@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 
-public class GlobalState : MonoBehaviour { 
+public class GlobalState : MonoBehaviour {
     public static GlobalState Instance;
 
     public List<string> completedQuests = new List<string>();
