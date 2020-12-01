@@ -20,6 +20,7 @@ public class Triggerer : MonoBehaviour {
 
     public AudioSource audioSource;
     public FxThunderTrigger thunder;
+    public OpenLink link;
 
 
     void Start() {
@@ -55,6 +56,7 @@ public class Triggerer : MonoBehaviour {
         if (mirrorcont) mirrorcont.RotateMirror();
         if (audioSource) audioSource.Play();
         if (thunder) thunder.Strike();
+        if (link) link.Open();
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }

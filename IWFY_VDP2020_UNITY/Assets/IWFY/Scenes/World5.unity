@@ -243,9 +243,123 @@ Transform:
   - {fileID: 1699613023}
   - {fileID: 336872101}
   - {fileID: 2028975943}
+  - {fileID: 218118957}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &218118956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 218118957}
+  - component: {fileID: 218118960}
+  - component: {fileID: 218118959}
+  - component: {fileID: 218118958}
+  - component: {fileID: 218118961}
+  m_Layer: 0
+  m_Name: DialogueEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &218118957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218118956}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 135594009}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218118958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218118956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  state: 2
+  nextState: 3
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
+--- !u!114 &218118959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218118956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  findComponents: 0
+  destroyAfterTrigger: 1
+  qlock: {fileID: 218118958}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 0}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 0}
+  link: {fileID: 218118961}
+--- !u!114 &218118960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218118956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0bc7a513d890846886a37631ce762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  dialogue:
+    names:
+    - Eia
+    - Eia
+    sentences:
+    - '> You''ve reached the end of the demo. '
+    - '> If you want to leave us some feedback a link will open at the end of this
+      dialogue.'
+--- !u!114 &218118961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218118956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf4c79b16a993d40ba466e9fefe26be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  link: itch.io
 --- !u!1 &336872100
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +451,7 @@ MonoBehaviour:
   mirrorcont: {fileID: 0}
   audioSource: {fileID: 0}
   thunder: {fileID: 0}
+  link: {fileID: 0}
 --- !u!114 &336872105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,12 +871,13 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   qlock: {fileID: 2028975946}
   pickup: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 218118960}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
   mirrorcont: {fileID: 0}
   audioSource: {fileID: 0}
   thunder: {fileID: 0}
+  link: {fileID: 0}
 --- !u!114 &2028975945
 MonoBehaviour:
   m_ObjectHideFlags: 0
