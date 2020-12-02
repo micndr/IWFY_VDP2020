@@ -41,6 +41,12 @@ public class PlayerMove : MonoBehaviour {
     }
 
     void Update() {
+    
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            Application.Quit();
+        }
+        
         float inh = lockUserInput ? 0 : 1;
 
         //space to advance moved to dialogue manager, for code clarity purpose
