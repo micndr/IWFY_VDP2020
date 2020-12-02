@@ -47,6 +47,7 @@ public class GlobalState : MonoBehaviour {
                 print("restoring completed quest name " + qm.name);
                 // TODO: change quest completion
                 qm.state = qm.stateNames.Length - 1;
+                qm.completed = true;
                 qm.CheckCompletion();
             }
         }

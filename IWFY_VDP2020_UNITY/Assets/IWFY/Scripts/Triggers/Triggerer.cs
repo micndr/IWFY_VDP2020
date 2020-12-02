@@ -57,10 +57,16 @@ public class Triggerer : MonoBehaviour {
     }
 
     public void Trigger() {
-        if (_triggered) 
-        {
+        if (_triggered) {
             return;
         }
+
+        // triggers this function after triggerdelay seconds
+        if (autoTriggerDelay > 0 && !autoTrigger) {
+            autoTrigger = true;
+            autoTriggerTimer = Time.time + autoTriggerDelay;
+        }
+
         if (qlock) qlock.Advance();
         if (pickup) pickup.GetItems();
         if (dialogue) dialogue.TriggerDialogue();

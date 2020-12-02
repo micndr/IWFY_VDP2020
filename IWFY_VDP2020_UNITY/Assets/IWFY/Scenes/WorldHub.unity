@@ -1266,10 +1266,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 280966328}
+  - component: {fileID: 280966329}
   - component: {fileID: 280966332}
   - component: {fileID: 280966331}
   - component: {fileID: 280966330}
-  - component: {fileID: 280966329}
   m_Layer: 0
   m_Name: VideoFlashback1
   m_TagString: Untagged
@@ -1324,7 +1324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
-  autoTriggerDelay: 0
+  autoTriggerDelay: 1
   findComponents: 0
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
@@ -2834,7 +2834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
-  autoTriggerDelay: 0
+  autoTriggerDelay: 1
   findComponents: 0
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
@@ -3638,7 +3638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
-  autoTriggerDelay: 0
+  autoTriggerDelay: 1
   findComponents: 0
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
@@ -4205,7 +4205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
-  autoTriggerDelay: 0
+  autoTriggerDelay: 1
   findComponents: 0
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
@@ -4935,7 +4935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 0
-  autoTriggerDelay: 0
+  autoTriggerDelay: 10
   findComponents: 0
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
@@ -6859,7 +6859,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1e0b0f3bd53b142a58293ed7434b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completedQuests: []
+  completedQuests:
+  - Chasm
+  - Pixie
+  - AfterWorld1
+  - Tutorial
+  - 
   globalVolume: 0.1
 --- !u!4 &1589480158
 Transform:
@@ -8936,7 +8941,11 @@ PrefabInstance:
     - target: {fileID: 379886542, guid: ed07ffa9cddc08c4191b0e28793d4783, type: 3}
       propertyPath: video
       value: 
-      objectReference: {fileID: 280966331}
+      objectReference: {fileID: 1189960593}
+    - target: {fileID: 379886542, guid: ed07ffa9cddc08c4191b0e28793d4783, type: 3}
+      propertyPath: lockPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2021214440, guid: ed07ffa9cddc08c4191b0e28793d4783, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9875,7 +9884,7 @@ VideoPlayer:
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
 --- !u!4 &2073594223
 Transform:

@@ -34,6 +34,8 @@ public class videoController : MonoBehaviour {
         // Mute ost
         _worldAudioSource.Stop();
         isplaying = true;
+
+        print("omegalul");
     }
 
     public void Stop() {
@@ -50,7 +52,7 @@ public class videoController : MonoBehaviour {
         if (isplaying && Time.time - timer > videoLenght) {
             Stop();
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             Stop();
         }
     }

@@ -112,7 +112,9 @@ public class QuestMain : MonoBehaviour {
         if (qa.nextState >= lenght)
         {
             lenght = qa.nextState;
-            //Debug.Log(qa.nextState);
+            Debug.Log(questName + " + " + lenght);
+
+            if (completed) { state = lenght; }
         }
     }
     public void RemoveAdvancer(QuestLock qa) {
@@ -153,7 +155,6 @@ public class QuestMain : MonoBehaviour {
             completed = true;
             if (!globalState) globalState = FindObjectOfType<GlobalState>();
             if (!globalState) {
-                // REMOVE ON DEPLOY
                 Debug.LogWarning("game was not started from hub! making new globalstate instance");
                 GameObject gs = GameObject.Instantiate(new GameObject());
                 globalState = gs.AddComponent<GlobalState>();
