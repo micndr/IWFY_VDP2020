@@ -9,7 +9,7 @@ public class GlobalState : MonoBehaviour {
     public static GlobalState Instance;
 
     public List<string> completedQuests = new List<string>();
-    public float globalVolume;
+    public float globalVolume = 1;
 
     void Awake() {
         if (Instance == null) {
