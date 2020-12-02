@@ -2892,6 +2892,7 @@ GameObject:
   - component: {fileID: 468186069}
   - component: {fileID: 468186068}
   - component: {fileID: 468186071}
+  - component: {fileID: 468186072}
   m_Layer: 0
   m_Name: Seeds bag
   m_TagString: Untagged
@@ -2933,7 +2934,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   qlock: {fileID: 468186070}
-  pickup: {fileID: 0}
+  pickup: {fileID: 468186072}
   dialogue: {fileID: 255512631}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2990,6 +2991,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &468186072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468186066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bca403ef329d0744a338b9e03f79c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  pickups:
+  - {fileID: 11400000, guid: 9c06b8c02b138824e8d56040f382d0a5, type: 2}
 --- !u!1001 &493475518
 PrefabInstance:
   m_ObjectHideFlags: 0
