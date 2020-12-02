@@ -9,7 +9,9 @@ public class Triggerer : MonoBehaviour {
     float autoTriggerTimer;
     public bool findComponents = false;
     public bool destroyAfterTrigger = false;
-
+    public bool disableAfterTrigger = false; //Deactivates the trigger without destroying the whole object, enabled means it only does the first interaction
+    private bool _triggered = false;
+    
     public QuestLock qlock;
     public ItemPickup pickup;
     public DialogueTrigger dialogue;
@@ -55,6 +57,10 @@ public class Triggerer : MonoBehaviour {
     }
 
     public void Trigger() {
+        if (_triggered) 
+        {
+            return;
+        }
         if (qlock) qlock.Advance();
         if (pickup) pickup.GetItems();
         if (dialogue) dialogue.TriggerDialogue();
@@ -71,5 +77,10 @@ public class Triggerer : MonoBehaviour {
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }
+        if (disableAfterTrigger)
+        {
+            _triggered = true;
+        }
+        
     }
 }
