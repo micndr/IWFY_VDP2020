@@ -13,7 +13,8 @@ public class areaDeleteController : MonoBehaviour
    {
        if (other.CompareTag("prova"))
        {
-           GetComponent<Triggerer>().Trigger();
+           Triggerer triggerer = GetComponent<Triggerer>(); 
+           if (triggerer) triggerer.Trigger();
            Destroy(this.gameObject);
            if (casuale)
                Destroy(casuale);
