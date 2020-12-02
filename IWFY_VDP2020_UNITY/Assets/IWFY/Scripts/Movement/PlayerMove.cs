@@ -43,9 +43,7 @@ public class PlayerMove : MonoBehaviour {
     void Update() {
         float inh = lockUserInput ? 0 : 1;
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            dialogueManager.DisplayNextSentence();
-        }
+        //space to advance moved to dialogue manager, for code clarity purpose
 
         if (!freeCursor) {
             // Look rotation:
