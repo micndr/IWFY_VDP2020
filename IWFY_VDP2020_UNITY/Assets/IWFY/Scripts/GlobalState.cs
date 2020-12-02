@@ -51,7 +51,7 @@ public class GlobalState : MonoBehaviour {
             }
         }
 
-        UpdateAudioVideo();
+        //UpdateAudioVideo();
     }
 
     private void UpdateAudioVideo()
@@ -73,6 +73,6 @@ public class GlobalState : MonoBehaviour {
     public void OnVolumeChanged(float volume)
     {
         globalVolume = volume;
-        UpdateAudioVideo();
+        //UpdateAudioVideo();
     }
 }
