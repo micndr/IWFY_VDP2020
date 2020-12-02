@@ -17,6 +17,10 @@ public class videoController : MonoBehaviour {
     bool isplaying = false;
 
     private AudioSource _worldAudioSource;
+
+    public float delay = 0;
+    bool sched = false;
+    float schedtime = 0;
     
     void Start() {
         rawImage = GameObject.Find("RawImage").GetComponent<RawImage>();
@@ -27,6 +31,12 @@ public class videoController : MonoBehaviour {
 
     public void Play () {
         if (!play) { play = true; return; }
+        if (delay > 0) {
+            schedtime = Time.time + delay;
+            sched = true;
+            delay = 0;
+            return;
+        }
         videoPlayer.Play();
         timer = Time.time;
         rawImage.color = new Color(1, 1, 1, 1);
@@ -34,8 +44,6 @@ public class videoController : MonoBehaviour {
         // Mute ost
         _worldAudioSource.Stop();
         isplaying = true;
-
-        print("omegalul");
     }
 
     public void Stop() {
@@ -54,6 +62,11 @@ public class videoController : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
             Stop();
+        }
+
+        if (sched && schedtime < Time.time) {
+            Play();
+            sched = false;
         }
     }
 }

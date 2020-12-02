@@ -61,11 +61,12 @@ public class Triggerer : MonoBehaviour {
             return;
         }
 
+        /*
         // triggers this function after triggerdelay seconds
         if (autoTriggerDelay > 0 && !autoTrigger) {
             autoTrigger = true;
             autoTriggerTimer = Time.time + autoTriggerDelay;
-        }
+        }*/
 
         if (qlock) qlock.Advance();
         if (pickup) pickup.GetItems();
