@@ -33,6 +33,7 @@ public class FxThunderstorm : MonoBehaviour {
         if (globalState) { 
             audioObj.GetComponent<AudioSource>().volume = globalState.globalVolume;
         }
+        audioObj.GetComponent<AudioSource>().Play();
     }
 
     void Update() {
