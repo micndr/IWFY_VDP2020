@@ -2558,23 +2558,12 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.123
+  m_Value: 0.256
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 614879528}
         m_MethodName: OnValueChanged
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1283785075}
-        m_MethodName: onVolumeChanged
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2598,6 +2587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: {fileID: 0}
   globalState: {fileID: 0}
+  soundManager: {fileID: 0}
 --- !u!1 &630199247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,7 +4776,7 @@ GameObject:
   - component: {fileID: 1283785075}
   m_Layer: 0
   m_Name: SoundManager
-  m_TagString: Untagged
+  m_TagString: SoundManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5123,7 +5113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fb7cd6c02fcfcbc97e0b5b5f8a7a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slider: {fileID: 614879527}
   _master: {fileID: 24100000, guid: 2ed195d42ac3e0d928ea03d4abd44286, type: 2}
 --- !u!1 &1355805554
 GameObject:
