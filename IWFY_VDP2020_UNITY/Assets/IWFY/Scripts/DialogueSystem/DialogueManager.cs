@@ -127,6 +127,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(_typespeed);
         }
 
+        _isTyping = false;
         //StartCoroutine(AutoAdvance());
     }
 
