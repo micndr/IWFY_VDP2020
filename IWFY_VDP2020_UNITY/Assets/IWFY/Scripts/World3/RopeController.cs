@@ -26,7 +26,7 @@ public class RopeController : MonoBehaviour
                     animator.SetTrigger("amt");
                     for (int i = 0; i < 10; i++)
                     {
-                        this.transform.localScale = this.transform.localScale - new Vector3(0f, 3f * Time.fixedDeltaTime, 0f);
+                        this.transform.localScale = this.transform.localScale - new Vector3(0f, 6f * Time.fixedDeltaTime, 0f);
                         if (this.transform.localScale.z < 2)
                             break;
                     }

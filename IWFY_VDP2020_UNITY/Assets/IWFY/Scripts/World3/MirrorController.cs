@@ -17,6 +17,8 @@ public class MirrorController : MonoBehaviour
             if (Mathf.Approximately(this.transform.rotation.y, y_axis))
             {
                 globe.increaseMirror();
+                Destroy(this.GetComponent<BoxCollider>());
+                Destroy(this);
             }
         }
         else
