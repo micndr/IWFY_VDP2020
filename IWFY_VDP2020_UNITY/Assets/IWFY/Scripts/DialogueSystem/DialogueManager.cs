@@ -6,9 +6,10 @@ using UnityEngine.UI;
 using TMPro;
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText;
+    //public Text nameText;
     public GameObject dialogue;
     public TextMeshProUGUI dialogueTMP;
+    public TextMeshProUGUI nameTMP;
     
     public Animator animator;
     
@@ -55,6 +56,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, DialogueTrigger startpoint)
     {
+        nameTMP.text = "Eia";
         _sentence = null;
         _isTyping = false; //false at start!
         _startPointRef = startpoint;
@@ -104,7 +106,8 @@ public class DialogueManager : MonoBehaviour
         //throw exception when the name or sentence is empty
         if (_names.Count != 0)
         {
-            nameText.text = _names.Dequeue();;
+            nameTMP.text = _names.Dequeue();
+            //nameText.text = _names.Dequeue();;
         }
         
         _sentence = _sentences.Dequeue(); 
