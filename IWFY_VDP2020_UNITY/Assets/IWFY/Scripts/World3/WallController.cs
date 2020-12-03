@@ -12,7 +12,9 @@ public class WallController : MonoBehaviour
     {
         if (collider.CompareTag("ponte") && attivo)
         {
-            Destroy(toBeDesrtoyed);
+            Debug.Log("distrutta area del ponte " + this.gameObject);
+            Destroy(toBeDesrtoyed.gameObject);
+            Debug.Log("distrutta area del ponte " + this.gameObject);
         }
     }
 
@@ -20,5 +22,6 @@ public class WallController : MonoBehaviour
     {
         if (collider.CompareTag("ponte"))
             attivo = true;
+        Debug.Log("fiume bloccato, da " + this.gameObject);
     }
 }

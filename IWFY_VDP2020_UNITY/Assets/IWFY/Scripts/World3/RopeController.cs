@@ -31,7 +31,6 @@ public class RopeController : MonoBehaviour
                             break;
                     }
                     Destroy(this.gameObject);
-                    Debug.Log("oggetto distrutto");
              //   }
             }
         }
@@ -42,7 +41,9 @@ public class RopeController : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            this.transform.localScale = this.transform.localScale + new Vector3(0f, 3f * Time.fixedDeltaTime, 0f);
+            this.transform.localScale = this.transform.localScale + new Vector3(0f, 6f * Time.fixedDeltaTime, 0f);
         }
+        else
+            this.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
     }
 }
