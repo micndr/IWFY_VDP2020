@@ -128,7 +128,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         _isTyping = false;
-        //StartCoroutine(AutoAdvance());
+        StartCoroutine(AutoAdvance());
     }
 
     private IEnumerator AutoAdvance()
