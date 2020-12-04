@@ -98,7 +98,8 @@ public class QuestMain : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.N) && state < lenght) {
+        // only in the unity editor
+        if (Input.GetKeyDown(KeyCode.N) && state < lenght && Application.isEditor) {
             state++;
             CheckCompletion();
         }
@@ -112,7 +113,6 @@ public class QuestMain : MonoBehaviour {
         if (qa.nextState >= lenght)
         {
             lenght = qa.nextState;
-            Debug.Log(questName + " + " + lenght);
 
             if (completed) { state = lenght; }
         }
