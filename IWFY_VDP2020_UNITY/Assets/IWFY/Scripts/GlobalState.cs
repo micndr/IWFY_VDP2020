@@ -13,6 +13,7 @@ public class GlobalState : MonoBehaviour {
     public List<string> completedQuests = new List<string>();
     public float globalVolume = 1;
     public int graphicsLevel = 2;
+    public bool vsync = true;
 
     void Awake() {
         if (Instance == null) {
@@ -75,8 +76,7 @@ public class GlobalState : MonoBehaviour {
         }
     }
 
-    public void UpdateGraphicLevel () {
-        print(graphicsLevel);
+    public void UpdateGraphicLevel() {
         if (graphicsLevel < 2) {
             var ppvs = FindObjectsOfType<PostProcessVolume>();
             foreach (PostProcessVolume ppv in ppvs) { ppv.enabled = false; }
@@ -90,6 +90,11 @@ public class GlobalState : MonoBehaviour {
         }
     }
 
+    public void UpdateVsync() { 
+        if (vsync) { QualitySettings.vSyncCount = 1; }
+        else { QualitySettings.vSyncCount = 0; }
+    }
+
     public void OnVolumeChanged(float volume)
     {
         globalVolume = volume;
@@ -99,5 +104,10 @@ public class GlobalState : MonoBehaviour {
     public void OnGraphicsChanged (int value) {
         graphicsLevel = value;
         UpdateGraphicLevel();
+    }
+
+    public void OnVsyncChanged (bool value) {
+        vsync = value;
+        UpdateVsync();
     }
 }
