@@ -29,11 +29,13 @@ public class FxThunderstorm : MonoBehaviour {
         thunder.GenerateThunder(pos, head);
 
         GameObject audioObj = Instantiate(FxAudio, pos, Quaternion.identity);
+        AudioSource audio = audioObj.GetComponent<AudioSource>();
         Destroy(audioObj, 8);
-        if (globalState) { 
-            audioObj.GetComponent<AudioSource>().volume = globalState.globalVolume;
+        if (globalState) {
+            audio.volume = globalState.globalVolume;
         }
-        audioObj.GetComponent<AudioSource>().Play();
+        audio.pitch = Random.Range(0.5f, 1.5f);
+        audio.Play();
     }
 
     void Update() {
