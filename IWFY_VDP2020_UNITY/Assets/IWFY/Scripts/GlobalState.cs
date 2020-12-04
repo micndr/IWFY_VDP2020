@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
+using UnityEngine.Rendering.PostProcessing;
+
 
 public class GlobalState : MonoBehaviour {
     public static GlobalState Instance;
 
     public List<string> completedQuests = new List<string>();
     public float globalVolume = 1;
+    public int graphicsLevel = 2;
 
     void Awake() {
         if (Instance == null) {
@@ -53,6 +56,7 @@ public class GlobalState : MonoBehaviour {
         }
 
         UpdateAudioVideo();
+        UpdateGraphicLevel();
     }
 
     private void UpdateAudioVideo()
@@ -71,9 +75,29 @@ public class GlobalState : MonoBehaviour {
         }
     }
 
+    public void UpdateGraphicLevel () {
+        print(graphicsLevel);
+        if (graphicsLevel < 2) {
+            var ppvs = FindObjectsOfType<PostProcessVolume>();
+            foreach (PostProcessVolume ppv in ppvs) { ppv.enabled = false; }
+            var ppls = FindObjectsOfType<PostProcessLayer>();
+            foreach (PostProcessLayer ppl in ppls) { ppl.enabled = false; }
+        }
+        if (graphicsLevel < 1) {
+            QualitySettings.SetQualityLevel(0, true);
+        } else {
+            QualitySettings.SetQualityLevel(5, true);
+        }
+    }
+
     public void OnVolumeChanged(float volume)
     {
         globalVolume = volume;
         UpdateAudioVideo();
+    }
+
+    public void OnGraphicsChanged (int value) {
+        graphicsLevel = value;
+        UpdateGraphicLevel();
     }
 }
