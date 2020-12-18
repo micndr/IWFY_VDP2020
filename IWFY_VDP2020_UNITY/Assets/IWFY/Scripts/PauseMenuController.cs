@@ -10,13 +10,22 @@ public class PauseMenuController : MonoBehaviour
 
     [SerializeField] private GameObject UI;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject panelToBeOpened;
+
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if ((isPaused) && (!UI.activeSelf) && panelToBeOpened.activeSelf)
+            {
+                Debug.Log("Esc in preferences");
+                panelToBeOpened.SetActive(false);
+                UI.SetActive(true);
+            }
+
+            else if (isPaused)
             {
                 ResumeGame();
             }
@@ -35,7 +44,6 @@ public class PauseMenuController : MonoBehaviour
         Debug.Log("pausa");
         isPaused = true;
         player.GetComponent<PlayerMove>().enabled = false;
-
     }
 
     public void ResumeGame()
@@ -55,8 +63,9 @@ public class PauseMenuController : MonoBehaviour
 
     public void preferences()
     {
-        Debug.Log("metodo di apeertura delle impostazioni");
-        
+        Debug.Log("apertura modifica impostazioni");
+        this.UI.SetActive(false);
+        panelToBeOpened.SetActive(true);
     }
 
     public void QuitGame()
