@@ -4144,12 +4144,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &818559741 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3893502994152972514, guid: 04b44f27d18f39d45a02a959ac335143,
-    type: 3}
-  m_PrefabInstance: {fileID: 1575463148}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &853229549
 GameObject:
   m_ObjectHideFlags: 0
@@ -6505,6 +6499,75 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1410954065
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 80.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 72.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -131.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616783998825101454, guid: 05f31ed1b80e1a743992cebb95559d47,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerFlat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05f31ed1b80e1a743992cebb95559d47, type: 3}
 --- !u!1001 &1414654613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7534,6 +7597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893502994152972514, guid: 04b44f27d18f39d45a02a959ac335143,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3893502994152972517, guid: 04b44f27d18f39d45a02a959ac335143,
         type: 3}
@@ -10375,6 +10443,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2021214444, guid: ed07ffa9cddc08c4191b0e28793d4783, type: 3}
+      propertyPath: _newscene
+      value: WorldHub
+      objectReference: {fileID: 0}
     - target: {fileID: 248432080949904610, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: m_Layer
@@ -10439,6 +10511,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261308926063449396, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701259640116874865, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: state
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4755011621867486728, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
@@ -10565,6 +10647,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7738785642009364908, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927328176153994021, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7950682936520139182, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: m_Layer
@@ -10574,6 +10666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518977133243460714, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8657639697928877189, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
@@ -10721,7 +10818,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 818559741}
+      objectReference: {fileID: 0}
     - target: {fileID: 4078782279254169462, guid: e0c117edb403c119b97d547a8618af81,
         type: 3}
       propertyPath: m_AnchorMax.y

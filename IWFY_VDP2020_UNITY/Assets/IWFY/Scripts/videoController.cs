@@ -28,7 +28,7 @@ public class videoController : MonoBehaviour {
         rawImageBack = GameObject.Find("RawImageBack").GetComponent<Image>();
         videoPlayer = gameObject.GetComponent<VideoPlayer>();
         videoLenght = (float)(videoPlayer.clip.frameCount / videoPlayer.clip.frameRate);
-        _worldAudioSource = GameObject.Find("PlanetPrefab").GetComponent<AudioSource>();
+        _worldAudioSource = GameObject.FindGameObjectWithTag("Planet").GetComponent<AudioSource>();
     }
 
     public void Play () {

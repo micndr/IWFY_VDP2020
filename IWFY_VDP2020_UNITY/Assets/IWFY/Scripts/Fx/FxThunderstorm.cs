@@ -15,7 +15,7 @@ public class FxThunderstorm : MonoBehaviour {
     float timer;
 
     void Start() {
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         timer = Time.time;
 
         GameObject globalStateObj = GameObject.Find("GlobalState");

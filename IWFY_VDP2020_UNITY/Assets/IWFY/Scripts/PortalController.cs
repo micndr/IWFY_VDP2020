@@ -17,7 +17,7 @@ public class PortalController : MonoBehaviour
 
     public void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("prova"))
+        if (col.CompareTag("Player"))
         {
             StartCoroutine(teleport());
             

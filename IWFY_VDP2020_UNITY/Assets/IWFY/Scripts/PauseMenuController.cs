@@ -13,6 +13,10 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private GameObject panelToBeOpened;
 
 
+    private void Awake() {
+        if (!player) player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -43,7 +47,8 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 0;
         Debug.Log("pausa");
         isPaused = true;
-        player.GetComponent<PlayerMove>().enabled = false;
+        player.GetComponent<MoveFlat>().lockUserInput = true;
+        player.GetComponent<MoveFlat>().freeCursor = true;
     }
 
     public void ResumeGame()
@@ -53,7 +58,8 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
-        player.GetComponent<PlayerMove>().enabled = true;
+        player.GetComponent<MoveFlat>().lockUserInput = false;
+        player.GetComponent<MoveFlat>().freeCursor = false;
     }
 
     public void SavingGame()

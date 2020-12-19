@@ -29,9 +29,11 @@ public class Triggerer : MonoBehaviour {
     public bool lockPlayer = false;
     public bool unlockPlayer = false;
     PlayerMove playerMove;
+    MoveFlat moveFlat;
 
     void Start() {
-        playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
+        //playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
+        moveFlat = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveFlat>();
 
         if (findComponents) {
             if (!qlock) qlock = GetComponent<QuestLock>();
@@ -78,8 +80,14 @@ public class Triggerer : MonoBehaviour {
         if (thunder) thunder.Strike();
         if (link) link.Open();
         if (video) video.Play();
-        if (lockPlayer) playerMove.lockUserInput = true;
-        if (unlockPlayer) playerMove.lockUserInput = false;
+        if (lockPlayer) {
+            //playerMove.lockUserInput = true;
+            moveFlat.lockUserInput = true;
+        }
+        if (unlockPlayer) {
+            //playerMove.lockUserInput = false;
+            moveFlat.lockUserInput = false;
+        }
         if (ropeActivator) ropeActivator.activateRope();
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
