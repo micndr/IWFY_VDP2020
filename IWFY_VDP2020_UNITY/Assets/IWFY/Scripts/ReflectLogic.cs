@@ -25,11 +25,11 @@ public class ReflectLogic : MonoBehaviour {
         Ray ray = new Ray(start, heading);
         LayerMask layerMask = 1 << LayerMask.NameToLayer("pause");
         if (Physics.Raycast(ray, out hit, maxRange, ~layerMask)) {
+            Vector3 reflect = Vector3.Reflect(start.normalized, hit.normal);
+            ShootRec(hit.point, reflect);
             if (hit.transform.gameObject.tag == "Reflect") {
-                Vector3 reflect = Vector3.Reflect(start.normalized, hit.normal);
                 depth++;
                 constrRay(start, hit.point);
-                ShootRec(hit.point, reflect);
             }
             if (hit.transform.gameObject.tag == "ReflectEnd") {
                 Debug.Log("Win");
