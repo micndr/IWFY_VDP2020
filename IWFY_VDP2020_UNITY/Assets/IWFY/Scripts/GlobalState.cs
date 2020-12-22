@@ -179,4 +179,11 @@ public class GlobalState : MonoBehaviour {
         player.transform.rotation = Quaternion.Euler(bin.playerRot);
         player.cam.rotation = Quaternion.Euler(bin.playerCamRot);
     }
+
+    public void EraseSavedData () {
+        SaveBin bin = new SaveBin();
+        bin.currentLevel = "WorldHub";
+        string raw = JsonUtility.ToJson(bin);
+        File.WriteAllText(Application.persistentDataPath + "/save.json", raw);
+    }
 }
