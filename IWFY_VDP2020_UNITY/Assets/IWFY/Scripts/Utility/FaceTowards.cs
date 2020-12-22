@@ -13,7 +13,7 @@ public class FaceTowards : MonoBehaviour {
     public float rotationSpeed = 2f;
 
     void Start() {
-        if (targetIsPlayer) { target = GameObject.Find("Player").transform; }
+        if (targetIsPlayer) { target = GameObject.FindGameObjectWithTag("Player").transform; }
     }
 
     void Update() {

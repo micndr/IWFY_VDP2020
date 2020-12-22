@@ -1,11 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
-
 using UnityEngine.Rendering.PostProcessing;
 
+[SerializeField]
+public class SaveBin {
+    public List<string> missions = new List<string>();
+    public List<int> inventoryIDs = new List<int>();
+    public List<int> inventoryQuantity = new List<int>();
+
+    public Vector3 playerPos;
+    public Vector3 playerRot;
+    public Vector3 playerCamRot;
+
+    public string currentLevel;
+}
 
 public class GlobalState : MonoBehaviour {
     public static GlobalState Instance;
@@ -15,6 +27,8 @@ public class GlobalState : MonoBehaviour {
     public int graphicsLevel = 2;
     public bool vsync = true;
 
+    public ItemObject[] inventoryItems;
+
     void Awake() {
         if (Instance == null) {
             DontDestroyOnLoad(gameObject);
@@ -23,6 +37,8 @@ public class GlobalState : MonoBehaviour {
             Destroy(gameObject);
         }
         SceneManager.sceneLoaded += this.OnLoadCallback;
+
+        inventoryItems = Resources.LoadAll<ItemObject>("Items");
     }
 
     public void AddQuest (QuestMain qm) {
@@ -109,5 +125,58 @@ public class GlobalState : MonoBehaviour {
     public void OnVsyncChanged (bool value) {
         vsync = value;
         UpdateVsync();
+    }
+
+    public SaveBin GetBin() {
+        InventoryManager inventory = FindObjectOfType<InventoryManager>();
+        SaveBin bin = new SaveBin();
+        bin.currentLevel = SceneManager.GetActiveScene().name;
+        bin.missions.AddRange(completedQuests);
+        foreach (InventorySlot item in inventory.inventory.itemList) {
+            bin.inventoryIDs.Add(item.itemID);
+            bin.inventoryQuantity.Add(item.amount);
+        }
+
+        MoveFlat player = FindObjectOfType<MoveFlat>();
+        bin.playerPos = player.transform.position;
+        bin.playerRot = player.transform.rotation.eulerAngles;
+        bin.playerCamRot = player.cam.rotation.eulerAngles;
+        return bin;
+    }
+
+    public void Save () {
+        SaveBin bin = GetBin();
+        string raw = JsonUtility.ToJson(bin);
+        File.WriteAllText(Application.persistentDataPath + "/save.json", raw);
+    }
+
+    public void Load () {
+        string raw = File.ReadAllText(Application.persistentDataPath + "/save.json");
+        SaveBin bin = JsonUtility.FromJson<SaveBin>(raw);
+        ApplyBin(bin);
+    }
+
+    public void ApplyBin (SaveBin bin) {
+        SceneManager.LoadScene(bin.currentLevel);
+        completedQuests.Clear();
+        completedQuests.AddRange(bin.missions);
+        InventoryManager inventory = FindObjectOfType<InventoryManager>();
+        for (int i=0; i<bin.inventoryIDs.Count; i++) {
+            ItemObject found = null;
+            foreach (ItemObject item in inventoryItems) {
+                if (item.itemID == bin.inventoryIDs[i]) { 
+                    found = item; break; 
+                }
+            }
+            if (found) {
+                inventory.inventory.AddItem(found, bin.inventoryQuantity[i], bin.inventoryIDs[i]);
+            } else {
+                Debug.LogWarning("While loading, item id " + bin.inventoryIDs[i] + " was not found.");
+            }
+        }
+        MoveFlat player = FindObjectOfType<MoveFlat>();
+        player.transform.position = bin.playerPos;
+        player.transform.rotation = Quaternion.Euler(bin.playerRot);
+        player.cam.rotation = Quaternion.Euler(bin.playerCamRot);
     }
 }

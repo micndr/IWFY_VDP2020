@@ -17,11 +17,13 @@ public class MoveFlat : MonoBehaviour {
     public bool lockUserInput = false;
     public bool freeCursor = false;
 
+    public Transform cam;
+
     void Start() {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        cameraTransform = Camera.main.transform;
+        cam = Camera.main.transform;
     }
 
     void Update() {
@@ -31,7 +33,7 @@ public class MoveFlat : MonoBehaviour {
             transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivityX * inh);
             verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY * inh;
             verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90, 90);
-            cameraTransform.localEulerAngles = Vector3.left * verticalLookRotation;
+            cam.localEulerAngles = Vector3.left * verticalLookRotation;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         } else {
@@ -44,6 +46,19 @@ public class MoveFlat : MonoBehaviour {
         if (acc.magnitude > 1) acc.Normalize();
 
         if (characterController.isGrounded) velocity = Vector3.zero;
+
+        if (Application.isEditor) {
+            if (Input.GetKeyDown(KeyCode.H)) {
+                Debug.Log(Application.persistentDataPath);
+                GlobalState globalState = FindObjectOfType<GlobalState>();
+                globalState.Save();
+            }
+
+            if (Input.GetKeyDown(KeyCode.K)) {
+                GlobalState globalState = FindObjectOfType<GlobalState>();
+                globalState.Load();
+            }
+        }
     }
 
     void FixedUpdate() {

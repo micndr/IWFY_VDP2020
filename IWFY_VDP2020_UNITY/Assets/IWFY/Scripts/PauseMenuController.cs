@@ -65,6 +65,8 @@ public class PauseMenuController : MonoBehaviour
     public void SavingGame()
     {
         Debug.Log("metodo di salvataggio delle partite");
+        GlobalState globalState = FindObjectOfType<GlobalState>();
+        globalState.Save();
     }
 
     public void preferences()
