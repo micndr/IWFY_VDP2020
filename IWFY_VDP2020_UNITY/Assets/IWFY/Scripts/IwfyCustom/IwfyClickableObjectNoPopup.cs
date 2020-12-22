@@ -20,6 +20,9 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
     public virtual void OnPointerEnter()
     {
         _reticlePointer.SendMessage("Animate");
+        //Debug.Log("Mouse enter");
+        if (GetComponent<Outline>() != null)
+            GetComponent<Outline>().enabled = true;
 
     }
     public virtual void OnPointerClick() {
@@ -33,6 +36,9 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
     public virtual void OnPointerExit()
     {
         _reticlePointer.SendMessage("OnClickableObjectExit");
+        //Debug.Log("Mouse exit");
+        if (GetComponent<Outline>() != null)
+            GetComponent<Outline>().enabled = false;
     }
 
     public GameObject getReticlePointer()
