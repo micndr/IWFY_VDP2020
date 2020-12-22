@@ -6,7 +6,7 @@ public class TriggerVolume : MonoBehaviour {
     public Triggerer triggerer;
 
     public void OnTriggerEnter(Collider other) {
-        if (other.name == "Player") {
+        if (other.tag == "Player") {
             triggerer.Trigger();
         }
     }

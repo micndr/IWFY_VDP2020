@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveFlat : MonoBehaviour {
 
-    CharacterController characterController;
+    public CharacterController characterController;
     Transform cameraTransform;
     Vector3 acc;
     public Vector3 velocity;
@@ -19,7 +19,7 @@ public class MoveFlat : MonoBehaviour {
 
     public Transform cam;
 
-    void Start() {
+    void Awake() {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
