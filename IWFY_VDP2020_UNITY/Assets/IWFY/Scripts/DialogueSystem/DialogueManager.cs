@@ -89,7 +89,7 @@ public class DialogueManager : MonoBehaviour
             StopAllCoroutines();
             dialogueTMP.text = _sentence;
             StartCoroutine(AutoAdvance());
-            Debug.Log("I'm waiting");
+            //Debug.Log("I'm waiting");
             return;
         }
         

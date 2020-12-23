@@ -23,6 +23,7 @@ public class IwfyCameraPointer : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
+            //Debug.Log(_gazedAtObject);
             // GameObject detected in front of the camera.
             if (_gazedAtObject != hit.collider.transform.gameObject)
             {
