@@ -24,11 +24,13 @@ public class BirdGameMain : MonoBehaviour {
     public AudioClip successClip; /* the success clip */
 
     public AudioMixer mixer;
-
+    public float fadeinSpeed = 2;
 
     AudioSource audioSource;
     Text debugText;
     float playingTimer;
+    float smoothvol = 1;
+    float smoothvoltarget = 1;
 
     public void GiveSeed () {
         if (selseed == -1) {
@@ -42,6 +44,7 @@ public class BirdGameMain : MonoBehaviour {
             // the sequence is complete, check if it's correct
             if (CheckCorrectSeq()) {
                 SuccessFeedback(-1);
+                seqcurrent.Clear();
             } else {
                 FailFeedback();
                 seqcurrent.Clear();
@@ -124,12 +127,15 @@ public class BirdGameMain : MonoBehaviour {
         } else { hudseed.SetActive(true); }
 
         if (playingTimer > Time.time) {
-            mixer.SetFloat("BirdVol", 0);
-            mixer.SetFloat("Not BirdVol", -80);
+            mixer.SetFloat("BirdVolume", 0);
+            smoothvoltarget = 0.01f;
         } else {
-            mixer.SetFloat("BirdVol", -80);
-            mixer.SetFloat("Not BirdVol", 0);
+            mixer.SetFloat("BirdVolume", -80);
+            smoothvoltarget = 1;
         }
+
+        smoothvol += (smoothvoltarget - smoothvol) * fadeinSpeed / 100f;
+        mixer.SetFloat("NotBirdVolume", Mathf.Log10(smoothvol) * 20);
     }
 
 }
