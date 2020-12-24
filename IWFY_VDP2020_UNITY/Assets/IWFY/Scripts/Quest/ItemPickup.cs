@@ -11,6 +11,7 @@ public class ItemPickup : MonoBehaviour {
         main = GameObject.Find("QuestMain").GetComponent<QuestMain>();
     }
 
+    // called by a triggerer, it add to the inventory every item in pickups.
     public void GetItems () {
         foreach (ItemObject item in pickups) {
             main.inventory.AddItem(item, 1, item.itemID, item.itemName);

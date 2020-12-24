@@ -3,6 +3,9 @@ using System.Collections;
 
 // Sebastian Lague https://github.com/SebLague/Spherical-Gravity
 
+// THIS COMPONENT IS OBSOLETE
+// as the earth is flat now
+
 [RequireComponent(typeof(GravityBody))]
 public class PlayerMove : MonoBehaviour {
 

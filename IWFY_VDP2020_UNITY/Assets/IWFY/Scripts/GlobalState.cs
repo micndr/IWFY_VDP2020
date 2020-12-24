@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using UnityEngine.Rendering.PostProcessing;
 
+// what is saved is thrown in here
 [SerializeField]
 public class SaveBin {
     public List<string> quests = new List<string>();
@@ -19,6 +20,7 @@ public class SaveBin {
     public string currentLevel;
 }
 
+// quest and setting synchronizer, saves/loads too
 public class GlobalState : MonoBehaviour {
     public static GlobalState Instance;
 
@@ -33,6 +35,7 @@ public class GlobalState : MonoBehaviour {
     SaveBin loadbin;
 
     void Awake() {
+        // monolithic pattern
         if (Instance == null) {
             DontDestroyOnLoad(gameObject);
             Instance = this;
@@ -41,17 +44,20 @@ public class GlobalState : MonoBehaviour {
         }
         SceneManager.sceneLoaded += this.OnLoadCallback;
 
+        // get a list of items, to reconstruct the inventory on load.
         inventoryItems = Resources.LoadAll<ItemObject>("Items");
     }
 
     public void AddQuest(QuestMain qm) {
+        // called by QuestMain when it's completed
         if (!completedQuests.Contains(qm.questName)) {
-            print("added completed quest name " + qm.name);
+            //print("added completed quest name " + qm.name);
             completedQuests.Add(qm.questName);
         }
     }
 
     public void SpawnpointPlayer() {
+        // move the player to spawnpoint (does not do it until tutorial is completed)
         if (SceneManager.GetActiveScene().name == "WorldHub") {
             if (completedQuests.Contains("Tutorial")) {
                 Transform player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -69,6 +75,8 @@ public class GlobalState : MonoBehaviour {
             loadbin = null;
             SpawnpointPlayer();
         }
+
+        // set the completed quests to their last state
         var qms = FindObjectsOfType<QuestMain>();
         foreach (QuestMain qm in qms) {
             if (completedQuests.Contains(qm.questName)) {
@@ -80,19 +88,24 @@ public class GlobalState : MonoBehaviour {
             }
         }
 
+        // save current inventory to a local list
         BackupInventory();
 
+        // synchronize settings
         UpdateAudioVideo();
         UpdateGraphicLevel();
     }
 
     private void BackupInventory() {
         InventoryManager inventory = FindObjectOfType<InventoryManager>();
-        inventoryBackup.Clear();
-        inventoryBackup.AddRange(inventory.inventory.itemList);
+        if (inventory) {
+            inventoryBackup.Clear();
+            inventoryBackup.AddRange(inventory.inventory.itemList);
+        }
     }
 
     private void UpdateAudioVideo() {
+        // find all audio and video components and change the volume
         AudioSource[] audios = FindObjectsOfType<AudioSource>();
         VideoPlayer[] videos = FindObjectsOfType<VideoPlayer>();
 
@@ -119,6 +132,7 @@ public class GlobalState : MonoBehaviour {
         }
     }
 
+    #region calledByUI
     public void UpdateVsync() {
         if (vsync) { QualitySettings.vSyncCount = 1; } else { QualitySettings.vSyncCount = 0; }
     }
@@ -137,8 +151,11 @@ public class GlobalState : MonoBehaviour {
         vsync = value;
         UpdateVsync();
     }
+    #endregion
 
+    #region saveload
     public SaveBin GetBin() {
+        // fetch data and put it in a bin
         SaveBin bin = new SaveBin();
         bin.currentLevel = SceneManager.GetActiveScene().name;
         bin.quests.AddRange(completedQuests);
@@ -167,6 +184,7 @@ public class GlobalState : MonoBehaviour {
         SaveBin bin = JsonUtility.FromJson<SaveBin>(raw);
         loadbin = bin;
         SceneManager.LoadScene(bin.currentLevel);
+        // the loading logic (ApplyBin) is called from the load callback.
     }
 
     public void ApplyBin(SaveBin bin) {
@@ -188,9 +206,11 @@ public class GlobalState : MonoBehaviour {
             }
         }
         MoveFlat player = FindObjectOfType<MoveFlat>();
+        // hack to teleport the player
         player.characterController.enabled = false;
         player.transform.position = bin.playerPos;
         player.characterController.enabled = true;
+
         player.transform.rotation = Quaternion.Euler(bin.playerRot);
         player.cam.rotation = Quaternion.Euler(bin.playerCamRot);
     }
@@ -201,4 +221,5 @@ public class GlobalState : MonoBehaviour {
         string raw = JsonUtility.ToJson(bin);
         File.WriteAllText(Application.persistentDataPath + "/save.json", raw);
     }
+    #endregion
 }

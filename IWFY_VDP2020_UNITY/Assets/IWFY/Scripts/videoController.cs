@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
+// renders on rawimage the video
 public class videoController : MonoBehaviour {
 
     private Image rawImageBack;
