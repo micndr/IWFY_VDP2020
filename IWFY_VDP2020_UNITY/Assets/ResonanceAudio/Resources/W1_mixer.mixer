@@ -16,7 +16,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 6535034978522105740}
   - {fileID: 7020690096656927951}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 6
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -36,7 +36,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: -6245049358224589432}
   - {fileID: -3886884349707095898}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 6
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -59,7 +59,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: -430144396028908839}
   - {fileID: -3132664463970762577}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 6
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -168,6 +168,8 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: ec50f7ab4a0c6014cb4ddd16c996d086
+    name: MyExposedParam 1
   - guid: f0c41783fc7e74a42affc204e3da5fef
     name: MyExposedParam
   m_AudioMixerGroupViews:
@@ -227,7 +229,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 57dc44b271cedbb9d872f7c739851e00
   m_FloatValues:
     23f9a182ae36c203fa9db69ce4c07e27: 0.13552584
-    f0c41783fc7e74a42affc204e3da5fef: -80
+    f0c41783fc7e74a42affc204e3da5fef: -0.002441872
     3bda7f06047e0414aa228565547bbcf6: -2.2889833
     53e9447ae9bed9687b1bf1d9dbfe2eff: -0.02577656
     abf6da5deb63a4f619ed8eb479fecf93: -3.8468614
@@ -262,7 +264,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 9114857470125807577}
   - {fileID: 407225072236589877}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 6
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
