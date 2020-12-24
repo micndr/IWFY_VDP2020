@@ -7,7 +7,6 @@ public class FlowerController : IwfyClickableObjectNoPopup
     // Position of the current flower: [row, column]
     [SerializeField] private int[] _pos;
     [SerializeField] private Animator _animator;
-    [SerializeField] private AudioSource _audio;
 
     // UP -> Towards the well
     // DOWN -> Away from the well
@@ -29,10 +28,12 @@ public class FlowerController : IwfyClickableObjectNoPopup
     private Renderer graphicRenderer0;
     private Renderer graphicRenderer1;
     public GameObject fxFlashPrefab;
+    private GameObject _audioManager;
     public override void Start()
     {
         base.Start();
         _controllerFlower = GameObject.FindGameObjectWithTag("LightsOutController");
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager");
         graphicRenderer0 = transform.Find("pPipe19").GetComponent<Renderer>();
         graphicRenderer1 = transform.Find("pCylinder3").GetComponent<Renderer>();
     }
@@ -63,7 +64,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
         if (_flowerRight) FxFlash(_flowerRight.transform);
         if (_flowerLeft) FxFlash(_flowerLeft.transform);
 
-        // Notify the controller to update the state
+        // Notify the controller to update the state 
         _controllerFlower?.SendMessage("OnFlowerClick");
     }
 
@@ -86,7 +87,7 @@ public class FlowerController : IwfyClickableObjectNoPopup
         if(_animator) _animator?.SetBool("isOn", isOn);
         
         // Play sound
-        if (isOn) if (_audio) _audio.Play();
+        if (isOn) _audioManager.SendMessage("PlayFlowerOn");
 
         // Update LightsOutController
         object[] state = {_pos, isOn};

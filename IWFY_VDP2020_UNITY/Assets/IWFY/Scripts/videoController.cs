@@ -29,7 +29,6 @@ public class videoController : MonoBehaviour {
         rawImageBack = GameObject.Find("RawImageBack").GetComponent<Image>();
         videoPlayer = gameObject.GetComponent<VideoPlayer>();
         videoLenght = (float)(videoPlayer.clip.frameCount / videoPlayer.clip.frameRate);
-        _worldAudioSource = GameObject.FindGameObjectWithTag("Planet").GetComponent<AudioSource>();
     }
 
     public void Play () {
@@ -45,8 +44,6 @@ public class videoController : MonoBehaviour {
         rawImage.color = new Color(1, 1, 1, 1);
         rawImageBack.color = new Color(0, 0, 0, 1);
         
-        // Mute ost
-        _worldAudioSource.Stop();
         isplaying = true;
     }
 
@@ -55,9 +52,6 @@ public class videoController : MonoBehaviour {
         triggerer.Trigger();
         rawImage.color = new Color(1, 1, 1, 0);
         rawImageBack.color = new Color(0, 0, 0, 0);
-
-        // Restart ost
-        if (isplaying) _worldAudioSource.Play();
     }
 
     private void Update() {

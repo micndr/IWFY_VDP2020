@@ -92,7 +92,7 @@ public class GlobalState : MonoBehaviour {
         BackupInventory();
 
         // synchronize settings
-        UpdateAudioVideo();
+        //UpdateAudioVideo();
         UpdateGraphicLevel();
     }
 
@@ -104,6 +104,7 @@ public class GlobalState : MonoBehaviour {
         }
     }
 
+    // DEPRECATED, SHOULD NOT BE USED
     private void UpdateAudioVideo() {
         // find all audio and video components and change the volume
         AudioSource[] audios = FindObjectsOfType<AudioSource>();
@@ -139,7 +140,7 @@ public class GlobalState : MonoBehaviour {
 
     public void OnVolumeChanged(float volume) {
         globalVolume = volume;
-        UpdateAudioVideo();
+        //UpdateAudioVideo();
     }
 
     public void OnGraphicsChanged(int value) {
