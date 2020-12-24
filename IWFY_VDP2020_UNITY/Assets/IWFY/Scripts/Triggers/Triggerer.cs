@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Triggerer : MonoBehaviour {
 
     public bool autoTrigger = false;
     public float autoTriggerDelay;
     float autoTriggerTimer;
-    public bool findComponents = false;
     public bool destroyAfterTrigger = false;
     public bool disableAfterTrigger = false; //Deactivates the trigger without destroying the whole object, enabled means it only does the first interaction
     private bool _triggered = false;
-    
+
+    public bool findComponents = false;
     public QuestLock qlock;
     public ItemPickup pickup;
     public DialogueTrigger dialogue;
