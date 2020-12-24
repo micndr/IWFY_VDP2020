@@ -19,13 +19,30 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
 
     public virtual void OnPointerEnter()
     {
-        _reticlePointer.SendMessage("Animate");
+        if(_reticlePointer != null)
+            _reticlePointer.SendMessage("Animate");
         //Debug.Log("Mouse enter");
         if (GetComponent<Outline>() != null)
+        {
+            //Debug.Log("Component activated");
             GetComponent<Outline>().enabled = true;
+        }
+    }      
 
+    public virtual void OnPointerExit()
+    {
+        if(_reticlePointer != null)
+            _reticlePointer.SendMessage("OnClickableObjectExit");
+        //Debug.Log("Mouse exit");
+        if (GetComponent<Outline>() != null)
+        {
+            //Debug.Log("Component disabled");
+            GetComponent<Outline>().enabled = false;
+        }
     }
-    public virtual void OnPointerClick() {
+
+    public virtual void OnPointerClick() 
+    {
         // Jacopo -> ho messo anche qua l'attivazione dei trigger. Se si vuole si può spostare
         Triggerer triggerer = GetComponent<Triggerer>();
         if (triggerer) triggerer.Trigger();
@@ -33,13 +50,6 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
     }
 
 
-    public virtual void OnPointerExit()
-    {
-        _reticlePointer.SendMessage("OnClickableObjectExit");
-        //Debug.Log("Mouse exit");
-        if (GetComponent<Outline>() != null)
-            GetComponent<Outline>().enabled = false;
-    }
 
     public GameObject getReticlePointer()
     {

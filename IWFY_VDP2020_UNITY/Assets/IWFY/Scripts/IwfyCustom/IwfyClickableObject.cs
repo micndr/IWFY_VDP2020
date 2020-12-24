@@ -43,7 +43,7 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
         base.getReticlePointer().SendMessage("OnClickableObjectEnter", id);
         
         foreach (Transform child in transform)
-            DestroyImmediate(child.gameObject);
+            if (child.CompareTag("Popup")) DestroyImmediate(child.gameObject);
 
         if (transform.childCount == 0)
         {
@@ -51,6 +51,7 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
         }
         
         _popupPrefabInstance = Instantiate(_popupPrefab, transform);
+        _popupPrefabInstance.tag = "Popup";
         _popupPrefabInstance.GetComponent<PopupLogic>().SetMessage(_popupMessage);
         _popupPrefabInstance.GetComponent<PopupLogic>().SetBackgroundColor(_popupBackgroundColor);
         
