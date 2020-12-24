@@ -69,6 +69,16 @@ public class AudioManager : MonoBehaviour
         ui[index].Play();
     }
 
+    public void PlayOST(int index)
+    {
+        ost[index].Play();
+    }
+
+    public void PlayAmbient(int index)
+    {
+        ambient[index].Play();
+    }
+
     public void PlayFlowerOn()
     {
         ambient[0].Play();
