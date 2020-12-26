@@ -29,7 +29,10 @@ public class IwfyCameraPointer : MonoBehaviour
             {
                 // New GameObject.
                 if (_gazedAtObject) _gazedAtObject?.SendMessage("OnPointerExit", SendMessageOptions.DontRequireReceiver);
-                _gazedAtObject = hit.collider.transform.gameObject;
+                {
+                    _gazedAtObject = hit.collider.transform.gameObject;
+                    //Debug.Log(_gazedAtObject);
+                }
                 _gazedAtObject?.SendMessage("OnPointerEnter", SendMessageOptions.DontRequireReceiver);
             }
         }

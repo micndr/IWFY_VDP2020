@@ -27,6 +27,11 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
             //Debug.Log("Component activated");
             GetComponent<Outline>().enabled = true;
         }
+
+        if (this.transform.parent.gameObject.GetComponent<Outline>() != null)
+        {
+            this.transform.parent.gameObject.GetComponent<Outline>().enabled = true;
+        }
     }      
 
     public virtual void OnPointerExit()
@@ -39,14 +44,33 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
             //Debug.Log("Component disabled");
             GetComponent<Outline>().enabled = false;
         }
+        
+        if ( this.transform.parent.gameObject.GetComponent<Outline>() != null)
+        {
+            this.transform.parent.gameObject.GetComponent<Outline>().enabled = false;
+        }
     }
 
     public virtual void OnPointerClick() 
     {
         // Jacopo -> ho messo anche qua l'attivazione dei trigger. Se si vuole si può spostare
         Triggerer triggerer = GetComponent<Triggerer>();
-        if (triggerer) triggerer.Trigger();
-        _reticlePointer.SendMessage("OnClickableObjectExit");
+        if (triggerer)
+        {
+            triggerer.Trigger();
+            
+            _reticlePointer.SendMessage("OnClickableObjectExit");
+            return;
+        }
+
+        if (transform.parent.gameObject.GetComponent<Triggerer>() != null)
+        {
+            triggerer = transform.parent.gameObject.GetComponent<Triggerer>();
+            if(triggerer) triggerer.Trigger();
+            
+            _reticlePointer.SendMessage("OnClickableObjectExit");
+            return;
+        }
     }
 
 

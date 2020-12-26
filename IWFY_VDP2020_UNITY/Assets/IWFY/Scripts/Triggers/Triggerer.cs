@@ -96,6 +96,22 @@ public class Triggerer : MonoBehaviour {
         if (disableAfterTrigger)
         {
             _triggered = true;
+            /*if (GetComponent<IwfyClickableObjectNoPopup>() != null)
+            {
+                GetComponent<IwfyClickableObjectNoPopup>().enabled = false;
+            }*/
+            
+            if (GetComponent<Outline>() != null)
+            {
+                Destroy(GetComponent<Outline>()); 
+            }
+
+            IwfyClickableObjectNoPopup[] allChildrenandSelf = GetComponentsInChildren<IwfyClickableObjectNoPopup>();
+            foreach (IwfyClickableObjectNoPopup child in allChildrenandSelf)
+            {
+                Destroy(child);
+            }
+            
         }
         
     }

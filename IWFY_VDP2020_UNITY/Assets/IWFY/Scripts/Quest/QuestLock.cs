@@ -28,6 +28,7 @@ public class QuestLock : MonoBehaviour {
 
     public void Advance () {
         // called by triggerer, assigns globalstate to this.nextstate
+        
         main.NextState(this);
     }
 
