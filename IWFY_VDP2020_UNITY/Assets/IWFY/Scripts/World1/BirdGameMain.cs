@@ -14,6 +14,7 @@ public class BirdGameMain : MonoBehaviour {
 
     int selseed;
     GameObject hudseed; /* seed in the player's hand */
+    public MeshRenderer hudseedmat; /* seed in the player's hand */
 
     public List<int> seq = new List<int>(); // the correct sequence
     List<int> seqcurrent = new List<int>(); // the inputted seq.
@@ -104,7 +105,7 @@ public class BirdGameMain : MonoBehaviour {
 
     public void PickupSeed (BirdGameSeedbag sb) {
         selseed = sb.seedtype;
-        hudseed.GetComponent<MeshRenderer>().material = sb.mat;
+        hudseedmat.material = sb.mat;
     }
 
     void Awake() {
