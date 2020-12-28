@@ -20,16 +20,18 @@ public class ReflectLogic : MonoBehaviour {
     }
 
     public void ShootRec (Vector3 start, Vector3 heading) {
+        // recursive function, main loop of shoot
         if (depth > maxDepth) { return; }
         RaycastHit hit;
         Ray ray = new Ray(start, heading);
-        LayerMask layerMask = 1 << LayerMask.NameToLayer("pause");
-        if (Physics.Raycast(ray, out hit, maxRange, ~layerMask)) {
-            Vector3 reflect = Vector3.Reflect(start.normalized, hit.normal);
-            ShootRec(hit.point, reflect);
+        //LayerMask layerMask = 1 << LayerMask.NameToLayer("IgnoreRaycast");
+        LayerMask layerMask = LayerMask.GetMask("IgnoreRaycast");
+        if (Physics.Raycast(ray, out hit, maxRange)) {
+            Vector3 reflect = Vector3.Reflect((hit.point-start).normalized, hit.normal);
+            depth++;
+            constrRay(start, hit.point);
             if (hit.transform.gameObject.tag == "Reflect") {
-                depth++;
-                constrRay(start, hit.point);
+                ShootRec(hit.point, reflect);
             }
             if (hit.transform.gameObject.tag == "ReflectEnd") {
                 Debug.Log("Win");
@@ -43,6 +45,7 @@ public class ReflectLogic : MonoBehaviour {
     }
 
     public void constrRay (Vector3 p0, Vector3 p1) {
+        // construct ray
         GameObject obj = Instantiate(ReflectRayPrefab, Vector3.zero, Quaternion.identity);
         obj.transform.parent = transform;
         LineRenderer line = obj.GetComponent<LineRenderer>();
