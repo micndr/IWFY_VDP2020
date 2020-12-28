@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MirrorController : MonoBehaviour
 {
     private bool active = false;
+    private float velocity;
+    private Vector3 currentAngles;
+    private Vector3 toBeAngles;
     [SerializeField] private float y_axis;
     [SerializeField] private GlobalWorld3 globe;
     
@@ -27,6 +31,16 @@ public class MirrorController : MonoBehaviour
             globe.increaseMirror();
         }
     }
+
+    // private void Update()
+    // {
+    //     if (Input.GetKey("R") && Input.GetKey(KeyCode.Mouse1))
+    //     {
+    //         currentAngles = this.transform.eulerAngles;
+    //         toBeAngles = currentAngles + new Vector3(1, 1, 1) * Time.deltaTime * velocity;
+    //         transform.eulerAngles = toBeAngles;
+    //     }
+    // }
 
     /*private void CheckAngles(float angle)
     {
