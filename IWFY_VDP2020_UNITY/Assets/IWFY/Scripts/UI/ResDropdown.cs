@@ -9,6 +9,7 @@ public class ResDropdown : MonoBehaviour {
     List<Resolution> ress = new List<Resolution>();
 
     void Awake() {
+        // filter to 16:9
         foreach (Resolution res in Screen.resolutions) {
             if (res.width >= 800) {
                 ress.Add(res);
