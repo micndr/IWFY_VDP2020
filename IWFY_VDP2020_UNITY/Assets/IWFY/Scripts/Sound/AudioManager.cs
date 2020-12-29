@@ -50,6 +50,7 @@ public class AudioManager : MonoBehaviour
     {
         if (_globalState) mixer.SetFloat("MasterVolume", _globalState.globalVolume);
 
+        if (video.Length == 0) return; // Jacopo: just to get rid of the error
         if (video[0].isPlaying) snapshot[1].TransitionTo(.1f);
         else
         {

@@ -7,6 +7,8 @@ public class AnimController : MonoBehaviour {
     public List<Animation> anims = new List<Animation>();
     public float animTimer;
     public int current;
+    public int oneshot = -1;
+    public bool useoneshot = false;
 
     void Start() {
         anims[current].Play();
@@ -14,16 +16,9 @@ public class AnimController : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.T)) {
-            SetAnim(0);
-            animTimer = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.Y)) {
-            SetAnim(1);
-            animTimer = 0;
-        }
-
         if (animTimer < Time.time) {
+            if (useoneshot) { useoneshot = false; } 
+            else if (oneshot != -1) { current = oneshot; oneshot = -1; }
             anims[current].Play();
             animTimer = Time.time + anims[current].clip.length;
         }
@@ -39,5 +34,12 @@ public class AnimController : MonoBehaviour {
 
     public void SetAnim (int anim) {
         current = anim;
+    }
+
+    public void OneShot (int anim) {
+        oneshot = current;
+        current = anim;
+        animTimer = 0;
+        useoneshot = true;
     }
 }

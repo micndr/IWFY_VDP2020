@@ -28,13 +28,12 @@ public class ReflectLogic : MonoBehaviour {
         LayerMask layerMask = LayerMask.GetMask("IgnoreRaycast");
         if (Physics.Raycast(ray, out hit, maxRange)) {
             Vector3 reflect = Vector3.Reflect((hit.point-start).normalized, hit.normal);
-            depth++;
+            depth++; // keep track of depth of recursion
             constrRay(start, hit.point);
             if (hit.transform.gameObject.tag == "Reflect") {
                 ShootRec(hit.point, reflect);
             }
             if (hit.transform.gameObject.tag == "ReflectEnd") {
-                Debug.Log("Win");
                 Triggerer trigger = hit.transform.gameObject.GetComponent<Triggerer>();
                 if (trigger) trigger.Trigger();
             }
