@@ -27,13 +27,36 @@ public class BirdGameMain : MonoBehaviour {
     public AudioMixer mixer;
     public float fadeinSpeed = 2;
 
+    public AnimController birbAnim;
+    public Animator birbgothere;
+
     AudioSource audioSource;
     Text debugText;
     float playingTimer;
     float smoothvol = 1;
     float smoothvoltarget = 1;
 
+    bool completed = false;
+
+    void Awake() {
+        // init and cache
+        selseed = -1;
+        hudseed = GameObject.Find("BirdGameHudSeed");
+        audioSource = GetComponent<AudioSource>();
+        if (!Application.isEditor) {
+            GameObject.Find("BirdCanvas").SetActive(false);
+        } else {
+            debugText = GameObject.Find("BirdCanvas").transform.Find("BirdText").GetComponent<Text>();
+        }
+        playingTimer = 0;
+
+        birbgothere = GameObject.Find("BirbGoThere").GetComponent<Animator>();
+        birbAnim = GameObject.Find("BirbAnim").GetComponent<AnimController>();
+    }
+
+
     public void GiveSeed () {
+        if (completed) return;
         if (selseed == -1) {
             FailFeedback();
             return;
@@ -73,7 +96,9 @@ public class BirdGameMain : MonoBehaviour {
 
     public void SuccessFeedback(int part) {
         if (part == -1) {
-            Debug.Log("you win");
+            Destroy(GameObject.Find("Kite").gameObject, 5.5f);
+            birbgothere.SetTrigger("getkite");
+            completed = true;
             PlayClip(successClip);
             return;
         }
@@ -81,11 +106,15 @@ public class BirdGameMain : MonoBehaviour {
         if (part == 2) Debug.Log("ba");
         if (part == 3) Debug.Log("baba");
         PlayClip(seqAudio[part - 1]);
+
+        birbAnim.OneShot(4);
     }
 
     public void FailFeedback () {
         PlayClip(wholeClip);
         Debug.Log("bababa ba baba bird");
+
+        birbAnim.OneShot(2);
     }
 
     public bool CheckCorrectSeq () {
@@ -108,35 +137,23 @@ public class BirdGameMain : MonoBehaviour {
         hudseedmat.material = sb.mat;
     }
 
-    void Awake() {
-        // init and cache
-        selseed = -1;
-        hudseed = GameObject.Find("BirdGameHudSeed");
-        audioSource = GetComponent<AudioSource>();
-        if (!Application.isEditor) {
-            GameObject.Find("BirdCanvas").SetActive(false);
-        } else {
-            debugText = GameObject.Find("BirdCanvas").transform.Find("BirdText").GetComponent<Text>();
-        }
-        playingTimer = 0;
-    }
-
     void Update() {
         // deactivate hudseed if no seed is selected
         if (selseed == -1) {
             hudseed.SetActive(false);
         } else { hudseed.SetActive(true); }
 
+        /*
         if (playingTimer > Time.time) {
-            mixer.SetFloat("BirdVolume", 0);
+            mixer.SetFloat("UIVolume", 0);
             smoothvoltarget = 0.01f;
         } else {
-            mixer.SetFloat("BirdVolume", -80);
+            mixer.SetFloat("OSTVolume", -80);
             smoothvoltarget = 1;
         }
 
         smoothvol += (smoothvoltarget - smoothvol) * fadeinSpeed / 100f;
-        mixer.SetFloat("NotBirdVolume", Mathf.Log10(smoothvol) * 20);
+        mixer.SetFloat("NotBirdVolume", Mathf.Log10(smoothvol) * 20);*/
     }
 
 }
