@@ -16,19 +16,19 @@ public class MirrorController : MonoBehaviour
     {
         if (this.transform.rotation.y != y_axis)
         {
-            this.transform.Rotate(0, 90, 0);
+            this.transform.Rotate(0, 15, 0);
             //CheckAngles(this.transform.rotation.y);
-            if (Mathf.Approximately(this.transform.rotation.y, y_axis))
-            {
-                globe.increaseMirror();
-                Destroy(this.GetComponent<BoxCollider>());
-                Destroy(this);
-            }
-        }
-        else
-        {
-            active = true;
-            globe.increaseMirror();
+        //     if (Mathf.Approximately(this.transform.rotation.y, y_axis))
+        //     {
+        //         globe.increaseMirror();
+        //         Destroy(this.GetComponent<BoxCollider>());
+        //         Destroy(this);
+        //     }
+        // }
+        // else
+        // {
+        //     active = true;
+        //     globe.increaseMirror();
         }
     }
 
