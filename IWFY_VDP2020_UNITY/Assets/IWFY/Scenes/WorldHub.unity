@@ -285,7 +285,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 110053482}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -534,7 +533,6 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 131353270}
   pickup: {fileID: 131353271}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -648,7 +646,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -967,6 +964,76 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7331217546139498308, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -984,6 +1051,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -996,16 +1068,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
         type: 3}
@@ -1026,6 +1088,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogSixPack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546264544547, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546433571580, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -287
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546915530723, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217547090406953, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217547170544749, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217547170544749, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65035f2db2311b14bb2ceac57e15d5e8, type: 3}
@@ -1156,7 +1248,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 280966329}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2129,6 +2220,96 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &513555129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5650741064896884876, guid: ed07ffa9cddc08c4191b0e28793d4783,
+    type: 3}
+  m_PrefabInstance: {fileID: 2052484038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &513555130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4981165510022687286, guid: ed07ffa9cddc08c4191b0e28793d4783,
+    type: 3}
+  m_PrefabInstance: {fileID: 2052484038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &513555131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513555129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.532947, y: 13.540061, z: 3.206664}
+  m_Center: {x: 9.19572, y: -6.304382, z: 1.7970504}
+--- !u!114 &513555132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513555129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fee7487fb2085029ef1a3ba9902923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _popupPrefab: {fileID: 0}
+  _popupMessage: 
+  _popupBackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  _name: 
+  _color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &513555133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513555129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  destroyAfterTrigger: 0
+  disableAfterTrigger: 0
+  findComponents: 0
+  qlock: {fileID: 0}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 706516241}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  ropeActivator: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 0}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 0
+--- !u!114 &513555134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513555129}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.9098039, b: 0.63529414, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &519982676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,7 +2800,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 657403950}
   pickup: {fileID: 657403953}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2807,7 +2987,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 693778703}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2927,6 +3106,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705089624}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &706516239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 706516240}
+  - component: {fileID: 706516241}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &706516240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706516239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 513555130}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &706516241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706516239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0bc7a513d890846886a37631ce762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  dialogue:
+    names: []
+    sentences:
+    - Geronimo Stilton in the fantasy kingdom
 --- !u!1 &719381853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,7 +3568,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3568,7 +3794,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 837581285}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3731,7 +3956,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 852264372}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3856,7 +4080,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 892861911}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4416,7 +4639,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 959757152}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4715,7 +4937,6 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1072794236}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4805,6 +5026,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2052484038}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1055457658 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5340552387799408355, guid: ed07ffa9cddc08c4191b0e28793d4783,
+    type: 3}
+  m_PrefabInstance: {fileID: 2052484038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1055457659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4872,8 +5099,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 1071572814}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
   mirrorcont: {fileID: 0}
@@ -4997,6 +5223,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058166560}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1071572812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071572813}
+  - component: {fileID: 1071572814}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1071572813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071572812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1055457658}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1071572814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071572812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0bc7a513d890846886a37631ce762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  dialogue:
+    names: []
+    sentences:
+    - "The Hitchhiker's Guide to the Galaxy \nby Douglas Adams\n"
 --- !u!1 &1072794233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +5309,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1072794235}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -5330,7 +5603,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1189960591}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -6935,7 +7207,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1437401285}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 110053483}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -7023,7 +7294,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1458057951}
   pickup: {fileID: 1458057950}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 837581286}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -7593,7 +7863,6 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 2067678605}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -7703,6 +7972,54 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!1 &1552634431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552634432}
+  - component: {fileID: 1552634433}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552634432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552634431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1596797179}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552634433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552634431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0bc7a513d890846886a37631ce762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  dialogue:
+    names: []
+    sentences:
+    - That old thing... It's been broken for years.
 --- !u!1 &1589480156
 GameObject:
   m_ObjectHideFlags: 0
@@ -7752,6 +8069,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1596797178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5621575387969805289, guid: ed07ffa9cddc08c4191b0e28793d4783,
+    type: 3}
+  m_PrefabInstance: {fileID: 2052484038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1596797179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 654120751605674878, guid: ed07ffa9cddc08c4191b0e28793d4783,
+    type: 3}
+  m_PrefabInstance: {fileID: 2052484038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1596797180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596797178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fee7487fb2085029ef1a3ba9902923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _popupPrefab: {fileID: 0}
+  _popupMessage: 
+  _popupBackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  _name: 
+  _color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1596797181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596797178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  destroyAfterTrigger: 0
+  disableAfterTrigger: 0
+  findComponents: 0
+  qlock: {fileID: 0}
+  pickup: {fileID: 0}
+  dialogue: {fileID: 1552634433}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  ropeActivator: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 0}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 0
+--- !u!114 &1596797182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596797178}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.9098039, b: 0.63529414, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1620590861
 GameObject:
   m_ObjectHideFlags: 0
@@ -8170,7 +8564,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1713539133}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1717289583}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8267,7 +8660,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1717289582}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8868,7 +9260,6 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8981,7 +9372,6 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 1899082750}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9114,7 +9504,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1904963048}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9231,7 +9620,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1908947252}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9462,7 +9850,6 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 1964254007}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9703,7 +10090,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1996560563}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -10360,6 +10746,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2290482186009553636, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.581
+      objectReference: {fileID: 0}
     - target: {fileID: 2333870958661233140, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: m_IsActive
@@ -10430,6 +10821,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3244097624184587188, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.0896764
+      objectReference: {fileID: 0}
     - target: {fileID: 3336126852792242408, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: main
@@ -10479,6 +10875,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992915554352376237, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.407
       objectReference: {fileID: 0}
     - target: {fileID: 4060261353547094049, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
@@ -10624,6 +11025,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245415674596395241, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.546
       objectReference: {fileID: 0}
     - target: {fileID: 5320382933686905552, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
@@ -10895,6 +11301,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9127129908832099989, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.675
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2857330952678535219, guid: ed07ffa9cddc08c4191b0e28793d4783, type: 3}
     - {fileID: 7719855266533002147, guid: ed07ffa9cddc08c4191b0e28793d4783, type: 3}
@@ -11077,7 +11488,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 2067678604}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -11254,7 +11664,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1908947248}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -11397,7 +11806,6 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 2086643590}
   pickup: {fileID: 2086643592}
-  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
