@@ -52,6 +52,10 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         _globalState = FindObjectOfType<GlobalState>();
+        if (!_globalState) { 
+            GameObject obj = new GameObject();
+            _globalState = obj.AddComponent<GlobalState>();
+        }
         Debug.Log("Selected soundscape: " + currentSoundscape);
         if (currentSoundscape == Soundscape.MainMenu)
         {

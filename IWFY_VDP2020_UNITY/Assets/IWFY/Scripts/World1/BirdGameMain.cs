@@ -35,7 +35,7 @@ public class BirdGameMain : MonoBehaviour {
     float playingTimer;
     float smoothvol = 1;
     float smoothvoltarget = 1;
-
+    float endtimer = float.MaxValue;
     bool completed = false;
 
     void Awake() {
@@ -94,12 +94,17 @@ public class BirdGameMain : MonoBehaviour {
         }
     }
 
+    public void EndKiteAnimationCallback () {
+        GetComponent<Triggerer>().Trigger();
+        completed = true;
+    }
+
     public void SuccessFeedback(int part) {
         if (part == -1) {
             Destroy(GameObject.Find("Kite").gameObject, 5.5f);
             birbgothere.SetTrigger("getkite");
-            completed = true;
             PlayClip(successClip);
+            endtimer = Time.time + 11f;
             return;
         }
         if (part == 1) Debug.Log("bababa");
@@ -143,17 +148,9 @@ public class BirdGameMain : MonoBehaviour {
             hudseed.SetActive(false);
         } else { hudseed.SetActive(true); }
 
-        /*
-        if (playingTimer > Time.time) {
-            mixer.SetFloat("UIVolume", 0);
-            smoothvoltarget = 0.01f;
-        } else {
-            mixer.SetFloat("OSTVolume", -80);
-            smoothvoltarget = 1;
+        if (endtimer < Time.time) {
+            EndKiteAnimationCallback();
         }
-
-        smoothvol += (smoothvoltarget - smoothvol) * fadeinSpeed / 100f;
-        mixer.SetFloat("NotBirdVolume", Mathf.Log10(smoothvol) * 20);*/
     }
 
 }
