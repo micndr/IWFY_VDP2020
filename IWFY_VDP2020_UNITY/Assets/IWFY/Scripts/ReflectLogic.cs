@@ -7,6 +7,7 @@ public class ReflectLogic : MonoBehaviour {
     public float maxRange = 200;
     public int maxDepth = 20;
     public GameObject ReflectRayPrefab;
+    [SerializeField] private GameObject rope;
 
     int depth = 0;
 
@@ -30,12 +31,18 @@ public class ReflectLogic : MonoBehaviour {
             Vector3 reflect = Vector3.Reflect((hit.point-start).normalized, hit.normal);
             depth++; // keep track of depth of recursion
             constrRay(start, hit.point);
+            bool colpito = false;
             if (hit.transform.gameObject.tag == "Reflect") {
                 ShootRec(hit.point, reflect);
             }
             if (hit.transform.gameObject.tag == "ReflectEnd") {
                 Triggerer trigger = hit.transform.gameObject.GetComponent<Triggerer>();
                 if (trigger) trigger.Trigger();
+                if ((rope) && (!rope.activeSelf) && (!colpito))
+                {
+                    rope.SetActive(true);
+                    colpito = true;
+                }
             }
         } else {
             Vector3 oth = start + heading * maxRange;
