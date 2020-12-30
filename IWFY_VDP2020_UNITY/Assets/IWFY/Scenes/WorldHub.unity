@@ -285,6 +285,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 110053482}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -533,6 +534,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 131353270}
   pickup: {fileID: 131353271}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -646,6 +648,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -964,76 +967,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7331217546139498308, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546139498331, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1051,11 +984,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -1068,6 +996,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7331217546264544546, guid: 65035f2db2311b14bb2ceac57e15d5e8,
         type: 3}
@@ -1088,36 +1026,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogSixPack
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546264544547, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546433571580, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -287
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217546915530723, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217547090406953, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217547170544749, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7331217547170544749, guid: 65035f2db2311b14bb2ceac57e15d5e8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65035f2db2311b14bb2ceac57e15d5e8, type: 3}
@@ -1248,6 +1156,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 280966329}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2710,6 +2619,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 657403950}
   pickup: {fileID: 657403953}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2897,6 +2807,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 693778703}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3430,6 +3341,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3656,6 +3568,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 837581285}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3818,6 +3731,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 852264372}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3942,6 +3856,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 892861911}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4501,6 +4416,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 959757152}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4799,6 +4715,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1072794236}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4955,6 +4872,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -5117,6 +5035,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1072794235}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -5411,6 +5330,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1189960591}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -7015,6 +6935,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1437401285}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 110053483}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -7102,6 +7023,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1458057951}
   pickup: {fileID: 1458057950}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 837581286}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -7671,6 +7593,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 2067678605}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8247,6 +8170,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1713539133}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1717289583}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8343,6 +8267,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1717289582}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8943,6 +8868,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9055,6 +8981,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 1899082750}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9187,6 +9114,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1904963048}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9303,6 +9231,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1908947252}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9533,6 +9462,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 1964254007}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9773,6 +9703,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1996560563}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -11146,6 +11077,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 2067678604}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -11322,6 +11254,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1908947248}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -11464,6 +11397,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 2086643590}
   pickup: {fileID: 2086643592}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}

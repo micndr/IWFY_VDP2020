@@ -15,6 +15,7 @@ public class Triggerer : MonoBehaviour {
     public bool findComponents = false;
     public QuestLock qlock;
     public ItemPickup pickup;
+    public DialogueManager dialogueManager;
     public DialogueTrigger dialogue;
     public Triggerer triggerer;
     public Animator animator;
@@ -35,7 +36,7 @@ public class Triggerer : MonoBehaviour {
     void Start() {
         //playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
         moveFlat = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveFlat>();
-
+        dialogueManager = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
         if (findComponents) {
             if (!qlock) qlock = GetComponent<QuestLock>();
             if (!pickup) pickup = GetComponent<ItemPickup>();
@@ -73,7 +74,15 @@ public class Triggerer : MonoBehaviour {
 
         if (qlock) qlock.Advance();
         if (pickup) pickup.GetItems();
-        if (dialogue) dialogue.TriggerDialogue();
+        if (dialogue) 
+        {
+            if (dialogueManager.isInConversation)
+            {
+                return;
+            }
+            dialogue.TriggerDialogue();
+            
+        }
         if (triggerer) triggerer.Trigger();
         if (animator) animator.SetTrigger("trigger");
         if (mirrorcont) mirrorcont.RotateMirror();

@@ -33,7 +33,8 @@ public class DialogueManager : MonoBehaviour
     //private GameObject inventoryState;
 
     private bool _isTyping = false;
-
+    public bool isInConversation = false;
+    
     private string _sentence;
     // Start is called before the first frame update
     private void Awake()
@@ -56,6 +57,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, DialogueTrigger startpoint)
     {
+        
+        
+        isInConversation = true;
         nameTMP.text = "Eia";
         _sentence = null;
         _isTyping = false; //false at start!
@@ -140,8 +144,11 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-    private void EndDialogue() 
+   
+
+    private void EndDialogue()
     {
+        isInConversation = false;
         animator.SetBool(IsOpen, false);
         _inventory.SetInventoryState(true);
         //Care here, destroy the trigger object after use
