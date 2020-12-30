@@ -14,12 +14,13 @@ public class FxThunderstorm : MonoBehaviour {
     public float timingSpread = 2;
     float timer;
 
+    AudioManager audioManager;
+
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
         timer = Time.time;
 
-        GameObject globalStateObj = GameObject.Find("GlobalState");
-        if (globalStateObj) globalState = globalStateObj.GetComponent<GlobalState>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void Strike(Vector3 pos, Vector3 head) {
@@ -28,14 +29,7 @@ public class FxThunderstorm : MonoBehaviour {
         thunder.height = 100;
         thunder.GenerateThunder(pos, head);
 
-        GameObject audioObj = Instantiate(FxAudio, pos, Quaternion.identity);
-        AudioSource audio = audioObj.GetComponent<AudioSource>();
-        Destroy(audioObj, 8);
-        if (globalState) {
-            audio.volume = globalState.globalVolume;
-        }
-        audio.pitch = Random.Range(0.5f, 1.5f);
-        audio.Play();
+        audioManager.PlayAmbient(1);
     }
 
     void Update() {
@@ -43,12 +37,14 @@ public class FxThunderstorm : MonoBehaviour {
             timer = Time.time + Random.Range(-timingSpread, timingSpread);
 
             Vector3 pos = player.transform.position;
+            /*
             Quaternion rot = Quaternion.Euler(
                 Random.Range(-spreadPlanetDegrees, spreadPlanetDegrees),
                 0,
                 Random.Range(-spreadPlanetDegrees, spreadPlanetDegrees));
-            pos = rot * pos;
-            Vector3 head = pos.normalized;
+            */
+            pos += new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+            Vector3 head = Vector3.up;
             Strike(pos, head);
         }
     }

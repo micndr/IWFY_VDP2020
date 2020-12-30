@@ -4,6 +4,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+#region soundmapping
+
+/* MAPPING OF THE SOUND INDEXES
+ *
+ * MAIN
+ * 
+ * WORLDHUB
+ *
+ * WORLD1
+ *     - Ambient
+ *         0 ->
+ *         1 ->
+ *
+ * 
+ */
+
+#endregion
+
 public class AudioManager : MonoBehaviour
 {
 
@@ -34,8 +52,16 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         _globalState = FindObjectOfType<GlobalState>();
+        if (!_globalState) { 
+            GameObject obj = new GameObject();
+            _globalState = obj.AddComponent<GlobalState>();
+        }
         Debug.Log("Selected soundscape: " + currentSoundscape);
-        if (currentSoundscape == Soundscape.MainMenu) snapshot[2].TransitionTo(.01f);
+        if (currentSoundscape == Soundscape.MainMenu)
+        {
+            snapshot[2].TransitionTo(.01f);
+            _globalState.OnVolumeChanged((float) (20.0 * Math.Log10(0.125)));    
+        }
         if (currentSoundscape == Soundscape.WorldHub) snapshot[1].TransitionTo(.01f);
         if (currentSoundscape == Soundscape.World4) snapshot[3].TransitionTo(1f);
 
@@ -63,6 +89,11 @@ public class AudioManager : MonoBehaviour
                 snapshot[0].TransitionTo(1f);
             }
         }
+
+        if (currentSoundscape == Soundscape.World1)
+        {
+            // TODO only if sounds are not hearable over the ost
+        }
     }
 
     public void PlayUI(int index)
@@ -78,6 +109,12 @@ public class AudioManager : MonoBehaviour
     public void PlayAmbient(int index)
     {
         ambient[index].Play();
+    }
+    
+    public void StopAmbient(int index)
+    {
+        // TODO see if fade out is needed
+        ambient[index].Stop();
     }
 
     public void PlayFlowerOn()

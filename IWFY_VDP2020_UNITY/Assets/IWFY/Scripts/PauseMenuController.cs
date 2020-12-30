@@ -78,6 +78,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void QuitGame()
     {
+        SavingGame();
         Debug.Log("metodo di chiusura delle partite");
         Application.Quit();
     }

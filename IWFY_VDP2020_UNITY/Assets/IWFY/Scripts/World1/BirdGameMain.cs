@@ -19,30 +19,23 @@ public class BirdGameMain : MonoBehaviour {
     public List<int> seq = new List<int>(); // the correct sequence
     List<int> seqcurrent = new List<int>(); // the inputted seq.
 
-    // sequence of sounds in the correct order
-    public List<AudioClip> seqAudio = new List<AudioClip>();
-    public AudioClip wholeClip; /* the complete theme */
-    public AudioClip successClip; /* the success clip */
-
-    public AudioMixer mixer;
-    public float fadeinSpeed = 2;
-
     public AnimController birbAnim;
     public Animator birbgothere;
 
-    AudioSource audioSource;
+    //AudioSource audioSource;
     Text debugText;
     float playingTimer;
     float smoothvol = 1;
     float smoothvoltarget = 1;
-
+    float endtimer = float.MaxValue;
     bool completed = false;
+
+    AudioManager audioManager;
 
     void Awake() {
         // init and cache
         selseed = -1;
         hudseed = GameObject.Find("BirdGameHudSeed");
-        audioSource = GetComponent<AudioSource>();
         if (!Application.isEditor) {
             GameObject.Find("BirdCanvas").SetActive(false);
         } else {
@@ -52,6 +45,8 @@ public class BirdGameMain : MonoBehaviour {
 
         birbgothere = GameObject.Find("BirbGoThere").GetComponent<Animator>();
         birbAnim = GameObject.Find("BirbAnim").GetComponent<AnimController>();
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
 
@@ -94,25 +89,27 @@ public class BirdGameMain : MonoBehaviour {
         }
     }
 
+    public void EndKiteAnimationCallback () {
+        GetComponent<Triggerer>().Trigger();
+        completed = true;
+    }
+
     public void SuccessFeedback(int part) {
         if (part == -1) {
             Destroy(GameObject.Find("Kite").gameObject, 5.5f);
             birbgothere.SetTrigger("getkite");
-            completed = true;
-            PlayClip(successClip);
+            PlayClip(7);
+            endtimer = Time.time + 11f;
             return;
         }
-        if (part == 1) Debug.Log("bababa");
-        if (part == 2) Debug.Log("ba");
-        if (part == 3) Debug.Log("baba");
-        PlayClip(seqAudio[part - 1]);
+        PlayClip(2+ part - 1);
 
         birbAnim.OneShot(4);
     }
 
     public void FailFeedback () {
-        PlayClip(wholeClip);
-        Debug.Log("bababa ba baba bird");
+        PlayClip(6);
+        //Debug.Log("bababa ba baba bird");
 
         birbAnim.OneShot(2);
     }
@@ -125,11 +122,10 @@ public class BirdGameMain : MonoBehaviour {
         return true;
     }
 
-    public void PlayClip (AudioClip clip) {
-        playingTimer = Time.time + clip.length;
-        audioSource.Stop();
-        audioSource.clip = clip;
-        audioSource.Play();
+    public void PlayClip (int clip) {
+        playingTimer = Time.time + 2;
+        audioManager.PlayAmbient(clip);
+        print(clip);
     }
 
     public void PickupSeed (BirdGameSeedbag sb) {
@@ -143,17 +139,9 @@ public class BirdGameMain : MonoBehaviour {
             hudseed.SetActive(false);
         } else { hudseed.SetActive(true); }
 
-        /*
-        if (playingTimer > Time.time) {
-            mixer.SetFloat("UIVolume", 0);
-            smoothvoltarget = 0.01f;
-        } else {
-            mixer.SetFloat("OSTVolume", -80);
-            smoothvoltarget = 1;
+        if (endtimer < Time.time) {
+            EndKiteAnimationCallback();
         }
-
-        smoothvol += (smoothvoltarget - smoothvol) * fadeinSpeed / 100f;
-        mixer.SetFloat("NotBirdVolume", Mathf.Log10(smoothvol) * 20);*/
     }
 
 }

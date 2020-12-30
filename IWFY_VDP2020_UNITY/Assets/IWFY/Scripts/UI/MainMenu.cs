@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-        [SerializeField] private string _scene;
+    [SerializeField] private string _scene;
         
-        public void PlayGame()
-        {
-                SceneManager.LoadScene(_scene);
-        }
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(_scene);
+    }
 
-        public void QuitGame()
-        {
-            Debug.Log("Close game");
-            Application.Quit();
-        }
+    public void LoadGame() {
+        GlobalState globalState = FindObjectOfType<GlobalState>();
+        globalState.Load();
+    }
+
+    public void QuitGame() {
+        Debug.Log("Close game");
+        Application.Quit();
+    }
 }
