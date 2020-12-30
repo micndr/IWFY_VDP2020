@@ -14,9 +14,9 @@ public class MirrorController : MonoBehaviour
     
     public void RotateMirror()
     {
-        if (this.transform.rotation.y != y_axis)
-        {
-            this.transform.Rotate(0, 15, 0);
+        // if (this.transform.rotation.y != y_axis)
+        // {
+            this.transform.Rotate(0, 30, 0);
             //CheckAngles(this.transform.rotation.y);
         //     if (Mathf.Approximately(this.transform.rotation.y, y_axis))
         //     {
@@ -29,7 +29,7 @@ public class MirrorController : MonoBehaviour
         // {
         //     active = true;
         //     globe.increaseMirror();
-        }
+        // }
     }
 
     // private void Update()
