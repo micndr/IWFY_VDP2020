@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class WallController : MonoBehaviour
 {
-    private bool attivo = false;
+     private bool attivo = false;
     [SerializeField] private GameObject toBeDesrtoyed;
 
     public void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("ponte") && attivo)
+        // if (collider.CompareTag("ponte") && attivo)
+        if (collider.CompareTag("ponte"))
         {
             Debug.Log("distrutta area del ponte " + this.gameObject);
             Destroy(toBeDesrtoyed.gameObject);

@@ -8,6 +8,10 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AutoBoom.cs" t="Include" />
+        <e p="Editor" t="Include">
+          <e p="CheckForStandardAssets.cs" t="Include" />
+          <e p="TriggererEditor.cs" t="Include" />
+        </e>
         <e p="IWFY" t="Include">
           <e p="Artwork" t="Include">
             <e p="3D models" t="Include">
@@ -74,11 +78,11 @@
             </e>
           </e>
           <e p="Materials" t="Include">
+            <e p="Jimmy" t="Include">
+              <e p="Occhio.shader" t="Include" />
+            </e>
             <e p="Water" t="Include">
               <e p="readme.txt" t="Include" />
-              <e p="Scripts" t="Include">
-                <e p="CheckForStandardAssets.cs" t="Include" />
-              </e>
               <e p="Shaders" t="Include">
                 <e p="FXWaterLowpoly.shader" t="Include" />
                 <e p="WaterInclude.cginc" t="Include" />
@@ -102,6 +106,9 @@
             </e>
           </e>
           <e p="Scripts" t="Include">
+            <e p="Animations" t="Include">
+              <e p="AnimController.cs" t="Include" />
+            </e>
             <e p="DialogueSystem" t="Include">
               <e p="Dialogue.cs" t="Include" />
               <e p="DialogueManager.cs" t="Include" />
@@ -152,7 +159,6 @@
             </e>
             <e p="Triggers" t="Include">
               <e p="Triggerer.cs" t="Include" />
-              <e p="TriggererEditor.cs" t="Include" />
               <e p="TriggerKey.cs" t="Include" />
               <e p="TriggerVolume.cs" t="Include" />
             </e>
@@ -187,6 +193,7 @@
               <e p="areaDeleteController.cs" t="Include" />
               <e p="GlobalWorld3.cs" t="Include" />
               <e p="MirrorController.cs" t="Include" />
+              <e p="momentanea.cs" t="Include" />
               <e p="ropeActivator.cs" t="Include" />
               <e p="RopeController.cs" t="Include" />
               <e p="WallController.cs" t="Include" />
