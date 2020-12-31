@@ -111,6 +111,14 @@ public class AudioManager : MonoBehaviour
         ambient[index].Play();
     }
     
+    // TODO
+    public void PlayAmbientPro(int index, float volume, float pitch)
+    {
+        ambient[index].Play();
+        ambient[index].volume = volume;
+        ambient[index].pitch = pitch;
+    }
+    
     public void StopAmbient(int index)
     {
         // TODO see if fade out is needed
