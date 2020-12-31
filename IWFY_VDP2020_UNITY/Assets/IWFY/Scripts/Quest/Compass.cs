@@ -12,6 +12,7 @@ public class Compass : MonoBehaviour {
         if (target) {
             // deactivate for the time being
             target = null;
+            return;
 
             arrow.gameObject.SetActive(true);
             // calculate the look rotation to rotate the visualizer
