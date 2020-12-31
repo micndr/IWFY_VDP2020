@@ -27,6 +27,7 @@ public class Triggerer : MonoBehaviour {
     public FxThunderTrigger thunder;
     public OpenLink link;
     public videoController video;
+    public openNote openNote;
 
     public bool lockPlayer = false;
     public bool unlockPlayer = false;
@@ -99,6 +100,7 @@ public class Triggerer : MonoBehaviour {
             moveFlat.lockUserInput = false;
         }
         if (ropeActivator) ropeActivator.activateRope();
+        if (openNote) openNote.showMessage();
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }

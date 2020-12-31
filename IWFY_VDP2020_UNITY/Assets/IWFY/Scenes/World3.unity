@@ -2031,6 +2031,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 2084760833}
   audioSource: {fileID: 0}
@@ -2259,6 +2260,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 396424864}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -2480,6 +2482,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -2628,6 +2631,9 @@ GameObject:
   - component: {fileID: 194611465}
   - component: {fileID: 194611464}
   - component: {fileID: 194611463}
+  - component: {fileID: 194611469}
+  - component: {fileID: 194611467}
+  - component: {fileID: 194611468}
   m_Layer: 0
   m_Name: Lettera4
   m_TagString: Untagged
@@ -2711,6 +2717,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 23.412, z: 0}
+--- !u!114 &194611467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194611462}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.9098039, b: 0.63529414, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &194611468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194611462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  autoTriggerDelay: 0
+  destroyAfterTrigger: 0
+  disableAfterTrigger: 0
+  findComponents: 0
+  qlock: {fileID: 0}
+  pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
+  dialogue: {fileID: 0}
+  triggerer: {fileID: 0}
+  animator: {fileID: 0}
+  openNote: {fileID: 0}
+  mirrorcont: {fileID: 0}
+  ropeActivator: {fileID: 0}
+  audioSource: {fileID: 0}
+  thunder: {fileID: 0}
+  link: {fileID: 0}
+  video: {fileID: 0}
+  lockPlayer: 0
+  unlockPlayer: 0
+--- !u!114 &194611469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194611462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4571ac95180fd0806afbd26a5591c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &194728537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3411,6 +3479,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -4201,6 +4270,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -4688,6 +4758,7 @@ MonoBehaviour:
   dialogue: {fileID: 2099263007}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -5220,7 +5291,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390976107}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5512,6 +5583,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 398183753}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -5979,6 +6051,7 @@ MonoBehaviour:
   dialogue: {fileID: 255512631}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -7127,6 +7200,7 @@ MonoBehaviour:
   dialogue: {fileID: 292138478}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -8555,6 +8629,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 725668569}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -9466,6 +9541,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 759035252}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -12101,6 +12177,7 @@ MonoBehaviour:
   dialogue: {fileID: 1605339254}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -13358,6 +13435,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 1200165555}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -13921,6 +13999,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -14257,6 +14336,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -14619,6 +14699,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 1341953567}
   audioSource: {fileID: 0}
@@ -14984,6 +15065,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 1389329320}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -15138,7 +15220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1399809650
 Transform:
   m_ObjectHideFlags: 0
@@ -15816,6 +15898,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 1443147800}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -17834,6 +17917,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -18259,6 +18343,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -19052,6 +19137,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -19364,6 +19450,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 1686802590}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -19650,6 +19737,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 1701239439}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -20251,6 +20339,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 1776513896}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -20715,6 +20804,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 1801108693}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -21332,6 +21422,7 @@ MonoBehaviour:
   dialogue: {fileID: 1291262047}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -22508,6 +22599,7 @@ MonoBehaviour:
   dialogue: {fileID: 171657061}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -22695,6 +22787,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 2005700461}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -22819,6 +22912,7 @@ MonoBehaviour:
   dialogue: {fileID: 165041274}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -23340,6 +23434,7 @@ MonoBehaviour:
   dialogue: {fileID: 1566689664}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}
@@ -23671,6 +23766,7 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
+  openNote: {fileID: 0}
   mirrorcont: {fileID: 0}
   ropeActivator: {fileID: 0}
   audioSource: {fileID: 0}

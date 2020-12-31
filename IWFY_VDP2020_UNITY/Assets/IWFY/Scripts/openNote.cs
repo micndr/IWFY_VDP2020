@@ -8,14 +8,9 @@ public class openNote : MonoBehaviour
 {
     [SerializeField] private Image note;
 
-    public void OnTriggerEnter(Collider other)
+    public void showMessage()
     {
-        if (other.CompareTag("Player"))
-        {
-            note.enabled = true;
-            
-        }
-            
+        note.enabled = true;
     }
 
     private void Update()
