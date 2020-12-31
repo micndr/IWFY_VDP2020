@@ -24,6 +24,8 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
     [SerializeField] private Color _color;
     private object [] id = new object[2];
 
+    private GameObject _audioManager;
+
     // Initializes calling 
     public override void Start()
     {
@@ -35,6 +37,8 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
         _popupPrefab = (GameObject) Resources.Load("PopupPrefab");
         // Retrieve the prefab
         //_popupPrefab = (GameObject) AssetDatabase.LoadAssetAtPath("Assets/IWFY/Prefabs/PopupPrefab.prefab", typeof(GameObject));
+
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager");
     }
     
     public override void OnPointerEnter()
@@ -51,6 +55,7 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
         }
         
         _popupPrefabInstance = Instantiate(_popupPrefab, transform);
+        _audioManager.SendMessage("PlayUI", 2); // Play pop sound.
         _popupPrefabInstance.tag = "Popup";
         _popupPrefabInstance.GetComponent<PopupLogic>().SetMessage(_popupMessage);
         _popupPrefabInstance.GetComponent<PopupLogic>().SetBackgroundColor(_popupBackgroundColor);
