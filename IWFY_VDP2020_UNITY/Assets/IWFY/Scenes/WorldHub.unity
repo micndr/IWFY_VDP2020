@@ -285,6 +285,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 110053482}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -533,6 +534,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 131353270}
   pickup: {fileID: 131353271}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -646,6 +648,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -862,7 +865,7 @@ Transform:
   m_LocalScale: {x: 0.07075558, y: 0.07075558, z: 0.07075558}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 81.840004, z: 0}
 --- !u!1 &192858813
 GameObject:
@@ -1248,6 +1251,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 280966329}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2281,6 +2285,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 706516241}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2800,6 +2805,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 657403950}
   pickup: {fileID: 657403953}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -2987,6 +2993,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 693778703}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3568,6 +3575,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3794,6 +3802,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 837581285}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -3956,6 +3965,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 852264372}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4080,6 +4090,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 892861911}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4639,6 +4650,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 959757152}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -4937,6 +4949,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1072794236}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -5099,6 +5112,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1071572814}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -5309,6 +5323,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1072794235}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -5603,6 +5618,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1189960591}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -5794,7 +5810,7 @@ PrefabInstance:
     - target: {fileID: 169158071851408317, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
       propertyPath: ui.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 169158071851408317, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
@@ -5826,6 +5842,11 @@ PrefabInstance:
       propertyPath: video.Array.data[0]
       value: 
       objectReference: {fileID: 1226211638}
+    - target: {fileID: 169158071851408317, guid: 23185e1e5bf3335d995b3971df99b191,
+        type: 3}
+      propertyPath: ui.Array.data[2]
+      value: 
+      objectReference: {fileID: 1226211642}
     - target: {fileID: 3692904780276533609, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
       propertyPath: m_Name
@@ -5869,7 +5890,7 @@ PrefabInstance:
     - target: {fileID: 4917501808785494431, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4917501808785494431, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
@@ -6198,6 +6219,102 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: eacba2fdd0a67d4069cd1b5fc841389d, type: 3}
   m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1226211642
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226211637}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d4da1caabdf9e8f3b8b277dad60b6d2f, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -7207,6 +7324,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1437401285}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 110053483}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -7294,6 +7412,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1458057951}
   pickup: {fileID: 1458057950}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 837581286}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -7863,6 +7982,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 2067678605}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8117,6 +8237,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1552634433}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8564,6 +8685,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1713539133}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1717289583}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -8660,6 +8782,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1717289582}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9260,6 +9383,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9372,6 +9496,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 1899082750}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9504,6 +9629,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1904963048}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9620,6 +9746,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1908947252}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -9850,6 +9977,7 @@ MonoBehaviour:
   findComponents: 1
   qlock: {fileID: 1964254007}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -10090,6 +10218,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 1996560563}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -11488,6 +11617,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 2067678604}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -11664,6 +11794,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 1908947248}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
@@ -11806,6 +11937,7 @@ MonoBehaviour:
   findComponents: 0
   qlock: {fileID: 2086643590}
   pickup: {fileID: 2086643592}
+  dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
