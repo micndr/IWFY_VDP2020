@@ -27,6 +27,7 @@ public class portalAnimation : MonoBehaviour {
     }
 
     void Update() {
+        return; // not finished
         if (timer < Time.time) {
             duration = Random.Range(1, 2);
             timer = Time.time + duration;
