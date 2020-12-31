@@ -10,13 +10,16 @@ public class openNote : MonoBehaviour
 
     public void showMessage()
     {
-        note.enabled = true;
-    }
+        if (!note.enabled)
+        {
+            note.enabled = true;
+            Debug.Log("show");
+        }
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.U))
-            if (note.enabled)
-                note.enabled = false;
+        else if (note.enabled)
+        {
+            Debug.Log("disabilita");
+            note.enabled = false;
+        }
     }
 }
