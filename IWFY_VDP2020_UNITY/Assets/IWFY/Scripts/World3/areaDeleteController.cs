@@ -11,8 +11,9 @@ public class areaDeleteController : MonoBehaviour
     [SerializeField] private GameObject toBeBuild;
    public void OnTriggerEnter(Collider other)
    {
-       if (other.CompareTag("prova"))
+       if (other.CompareTag("Player"))
        {
+           Debug.Log("collisione altalena");
            Triggerer triggerer = GetComponent<Triggerer>(); 
            if (triggerer) triggerer.Trigger();
            Destroy(this.gameObject);
