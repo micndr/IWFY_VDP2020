@@ -637,6 +637,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 166183088}
   pickup: {fileID: 0}
@@ -757,6 +758,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 182680523}
   pickup: {fileID: 0}
@@ -1097,6 +1099,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 249489519}
   pickup: {fileID: 0}
@@ -2178,7 +2181,7 @@ Transform:
   m_LocalScale: {x: 0.032458827, y: 0.026923355, z: 0.027864283}
   m_Children: []
   m_Father: {fileID: 2146812769}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &412194549
 MonoBehaviour:
@@ -2196,6 +2199,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 412194550}
   pickup: {fileID: 412194553}
@@ -2302,7 +2306,7 @@ Transform:
   m_Children:
   - {fileID: 1430635407}
   m_Father: {fileID: 2146812769}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &436007964
 MonoBehaviour:
@@ -3099,6 +3103,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 739487056}
   pickup: {fileID: 0}
@@ -3202,6 +3207,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 756258634}
   pickup: {fileID: 756258633}
@@ -3314,6 +3320,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 758286502}
   pickup: {fileID: 0}
@@ -4150,6 +4157,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -4196,7 +4204,7 @@ Transform:
   m_Children:
   - {fileID: 915896323}
   m_Father: {fileID: 2146812769}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &961609829
 MonoBehaviour:
@@ -6405,6 +6413,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1505274177}
   pickup: {fileID: 0}
@@ -6939,6 +6948,99 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1641713273}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1654939757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654939758}
+  - component: {fileID: 1654939761}
+  - component: {fileID: 1654939760}
+  - component: {fileID: 1654939759}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654939758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654939757}
+  m_LocalRotation: {x: 0.70100886, y: -0.09325101, z: -0.09544534, w: 0.70055777}
+  m_LocalPosition: {x: -0.00008, y: -0.00038, z: 0.1031}
+  m_LocalScale: {x: 0.013541425, y: 0.0051050107, z: 0.013541555}
+  m_Children: []
+  m_Father: {fileID: 2146812769}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1654939759
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654939757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1654939760
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654939757}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 04ab87850e402fc40a48faa00f57882d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1654939761
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654939757}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1696656810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5964074175141483016, guid: 2d9f0195071fc2577964628d2ef1cf9d,
@@ -7158,6 +7260,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1743605453}
   pickup: {fileID: 0}
@@ -7778,7 +7881,7 @@ Transform:
   m_LocalScale: {x: -0.54883164, y: -0.2751478, z: -0.5459269}
   m_Children: []
   m_Father: {fileID: 2146812769}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -34.386, y: 106.715004, z: -78.545006}
 --- !u!23 &1973152142
 MeshRenderer:
@@ -8132,7 +8235,7 @@ Transform:
   m_Children:
   - {fileID: 558741706}
   m_Father: {fileID: 2146812769}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2085707128
 MonoBehaviour:
@@ -8176,6 +8279,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 2129488711}
   pickup: {fileID: 0}
@@ -8263,6 +8367,7 @@ MonoBehaviour:
   autoTriggerDelay: 0
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
+  playAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 2129488711}
   pickup: {fileID: 0}
@@ -8522,6 +8627,7 @@ Transform:
   - {fileID: 739487051}
   - {fileID: 756258630}
   - {fileID: 1336224296}
+  - {fileID: 1654939758}
   - {fileID: 2085707127}
   - {fileID: 961609828}
   - {fileID: 436007963}
@@ -8655,6 +8761,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3811531413408898858, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3924780961504650327, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: m_IsActive
@@ -8711,6 +8822,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5562724352348109319, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630112070127721768, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: m_IsActive
       value: 1
