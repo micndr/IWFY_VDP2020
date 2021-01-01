@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.7735849, g: 0.3595935, b: 0.26637593, a: 1}
+  m_AmbientSkyColor: {r: 0.18039216, g: 0.09803922, b: 0.05882353, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.69
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 20f6d22d93779de4ea6f62f8ab305593, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 99d037614b0e92e44833eea4ad2ee6d3, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -626,8 +626,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.80691653, b: 0.5686275, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.69803923, b: 0.46666667, a: 1}
+  m_Intensity: 1.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -683,13 +683,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110380240}
-  m_LocalRotation: {x: 0.6289199, y: -0.19828199, z: -0.5646487, w: 0.4963022}
+  m_LocalRotation: {x: 0.83577466, y: -0.509036, z: 0.12589273, w: 0.1628318}
   m_LocalPosition: {x: -84, y: 110, z: -255}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 156.4, y: 98.173996, z: -657.896}
+  m_LocalEulerAnglesHint: {x: 156.4, y: -2.7940063, z: -657.896}
 --- !u!1 &135594008
 GameObject:
   m_ObjectHideFlags: 0
@@ -15937,11 +15937,16 @@ PrefabInstance:
     - target: {fileID: 1827118124914288046, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: speedScaling
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1827118124914288046, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: speedTransparency
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827118124914288046, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: speedForwardMovement
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1930880410137673112, guid: ed07ffa9cddc08c4191b0e28793d4783,
@@ -16133,6 +16138,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324694230362140727, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 165.37862
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324694230362140727, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 165.37865
       objectReference: {fileID: 0}
     - target: {fileID: 8715460157809213917, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
