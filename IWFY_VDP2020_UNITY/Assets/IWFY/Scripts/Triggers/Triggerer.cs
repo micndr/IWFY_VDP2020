@@ -11,6 +11,7 @@ public class Triggerer : MonoBehaviour {
     public bool destroyAfterTrigger = false;
     public bool disableAfterTrigger = false; //Deactivates the trigger without destroying the whole object, enabled means it only does the first interaction
     private bool _triggered = false;
+    public int playAmbientSound = -1;
 
     public bool findComponents = false;
     public QuestLock qlock;
@@ -33,6 +34,7 @@ public class Triggerer : MonoBehaviour {
     public bool unlockPlayer = false;
     PlayerMove playerMove;
     MoveFlat moveFlat;
+    AudioManager audioManager;
 
     void Start() {
         //playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
@@ -47,6 +49,8 @@ public class Triggerer : MonoBehaviour {
         }
 
         autoTriggerTimer = Time.time + autoTriggerDelay;
+
+        if (playAmbientSound != -1) { audioManager = FindObjectOfType<AudioManager>(); }
     }
 
     void Update() {
@@ -101,6 +105,7 @@ public class Triggerer : MonoBehaviour {
         }
         if (ropeActivator) ropeActivator.activateRope();
         if (openNote) openNote.showMessage();
+        if (playAmbientSound != -1) { audioManager.PlayAmbient(playAmbientSound); }
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }

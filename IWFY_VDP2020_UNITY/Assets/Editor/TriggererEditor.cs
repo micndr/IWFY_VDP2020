@@ -12,7 +12,8 @@ public class LookAtPointEditor : Editor {
     List<SerializedProperty> components = new List<SerializedProperty>();
     SerializedProperty findComps;
 
-    bool show = false;
+    bool showComp = false;
+    bool showOth = false;
 
     void OnEnable() {
         components.Add(serializedObject.FindProperty("qlock"));
@@ -34,23 +35,33 @@ public class LookAtPointEditor : Editor {
         other.Add(serializedObject.FindProperty("lockPlayer"));
         other.Add(serializedObject.FindProperty("unlockPlayer"));
         other.Add(serializedObject.FindProperty("findComponents"));
+        other.Add(serializedObject.FindProperty("playAmbientSound"));
     }
 
     public override void OnInspectorGUI() {
         serializedObject.Update();
-        foreach (SerializedProperty prop in other) {
-            EditorGUILayout.PropertyField(prop);
+        if (showOth) {
+            foreach (SerializedProperty prop in other) {
+                EditorGUILayout.PropertyField(prop);
+            }
+            if (GUILayout.Button("Hide Attributes")) {
+                showOth = !showOth;
+            }
+        } else {
+            if (GUILayout.Button("Show Attributes")) {
+                showOth = !showOth;
+            }
         }
-        if (show) {
+        if (showComp) {
             foreach (SerializedProperty prop in components) {
                 EditorGUILayout.PropertyField(prop);
             }
             if (GUILayout.Button("Hide Components")) {
-                show = !show;
+                showComp = !showComp;
             }
         } else {
             if (GUILayout.Button("Show Components")) {
-                show = !show;
+                showComp = !showComp;
             }
         }
         serializedObject.ApplyModifiedProperties();
