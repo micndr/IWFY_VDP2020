@@ -26,7 +26,6 @@ public class LookAtPointEditor : Editor {
         components.Add(serializedObject.FindProperty("thunder"));
         components.Add(serializedObject.FindProperty("link"));
         components.Add(serializedObject.FindProperty("video"));
-        components.Add(serializedObject.FindProperty("openNote"));
         findComps = serializedObject.FindProperty("findComponents");
         other.Add(serializedObject.FindProperty("autoTrigger"));
         other.Add(serializedObject.FindProperty("autoTriggerDelay"));
