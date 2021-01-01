@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.15
@@ -210,7 +210,7 @@ PrefabInstance:
     - target: {fileID: 4616783998825101451, guid: 05f31ed1b80e1a743992cebb95559d47,
         type: 3}
       propertyPath: speed
-      value: 30
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4616783998825101453, guid: 05f31ed1b80e1a743992cebb95559d47,
         type: 3}
@@ -1446,17 +1446,17 @@ MonoBehaviour:
   state: 0
   stateNames:
   - 
-  - What else is different from my dimension?
+  - Follow Jimmy
   - Search around
   - Find him
   - Find him
   - Find him
-  - Pick up the stair
-  - Interact with the stair to fix them
+  - Pick up the stairs
+  - Click the stair to fix them
   - Go inside your tent
   - Place the phonograph on the bedside table
   - Play the phonograph
-  - Completed Go Back to your portal
+  - Go back to the portal
   completed: 0
   questRequirements: []
 --- !u!1 &289491589
@@ -2247,7 +2247,7 @@ Transform:
   - {fileID: 1822086131}
   - {fileID: 1302637994}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527595622 stripped
 GameObject:
@@ -5919,8 +5919,8 @@ MonoBehaviour:
   dialogue:
     names: []
     sentences:
-    - Oh... I love this song, but  haven't found anything useful here. I should go
-      back.
+    - Oh... I love this song.
+    - Maybe it starts again to work also in my dimension now! I need to check it.
 --- !u!114 &1302637997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6261,8 +6261,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355033635}
   m_LocalRotation: {x: -0.66594803, y: -0.2377251, z: -0.2377251, w: 0.66594803}
-  m_LocalPosition: {x: 3.3899198, y: -2.8966262, z: -8.220022}
-  m_LocalScale: {x: 4.58239, y: 4.58239, z: 4.58239}
+  m_LocalPosition: {x: 3.3899198, y: -2.748, z: -8.220022}
+  m_LocalScale: {x: 4.58239, y: 4.58239, z: 3.184384}
   m_Children: []
   m_Father: {fileID: 1822086131}
   m_RootOrder: 0
@@ -7917,8 +7917,8 @@ MonoBehaviour:
     names:
     - Eia
     sentences:
-    - Some stairs are missing! Uff.. I should search around to find things that may
-      help me.
+    - Some stairs are missing! Uff.. I should search around to find something that
+      may help me.
 --- !u!222 &1624356350
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8279,7 +8279,7 @@ PrefabInstance:
     - target: {fileID: 169158071851408317, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
       propertyPath: ui.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 169158071851408317, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
@@ -8311,6 +8311,11 @@ PrefabInstance:
       propertyPath: ui.Array.data[0]
       value: 
       objectReference: {fileID: 1703552407}
+    - target: {fileID: 169158071851408317, guid: 23185e1e5bf3335d995b3971df99b191,
+        type: 3}
+      propertyPath: ui.Array.data[2]
+      value: 
+      objectReference: {fileID: 1703552408}
     - target: {fileID: 3692904780276533609, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
       propertyPath: m_Name
@@ -8354,7 +8359,7 @@ PrefabInstance:
     - target: {fileID: 4917501808785494431, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4917501808785494431, guid: 23185e1e5bf3335d995b3971df99b191,
         type: 3}
@@ -8767,6 +8772,102 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &1703552408
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703552403}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d4da1caabdf9e8f3b8b277dad60b6d2f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1713405976
 GameObject:
   m_ObjectHideFlags: 0
@@ -8828,16 +8929,15 @@ MonoBehaviour:
     - Eia
     - R_404
     - Eia
-    - R_404
-    - Eia
     sentences:
     - "Hi, who are you?\t"
     - Hi, I'm R_404 , who are you?
     - My name is Eia, do you have an idea about what happend to my stairs?
-    - Mmh.. maybe yes, maybe not, it depends.."
-    - Tell me!
-    - If you play catch with me, I will tell you what happened
-    - What?! I have no time to play with you!
+    - 'Mmh.. maybe yes, maybe not, it depends..
+
+      If you play catch with me,
+      I will tell you what happened.'
+    - Sorry, I haven't the time to play with you now.
     - Ok.. you will never know...
     - Uff ok! Let's play...
 --- !u!222 &1713405979
@@ -9208,10 +9308,12 @@ MonoBehaviour:
   dialogue:
     names:
     - R_404
+    - R_404
     - Eia
     - R_404
     sentences:
-    - Oh, you caught me! Actually I removed the steps of your house!
+    - 'Oh, you caught me! '
+    - Actually it's my fault,  I removed the steps of your stair.
     - WHAT?!
     - I was just bored, some time ago a kind person comes here often to play with
       me, but I haven't seen her for a while...
@@ -9315,7 +9417,7 @@ Transform:
   m_LocalScale: {x: 0.07075558, y: 0.07075558, z: 0.07075558}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -19.413, z: 0}
 --- !u!1 &1819712995
 GameObject:
@@ -9463,7 +9565,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822086130}
   m_LocalRotation: {x: -0, y: -0.64183944, z: -0, w: 0.76683915}
-  m_LocalPosition: {x: 68.7396, y: -44.460266, z: -131.0452}
+  m_LocalPosition: {x: 68.7396, y: -44.727, z: -131.0452}
   m_LocalScale: {x: 1.5911003, y: 1.5911, z: 1.5911003}
   m_Children:
   - {fileID: 1355033636}
@@ -11760,6 +11862,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 3811531413408898858, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5512384745829076018, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
       propertyPath: m_RootOrder
@@ -11769,6 +11876,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630112070127721768, guid: ed07ffa9cddc08c4191b0e28793d4783,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6642087754457836783, guid: ed07ffa9cddc08c4191b0e28793d4783,
         type: 3}
