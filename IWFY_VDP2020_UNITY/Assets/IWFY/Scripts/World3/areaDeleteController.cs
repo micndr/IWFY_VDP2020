@@ -18,7 +18,7 @@ public class areaDeleteController : MonoBehaviour
            if (triggerer) triggerer.Trigger();
            Destroy(this.gameObject);
            if (casuale)
-               Destroy(casuale);
+               Destroy(casuale.gameObject);
            if (casuale1)
                Destroy(casuale1);
            if (casuale2)
