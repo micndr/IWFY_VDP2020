@@ -37,7 +37,7 @@ public class GlobalState : MonoBehaviour {
     public ItemObject[] inventoryItems;
     public List<InventorySlot> inventoryBackup = new List<InventorySlot>();
 
-    SaveBin loadbin;
+    SaveBin loadbin = null;
 
     void Awake() {
         // monolithic pattern
@@ -63,13 +63,14 @@ public class GlobalState : MonoBehaviour {
 
     public void SpawnpointPlayer() {
         // move the player to spawnpoint (does not do it until tutorial is completed)
-        if (SceneManager.GetActiveScene().name == "WorldHub") {
-            if (completedQuests.Contains("Tutorial")) {
-                Transform player = GameObject.FindGameObjectWithTag("Player").transform;
-                Transform spawnpoint = GameObject.Find("PlayerPortalSpawnpoint").transform;
-                player.position = spawnpoint.position;
-                player.rotation = spawnpoint.rotation;
-            }
+        if (completedQuests.Contains("Tutorial")) {
+            Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+            Transform spawnpoint = GameObject.Find("PlayerPortalSpawnpoint").transform;
+            CharacterController ch = player.GetComponent<CharacterController>();
+            ch.enabled = false;
+            player.position = spawnpoint.position;
+            player.rotation = spawnpoint.rotation;
+            ch.enabled = true;
         }
     }
 
