@@ -142,24 +142,25 @@ public class GlobalState : MonoBehaviour {
     }
 
     public void ModifyPortal(PortalController portal, bool active, QuestMain[] mains = null, string dest="", string questname="", string canvas="") {
+        print(portal.name + " active " + active.ToString());
         if (active) {
             portal._newscene = dest;
             QuestLock ql = portal.GetComponent<QuestLock>();
+            ql.enabled = true;
             ql.main = mains.Where(m => m.questName == questname).ToArray()[0];
             ql.state = ql.main.lenght;
-            print(portal.transform.parent.GetComponentInChildren<Canvas>());
-            print(portal.transform.parent.GetComponentInChildren<Canvas>().transform.GetChild(0).GetComponent<TextMeshProUGUI>());
             portal.transform.parent.GetComponentInChildren<Canvas>().transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = canvas;
         } else {
-            portal.gameObject.SetActive(false);
             portal.transform.parent.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
-            portal.transform.parent.Find("Portal.Emissive" + portal.transform.name[6]).gameObject.SetActive(false);
+            portal.transform.parent.Find("Portal.emissive" + portal.transform.name[6]).gameObject.SetActive(false);
+            portal.gameObject.SetActive(false);
         }
     }
 
     public void SetupPortalsAntiPrefabOverwriting () {
         // :(
         string name = SceneManager.GetActiveScene().name;
+        if (name == "Menu") return;
         QuestMain[] mains = FindObjectsOfType<QuestMain>();
         PortalController[] portals = FindObjectsOfType<PortalController>();
         if (name == "WorldHub") {
@@ -181,18 +182,20 @@ public class GlobalState : MonoBehaviour {
                 }
             }
         } else {
-            string[] questnames = { "Chasm", "Pixie", "Mirror", "Coin" };
-            for (int i = 1; i < 5; i++) {
-                foreach (PortalController portal in portals) {
-                    if (portal.transform.parent.name == "Portal" + i) {
-                        QuestMain main = mains.Where(m => m.questName == questnames[i-1]).ToArray()[0];
-                        ModifyPortal(portal, true, mains, "WorldHub", main.questName, "home");
-                    } else {
-                        ModifyPortal(portal, false);
-                    }
+            string[] questnames = { "Chasm", "Pixie", "Mirror", "Coin", "TheEnd" };
+            int i = int.Parse(name[5].ToString());
+            foreach (PortalController portal in portals) {
+                if (portal.transform.parent.name == "Portal" + i) {
+                    QuestMain main = mains.Where(m => m.questName == questnames[i-1]).ToArray()[0];
+                    ModifyPortal(portal, true, mains, "WorldHub", main.questName, "home");
+                } else {
+                    ModifyPortal(portal, false);
                 }
             }
         }
+
+        GameObject[] fxs = GameObject.FindGameObjectsWithTag("fx");
+        foreach(GameObject fx in fxs) { Destroy(fx); }
     }
 
     #region calledByUI

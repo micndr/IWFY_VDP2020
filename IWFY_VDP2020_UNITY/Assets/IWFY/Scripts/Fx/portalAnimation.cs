@@ -53,6 +53,10 @@ public class portalAnimation : MonoBehaviour {
 
         float anim =  1 - (timer - Time.time) / duration; // from 0 to 1
         foreach (GameObject child in portalFxs) {
+            if (!child) {
+                portalFxs.Clear();
+                return;
+            }
             child.transform.localPosition += transform.forward * child.transform.GetSiblingIndex() / 10000f * speedForwardMovement;
             child.transform.localScale += Vector3.one * child.transform.GetSiblingIndex() / 2500f * speedScaling;
             Renderer rend = child.GetComponentInChildren<Renderer>();
