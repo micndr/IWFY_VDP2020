@@ -65,6 +65,10 @@ public class Triggerer : MonoBehaviour {
         }
     }
 
+    private void OnEnable() {
+        autoTriggerTimer = Time.time + autoTriggerDelay;
+    }
+
     public void Trigger() {
         if (_triggered) {
             return;

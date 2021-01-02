@@ -11,11 +11,13 @@ public class QuestLock : MonoBehaviour {
     // activeUntilState and invert modify the condition for disabling
     public bool activeUntilState = false;
     public bool invert = false;
+    [HideInInspector]
     public bool toCompass = false; /* if true, the compass points to this gameobject */
 
     // if the invetory doesn't have all the requirements, Advance fails.
     public List<ItemObject> requirements = new List<ItemObject>();
 
+    [HideInInspector]
     public int deactivateDelay = 0;
 
     void Start() {
