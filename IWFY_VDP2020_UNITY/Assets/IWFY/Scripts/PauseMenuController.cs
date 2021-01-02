@@ -24,7 +24,6 @@ public class PauseMenuController : MonoBehaviour
         {
             if ((isPaused) && (!UI.activeSelf) && panelToBeOpened.activeSelf)
             {
-                Debug.Log("Esc in preferences");
                 panelToBeOpened.SetActive(false);
                 UI.SetActive(true);
             }
@@ -45,7 +44,7 @@ public class PauseMenuController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         UI.SetActive(true);
         Time.timeScale = 0;
-        Debug.Log("pausa");
+
         isPaused = true;
         player.GetComponent<MoveFlat>().lockUserInput = true;
         player.GetComponent<MoveFlat>().freeCursor = true;
@@ -53,7 +52,6 @@ public class PauseMenuController : MonoBehaviour
 
     public void ResumeGame()
     {
-        Debug.Log("riprendi");
         UI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
@@ -64,14 +62,12 @@ public class PauseMenuController : MonoBehaviour
 
     public void SavingGame()
     {
-        Debug.Log("metodo di salvataggio delle partite");
         GlobalState globalState = FindObjectOfType<GlobalState>();
         globalState.Save();
     }
 
     public void preferences()
     {
-        Debug.Log("apertura modifica impostazioni");
         this.UI.SetActive(false);
         panelToBeOpened.SetActive(true);
     }
@@ -79,7 +75,6 @@ public class PauseMenuController : MonoBehaviour
     public void QuitGame()
     {
         SavingGame();
-        Debug.Log("metodo di chiusura delle partite");
         Application.Quit();
     }
 }

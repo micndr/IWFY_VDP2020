@@ -48,7 +48,6 @@ public class portalAnimation : MonoBehaviour {
             duration = Random.Range(1, 2) * 0 + timeBetweenPulses;
             timer = Time.time + duration;
             Pulse();
-            print("pulse");
         }
 
         float anim =  1 - (timer - Time.time) / duration; // from 0 to 1
