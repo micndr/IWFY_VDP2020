@@ -22,6 +22,7 @@ public class LookAtPointEditor : Editor {
         components.Add(serializedObject.FindProperty("triggerer"));
         components.Add(serializedObject.FindProperty("animator"));
         components.Add(serializedObject.FindProperty("mirrorcont"));
+        components.Add(serializedObject.FindProperty("bidoneController"));
         components.Add(serializedObject.FindProperty("ropeActivator"));
         components.Add(serializedObject.FindProperty("audioSource"));
         components.Add(serializedObject.FindProperty("thunder"));
