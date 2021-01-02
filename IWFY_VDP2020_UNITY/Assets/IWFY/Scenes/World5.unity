@@ -316,6 +316,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -618,6 +619,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -956,6 +958,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -1201,6 +1204,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -1284,6 +1288,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -1437,6 +1442,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 218118958}
   pickup: {fileID: 0}
@@ -1493,77 +1499,77 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1512598191}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 130.79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 75.1
+      value: 4.229677
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -74.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000000813674
+      value: 0.000000081460335
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.04775422
+      value: 6.123234e-17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000003890074
+      value: 6.1232336e-17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99885917
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 84.032936
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 5.4740005
+      value: -179.99919
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90.00079
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 765.1934
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 765.1934
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 765.1934
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e659b84713ed81b448d5410b8c13ebc9,
         type: 3}
@@ -1577,6 +1583,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e659b84713ed81b448d5410b8c13ebc9, type: 3}
+--- !u!1 &223664868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e659b84713ed81b448d5410b8c13ebc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 223664867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &223664869
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223664868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9fe7d890cef619f45993e98db118c697, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &223664870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e659b84713ed81b448d5410b8c13ebc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 223664867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &226436269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,6 +1875,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 336872103}
   pickup: {fileID: 0}
@@ -2120,6 +2158,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -2352,6 +2391,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -2801,6 +2841,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -3008,6 +3049,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -3239,6 +3281,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -3414,6 +3457,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -3764,6 +3808,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -3947,6 +3992,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -4122,6 +4168,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -4367,6 +4414,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -4597,6 +4645,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -4807,6 +4856,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -5015,6 +5065,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -5180,6 +5231,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -5380,6 +5432,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -5610,6 +5663,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -5775,6 +5829,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -5983,6 +6038,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -6190,6 +6246,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -6338,6 +6395,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -6507,6 +6565,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -6695,6 +6754,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -6951,6 +7011,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -7239,6 +7300,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -7484,6 +7546,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -7793,6 +7856,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -8025,6 +8089,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -8255,6 +8320,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -8709,6 +8775,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -9460,6 +9527,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -9667,6 +9735,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -9849,6 +9918,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -10081,6 +10151,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -10445,6 +10516,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -10740,6 +10812,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -10954,6 +11027,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -11137,6 +11211,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -11497,6 +11572,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -11699,6 +11775,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -11942,6 +12019,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -12252,6 +12330,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ebe6f4978ef47c49a8020d76cc84c6e, type: 3}
+--- !u!1 &1512598190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512598191}
+  m_Layer: 0
+  m_Name: Albero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1512598191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512598190}
+  m_LocalRotation: {x: 0.00000005485708, y: -0.6716449, z: 0.00000006022045, w: 0.7408732}
+  m_LocalPosition: {x: 130.79, y: 44.94, z: -74.2}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children:
+  - {fileID: 223664870}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: -84.388, z: 0}
 --- !u!1001 &1520327964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12392,6 +12501,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -12635,6 +12745,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -12800,6 +12911,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13032,6 +13144,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13297,6 +13410,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13462,6 +13576,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13705,6 +13820,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13934,6 +14050,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -14378,6 +14495,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -14484,6 +14602,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1729629687}
   pickup: {fileID: 0}
@@ -14722,6 +14841,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -14929,6 +15049,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -15158,6 +15279,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -15378,6 +15500,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -15586,6 +15709,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -15760,6 +15884,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -15924,6 +16049,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 2028975946}
   pickup: {fileID: 0}
@@ -16175,6 +16301,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -16345,6 +16472,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
