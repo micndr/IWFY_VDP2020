@@ -149,6 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1497563138}
+  - {fileID: 85020160}
   - {fileID: 1144206644}
   - {fileID: 145663318}
   - {fileID: 768361669}
@@ -180,12 +181,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85020159}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.6418394, z: -0, w: 0.7668391}
+  m_LocalPosition: {x: 68.73982, y: 77.054054, z: -131.04576}
+  m_LocalScale: {x: 1.5911051, y: 1.5911052, z: 1.5911051}
   m_Children: []
-  m_Father: {fileID: 1144206644}
-  m_RootOrder: 5
+  m_Father: {fileID: 40362367}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &85020161
 MonoBehaviour:
@@ -333,6 +334,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 110053482}
   pickup: {fileID: 0}
@@ -585,6 +587,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 1
   qlock: {fileID: 131353270}
   pickup: {fileID: 131353271}
@@ -702,6 +705,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -783,7 +787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 40362367}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &145663319
 MonoBehaviour:
@@ -802,6 +806,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: 0
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -834,7 +839,7 @@ MonoBehaviour:
   main: {fileID: 1497563139}
   state: 0
   nextState: 0
-  activeUntilState: 1
+  activeUntilState: 0
   invert: 0
   toCompass: 0
   requirements: []
@@ -1032,6 +1037,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -1181,9 +1187,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217710852}
-  m_LocalRotation: {x: -0.66594803, y: -0.23772506, z: -0.23772505, w: 0.6659481}
-  m_LocalPosition: {x: 3.8377004, y: -2.581, z: -8.8921}
-  m_LocalScale: {x: 1.3271799, y: 1.3271799, z: 20.620869}
+  m_LocalRotation: {x: -0.70696527, y: 0.014142722, z: 0.014142692, w: 0.70696545}
+  m_LocalPosition: {x: 0.55986345, y: -0.68258667, z: -0.5675884}
+  m_LocalScale: {x: 2.111683, y: 2.1116827, z: 32.809967}
   m_Children: []
   m_Father: {fileID: 1144206644}
   m_RootOrder: 3
@@ -1551,6 +1557,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 280966329}
   pickup: {fileID: 0}
@@ -2860,6 +2867,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -3383,6 +3391,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 657403950}
   pickup: {fileID: 657403953}
@@ -3574,6 +3583,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 693778703}
   pickup: {fileID: 0}
@@ -4066,7 +4076,7 @@ Transform:
   m_LocalScale: {x: 1.8050888, y: 1.8050888, z: 1.8050888}
   m_Children: []
   m_Father: {fileID: 40362367}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -38.396004, z: 0}
 --- !u!65 &768361670
 BoxCollider:
@@ -4135,6 +4145,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -4366,6 +4377,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 837581285}
   pickup: {fileID: 0}
@@ -4532,6 +4544,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 852264372}
   pickup: {fileID: 0}
@@ -4660,6 +4673,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 892861911}
   pickup: {fileID: 0}
@@ -5114,6 +5128,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 959757152}
   pickup: {fileID: 0}
@@ -5416,6 +5431,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -5631,6 +5647,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -5845,6 +5862,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1072794235}
   pickup: {fileID: 0}
@@ -5941,9 +5959,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107514450}
-  m_LocalRotation: {x: -0.22275889, y: -0.5167989, z: -0.14135002, w: 0.8144432}
-  m_LocalPosition: {x: 3.2426782, y: -1.675, z: -8.6206455}
-  m_LocalScale: {x: 4.3333883, y: 4.3333907, z: 4.3333898}
+  m_LocalRotation: {x: -0.25842693, y: -0.19404754, z: -0.05307409, w: 0.94485146}
+  m_LocalPosition: {x: 0.13835499, y: 0.7589569, z: 0.38382816}
+  m_LocalScale: {x: 6.894877, y: 6.89488, z: 6.8948784}
   m_Children: []
   m_Father: {fileID: 1144206644}
   m_RootOrder: 4
@@ -6127,6 +6145,7 @@ GameObject:
   - component: {fileID: 1144206646}
   - component: {fileID: 1144206645}
   - component: {fileID: 1144206648}
+  - component: {fileID: 1144206649}
   m_Layer: 0
   m_Name: Phonograph
   m_TagString: Untagged
@@ -6141,19 +6160,18 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144206643}
-  m_LocalRotation: {x: -0, y: -0.6418394, z: -0, w: 0.7668391}
-  m_LocalPosition: {x: 68.73982, y: 77.054054, z: -131.04576}
-  m_LocalScale: {x: 1.5911052, y: 1.5911052, z: 1.5911052}
+  m_LocalRotation: {x: -0, y: -0.87224275, z: -0, w: 0.48907322}
+  m_LocalPosition: {x: 83.55, y: 73.63, z: -128.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1846483812}
   - {fileID: 2104334927}
   - {fileID: 2084842183}
   - {fileID: 217710853}
   - {fileID: 1107514451}
-  - {fileID: 85020160}
   m_Father: {fileID: 40362367}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -88.520004, z: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -121.44101, z: 0}
 --- !u!114 &1144206645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6186,14 +6204,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoTrigger: 0
   autoTriggerDelay: 0
-  destroyAfterTrigger: 0
+  destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: 0
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
   dialogueManager: {fileID: 0}
-  dialogue: {fileID: 85020161}
+  dialogue: {fileID: 0}
   triggerer: {fileID: 0}
   animator: {fileID: 0}
   mirrorcont: {fileID: 0}
@@ -6235,14 +6254,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 0}
+  main: {fileID: 1497563139}
   state: 0
   nextState: 0
-  activeUntilState: 0
+  activeUntilState: 1
   invert: 0
   toCompass: 0
   requirements: []
   deactivateDelay: 0
+--- !u!65 &1144206649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144206643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.56, y: 2.47, z: 1.82}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1166049695
 GameObject:
   m_ObjectHideFlags: 0
@@ -6389,7 +6421,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 40362367}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1189960591
 MonoBehaviour:
@@ -6428,6 +6460,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1189960591}
   pickup: {fileID: 0}
@@ -8424,6 +8457,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1437401285}
   pickup: {fileID: 0}
@@ -8515,6 +8549,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1458057951}
   pickup: {fileID: 1458057950}
@@ -9051,6 +9086,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -9124,6 +9160,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -9382,6 +9419,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -9868,6 +9906,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1713539133}
   pickup: {fileID: 0}
@@ -9968,6 +10007,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1717289582}
   pickup: {fileID: 0}
@@ -10517,9 +10557,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846483811}
-  m_LocalRotation: {x: -0.66594803, y: -0.2377251, z: -0.2377251, w: 0.66594803}
-  m_LocalPosition: {x: 3.3899198, y: -2.8966262, z: -8.220022}
-  m_LocalScale: {x: 4.58239, y: 4.58239, z: 3.0896764}
+  m_LocalRotation: {x: -0.7069654, y: 0.0141426325, z: 0.0141426325, w: 0.7069654}
+  m_LocalPosition: {x: 0.73666584, y: -1.1847763, z: 0.70514286}
+  m_LocalScale: {x: 7.291063, y: 7.2910633, z: 4.916}
   m_Children: []
   m_Father: {fileID: 1144206644}
   m_RootOrder: 0
@@ -10726,6 +10766,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 1
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -10842,6 +10883,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 1
   qlock: {fileID: 1899082750}
   pickup: {fileID: 0}
@@ -10978,6 +11020,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1904963048}
   pickup: {fileID: 0}
@@ -11098,6 +11141,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1908947252}
   pickup: {fileID: 0}
@@ -11332,6 +11376,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 1
   qlock: {fileID: 1964254007}
   pickup: {fileID: 0}
@@ -11576,6 +11621,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 1996560563}
   pickup: {fileID: 0}
@@ -13006,6 +13052,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13040,6 +13087,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13191,6 +13239,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13355,6 +13404,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 2067678604}
   pickup: {fileID: 0}
@@ -13535,6 +13585,7 @@ MonoBehaviour:
   destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
   pickup: {fileID: 0}
@@ -13639,9 +13690,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084842182}
-  m_LocalRotation: {x: -0.15061963, y: 0.15061963, z: -0.6908789, w: 0.690879}
-  m_LocalPosition: {x: 3.2819276, y: -2.407, z: -8.689183}
-  m_LocalScale: {x: 2.16397, y: 2.16397, z: 2.16397}
+  m_LocalRotation: {x: -0.38604805, y: 0.38604808, z: -0.59242463, w: 0.59242463}
+  m_LocalPosition: {x: 0.1126886, y: -0.4057312, z: 0.2608161}
+  m_LocalScale: {x: 3.4431036, y: 3.443103, z: 3.4431033}
   m_Children: []
   m_Father: {fileID: 1144206644}
   m_RootOrder: 2
@@ -13788,6 +13839,7 @@ MonoBehaviour:
   destroyAfterTrigger: 0
   disableAfterTrigger: 0
   playAmbientSound: -1
+  stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 2086643590}
   pickup: {fileID: 2086643592}
@@ -13880,9 +13932,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104334926}
-  m_LocalRotation: {x: -0.665948, y: -0.23772512, z: -0.23772506, w: 0.6659481}
-  m_LocalPosition: {x: 3.3035722, y: -2.546, z: -8.88264}
-  m_LocalScale: {x: 2.13479, y: 2.13479, z: 2.13479}
+  m_LocalRotation: {x: -0.70696527, y: 0.014142662, z: 0.014142692, w: 0.70696545}
+  m_LocalPosition: {x: -0.06583981, y: -0.6268997, z: 0.0077119023}
+  m_LocalScale: {x: 3.396675, y: 3.3966746, z: 3.3966749}
   m_Children: []
   m_Father: {fileID: 1144206644}
   m_RootOrder: 1

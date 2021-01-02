@@ -38,6 +38,7 @@ public class LookAtPointEditor : Editor {
         other.Add(serializedObject.FindProperty("unlockPlayer"));
         other.Add(serializedObject.FindProperty("findComponents"));
         other.Add(serializedObject.FindProperty("playAmbientSound"));
+        other.Add(serializedObject.FindProperty("stopAmbientSound"));
     }
 
     public override void OnInspectorGUI() {
