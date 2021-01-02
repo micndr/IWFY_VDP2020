@@ -22,6 +22,7 @@ public class Triggerer : MonoBehaviour {
     public Animator animator;
 
     public MirrorController mirrorcont;
+    public bidoneController bidoneController;
     public ropeActivator ropeActivator;
 
     public AudioSource audioSource;
@@ -97,6 +98,7 @@ public class Triggerer : MonoBehaviour {
             animator.SetTrigger("trigger");
         }
         if (mirrorcont) mirrorcont.RotateMirror();
+        if (bidoneController) bidoneController.RotateBidone();
         if (audioSource) audioSource.Play();
         if (thunder) thunder.Strike();
         if (link) link.Open();
