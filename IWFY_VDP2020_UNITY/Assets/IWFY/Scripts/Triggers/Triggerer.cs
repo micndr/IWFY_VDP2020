@@ -89,7 +89,9 @@ public class Triggerer : MonoBehaviour {
             
         }
         if (triggerer) triggerer.Trigger();
-        if (animator) animator.SetTrigger("trigger");
+        if (animator) {
+            animator.SetTrigger("trigger");
+        }
         if (mirrorcont) mirrorcont.RotateMirror();
         if (audioSource) audioSource.Play();
         if (thunder) thunder.Strike();
