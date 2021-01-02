@@ -23,7 +23,7 @@ public class QuestMain : MonoBehaviour {
     public List<string> questRequirements = new List<string>();
 
     // internal
-    int lenght = 0; /* largest lock.nextstate */
+    public int lenght = 0; /* largest lock.nextstate */
     Text QuestText;
     private bool resetQuestText = true;
     private Compass compass;

@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using UnityEngine.Rendering.PostProcessing;
 
+using TMPro;
+
+using System.Linq;
+
+
 // what is saved is thrown in here
 [SerializeField]
 public class SaveBin {
@@ -94,6 +99,8 @@ public class GlobalState : MonoBehaviour {
         // synchronize settings
         //UpdateAudioVideo();
         UpdateGraphicLevel();
+
+        Invoke("SetupPortalsAntiPrefabOverwriting", 0.2f);
     }
 
     private void BackupInventory() {
@@ -106,6 +113,7 @@ public class GlobalState : MonoBehaviour {
 
     // DEPRECATED, SHOULD NOT BE USED
     private void UpdateAudioVideo() {
+        return;
         // find all audio and video components and change the volume
         AudioSource[] audios = FindObjectsOfType<AudioSource>();
         VideoPlayer[] videos = FindObjectsOfType<VideoPlayer>();
@@ -130,6 +138,60 @@ public class GlobalState : MonoBehaviour {
             QualitySettings.SetQualityLevel(0, true);
         } else {
             QualitySettings.SetQualityLevel(5, true);
+        }
+    }
+
+    public void ModifyPortal(PortalController portal, bool active, QuestMain[] mains = null, string dest="", string questname="", string canvas="") {
+        if (active) {
+            portal._newscene = dest;
+            QuestLock ql = portal.GetComponent<QuestLock>();
+            ql.main = mains.Where(m => m.questName == questname).ToArray()[0];
+            ql.state = ql.main.lenght;
+            print(portal.transform.parent.GetComponentInChildren<Canvas>());
+            print(portal.transform.parent.GetComponentInChildren<Canvas>().transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+            portal.transform.parent.GetComponentInChildren<Canvas>().transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = canvas;
+        } else {
+            portal.gameObject.SetActive(false);
+            portal.transform.parent.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+            portal.transform.parent.Find("Portal.Emissive" + portal.transform.name[6]).gameObject.SetActive(false);
+        }
+    }
+
+    public void SetupPortalsAntiPrefabOverwriting () {
+        // :(
+        string name = SceneManager.GetActiveScene().name;
+        QuestMain[] mains = FindObjectsOfType<QuestMain>();
+        PortalController[] portals = FindObjectsOfType<PortalController>();
+        if (name == "WorldHub") {
+            foreach(PortalController portal in portals) {
+                if (portal.transform.parent.name == "Portal1") {
+                    ModifyPortal(portal, true, mains, "World1", "Tutorial", "to world 1");
+                }
+                if (portal.transform.parent.name == "Portal2") {
+                    ModifyPortal(portal, true, mains, "World2", "AfterWorld1", "to world 2");
+                }
+                if (portal.transform.parent.name == "Portal3") {
+                    ModifyPortal(portal, true, mains, "World2", "AfterWorld2", "to world 3");
+                }
+                if (portal.transform.parent.name == "Portal4") {
+                    ModifyPortal(portal, true, mains, "World2", "AfterWorld3", "to world 4");
+                }
+                if (portal.transform.parent.name == "Portal5") {
+                    ModifyPortal(portal, true, mains, "World2", "AfterWorld4", "to world 5");
+                }
+            }
+        } else {
+            string[] questnames = { "Chasm", "Pixie", "Mirror", "Coin" };
+            for (int i = 1; i < 5; i++) {
+                foreach (PortalController portal in portals) {
+                    if (portal.transform.parent.name == "Portal" + i) {
+                        QuestMain main = mains.Where(m => m.questName == questnames[i-1]).ToArray()[0];
+                        ModifyPortal(portal, true, mains, "WorldHub", main.questName, "home");
+                    } else {
+                        ModifyPortal(portal, false);
+                    }
+                }
+            }
         }
     }
 

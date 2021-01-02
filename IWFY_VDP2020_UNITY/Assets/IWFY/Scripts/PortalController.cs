@@ -12,7 +12,7 @@ public class PortalController : MonoBehaviour
     // [SerializeField] private float _zcoord;
     
     
-    [SerializeField] private string _newscene;
+    [SerializeField] public string _newscene;
 
 
     public void OnTriggerEnter(Collider col)
