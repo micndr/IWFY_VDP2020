@@ -74,6 +74,7 @@ public class GlobalState : MonoBehaviour {
     }
 
     void OnLoadCallback(Scene scene, LoadSceneMode sceneMode) {
+        if (!this) return;
         if (loadbin != null) {
             ApplyBin(loadbin);
         } else {
@@ -172,13 +173,13 @@ public class GlobalState : MonoBehaviour {
                     ModifyPortal(portal, true, mains, "World2", "AfterWorld1", "to world 2");
                 }
                 if (portal.transform.parent.name == "Portal3") {
-                    ModifyPortal(portal, true, mains, "World2", "AfterWorld2", "to world 3");
+                    ModifyPortal(portal, true, mains, "World3", "AfterWorld2", "to world 3");
                 }
                 if (portal.transform.parent.name == "Portal4") {
-                    ModifyPortal(portal, true, mains, "World2", "AfterWorld3", "to world 4");
+                    ModifyPortal(portal, true, mains, "World4", "AfterWorld3", "to world 4");
                 }
                 if (portal.transform.parent.name == "Portal5") {
-                    ModifyPortal(portal, true, mains, "World2", "AfterWorld4", "to world 5");
+                    ModifyPortal(portal, true, mains, "World5", "AfterWorld4", "to world 5");
                 }
             }
         } else {
