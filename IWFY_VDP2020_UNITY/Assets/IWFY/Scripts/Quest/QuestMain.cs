@@ -24,14 +24,14 @@ public class QuestMain : MonoBehaviour {
 
     // internal
     public int lenght = 0; /* largest lock.nextstate */
-    Text QuestText;
+    TMPro.TextMeshProUGUI QuestText;
     private bool resetQuestText = true;
     private Compass compass;
 
     private void Start() {
         // cache components and references
         if (questName.Length == 0 && stateNames.Length > 0) { questName = stateNames[0]; }
-        QuestText = GameObject.Find("QuestText").GetComponent<Text>();
+        QuestText = GameObject.Find("QuestText").GetComponent<TMPro.TextMeshProUGUI>();
         globalState = FindObjectOfType<GlobalState>();
 
         GameObject compassObj = GameObject.Find("CompassPrefab");
