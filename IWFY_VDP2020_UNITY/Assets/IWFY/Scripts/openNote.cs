@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class openNote : MonoBehaviour
 {
     [SerializeField] private Image note;
+    private bool attivo = true;
 
     public void showMessage()
     {
@@ -21,5 +22,15 @@ public class openNote : MonoBehaviour
             Debug.Log("disabilita");
             note.enabled = false;
         }
+    }
+
+    public bool getAttivo()
+    {
+        return attivo;
+    }
+
+    public void setAttivo()
+    {
+        attivo = !attivo;
     }
 }
