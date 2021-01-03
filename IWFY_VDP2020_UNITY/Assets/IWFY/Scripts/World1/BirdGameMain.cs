@@ -25,8 +25,6 @@ public class BirdGameMain : MonoBehaviour {
     //AudioSource audioSource;
     Text debugText;
     float playingTimer;
-    float smoothvol = 1;
-    float smoothvoltarget = 1;
     float endtimer = float.MaxValue;
     bool completed = false;
 
@@ -98,7 +96,7 @@ public class BirdGameMain : MonoBehaviour {
         if (part == -1) {
             Destroy(GameObject.Find("Kite").gameObject, 5.5f);
             birbgothere.SetTrigger("getkite");
-            PlayClip(7);
+            PlayClip(10);
             endtimer = Time.time + 11f;
             return;
         }
@@ -108,7 +106,7 @@ public class BirdGameMain : MonoBehaviour {
     }
 
     public void FailFeedback () {
-        PlayClip(6);
+        PlayClip(9);
         //Debug.Log("bababa ba baba bird");
 
         birbAnim.OneShot(2);
@@ -125,7 +123,6 @@ public class BirdGameMain : MonoBehaviour {
     public void PlayClip (int clip) {
         playingTimer = Time.time + 2;
         audioManager.PlayAmbient(clip);
-        print(clip);
     }
 
     public void PickupSeed (BirdGameSeedbag sb) {

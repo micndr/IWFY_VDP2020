@@ -51,11 +51,6 @@ public class GlobalState : MonoBehaviour {
 
         // get a list of items, to reconstruct the inventory on load.
         inventoryItems = Resources.LoadAll<ItemObject>("Items");
-
-        
-        System.AppDomain.CurrentDomain.DomainUnload += (var, var2) => {
-            Debug.LogError("AppDomain Unloaded!");
-        };
     }
 
     public void AddQuest(QuestMain qm) {
