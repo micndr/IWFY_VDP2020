@@ -59,7 +59,8 @@ public class GlobalState : MonoBehaviour {
         inventoryItems = Resources.LoadAll<ItemObject>("Items");
 
         if (Application.isEditor) {
-            if (SceneManager.GetActiveScene().name != "WorldHub") {
+            if (SceneManager.GetActiveScene().name != "WorldHub"
+                && SceneManager.GetActiveScene().name != "Menu" ) {
                 completedQuests.Add("Tutorial");
                 int index = int.Parse(SceneManager.GetActiveScene().name[5].ToString());
                 if (index >= 2) { completedQuests.Add("Chasm"); completedQuests.Add("AfterWorld1"); }
