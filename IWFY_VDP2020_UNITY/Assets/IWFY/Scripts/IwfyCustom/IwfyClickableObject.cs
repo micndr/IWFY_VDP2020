@@ -52,6 +52,9 @@ public class IwfyClickableObject : IwfyClickableObjectNoPopup
         
         _popupPrefabInstance = Instantiate(_popupPrefab, transform);
         _popupPrefabInstance.tag = "Popup";
+        // Jacopo: ho messo anche qui la rotazione del popup verso il giocatore, così da quando appaiono sono giusti
+        _popupPrefabInstance.transform.rotation = 
+            Quaternion.LookRotation(transform.position - GameObject.FindGameObjectWithTag("Player").transform.position);
         _popupPrefabInstance.GetComponent<PopupLogic>().SetMessage(_popupMessage);
         _popupPrefabInstance.GetComponent<PopupLogic>().SetBackgroundColor(_popupBackgroundColor);
         
