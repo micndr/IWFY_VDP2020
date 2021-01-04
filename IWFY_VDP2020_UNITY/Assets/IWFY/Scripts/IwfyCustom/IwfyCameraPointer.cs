@@ -37,10 +37,6 @@ public class IwfyCameraPointer : MonoBehaviour
                 }
                 _gazedAtObject?.SendMessage("OnPointerEnter", SendMessageOptions.DontRequireReceiver);
             }
-            else
-            {
-                _gazedAtObject?.SendMessage("OnPointerEnter", SendMessageOptions.DontRequireReceiver);
-            }
         }
         else
         {

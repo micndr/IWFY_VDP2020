@@ -12,6 +12,7 @@ using UnityEngine;
 public class IwfyClickableObjectNoPopup : MonoBehaviour
 {
     private GameObject _reticlePointer;
+    [SerializeField] private bool doesNotDisappearWhenClicked = false;
     public virtual void Start()
     {
         _reticlePointer = GameObject.FindGameObjectWithTag("IwfyReticlePointer");
@@ -59,7 +60,7 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
         {
             triggerer.Trigger();
             
-            _reticlePointer.SendMessage("OnClickableObjectExit");
+            if (!doesNotDisappearWhenClicked) _reticlePointer.SendMessage("OnClickableObjectExit");
             return;
         }
 
@@ -68,7 +69,7 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
             triggerer = transform.parent.gameObject.GetComponent<Triggerer>();
             if(triggerer) triggerer.Trigger();
             
-            _reticlePointer.SendMessage("OnClickableObjectExit");
+            if (!doesNotDisappearWhenClicked) _reticlePointer.SendMessage("OnClickableObjectExit");
             return;
         }
     }
