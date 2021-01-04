@@ -45,7 +45,7 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
             GetComponent<Outline>().enabled = false;
         }
         
-        if ( this.transform.parent.gameObject.GetComponent<Outline>() != null)
+        if (transform.parent && this.transform.parent.gameObject.GetComponent<Outline>() != null)
         {
             this.transform.parent.gameObject.GetComponent<Outline>().enabled = false;
         }
