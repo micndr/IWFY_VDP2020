@@ -62,7 +62,7 @@ public class ScrignoController : MonoBehaviour
 
     private void CheckWin()
     {
-        PrintAll();
+        //PrintAll();
         if (AllZeros())
         {
             StartCoroutine(Apertura()); // Send ghiera completed message;
