@@ -79,6 +79,8 @@ public class Triggerer : MonoBehaviour {
             return;
         }
 
+        print("lol");
+
         /*
         // triggers this function after triggerdelay seconds
         if (autoTriggerDelay > 0 && !autoTrigger) {

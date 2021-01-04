@@ -81,13 +81,14 @@ public class GlobalState : MonoBehaviour {
     }
 
     void OnLoadCallback(Scene scene, LoadSceneMode sceneMode) {
-        if (!this) return;
-        if (loadbin != null) {
-            ApplyBin(loadbin);
-        } else {
-            loadbin = null;
-            SpawnpointPlayer();
-        }
+        if (scene.name != "Menu") {
+            if (!this) return;
+            if (loadbin != null) {
+                ApplyBin(loadbin);
+            } else {
+                loadbin = null;
+                SpawnpointPlayer();
+            }
 
         // set the completed quests to their last state
         var qms = FindObjectsOfType<QuestMain>();
@@ -101,15 +102,16 @@ public class GlobalState : MonoBehaviour {
             }
         }
 
-        // save current inventory to a local list
-        // BackupInventory();
-        Save();
+            // save current inventory to a local list
+            // BackupInventory();
+            Save();
 
-        // synchronize settings
-        //UpdateAudioVideo();
-        UpdateGraphicLevel();
+            // synchronize settings
+            //UpdateAudioVideo();
+            UpdateGraphicLevel();
 
-        Invoke("SetupPortalsAntiPrefabOverwriting", 0.2f);
+            Invoke("SetupPortalsAntiPrefabOverwriting", 0.2f);
+        }
     }
 
     public void UpdateGraphicLevel() {

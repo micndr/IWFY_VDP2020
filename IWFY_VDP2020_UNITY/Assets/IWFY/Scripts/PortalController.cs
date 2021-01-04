@@ -14,6 +14,9 @@ public class PortalController : MonoBehaviour
     
     [SerializeField] public string _newscene;
 
+    public void Trigger () {
+        SceneManager.LoadScene(_newscene);
+    }
 
     public void OnTriggerEnter(Collider col)
     {
