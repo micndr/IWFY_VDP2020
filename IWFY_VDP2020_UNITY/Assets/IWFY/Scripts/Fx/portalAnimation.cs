@@ -87,6 +87,6 @@ public class portalAnimation : MonoBehaviour {
         "Tolomeo", "Ippocrate",
         "Avicenna", "Galeno",
         "Averroè",
-        "Virgilio"
+        "Virgilio", "Stasi"
     };
 }
