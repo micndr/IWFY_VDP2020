@@ -24,6 +24,8 @@ public class IwfyCameraPointer : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
             //Debug.Log(_gazedAtObject);
+            // hit.transform.gameObject -> Parent tranform
+            // hit.collider.transform.gameObject -> Child transform
             // GameObject detected in front of the camera.
             if (_gazedAtObject != hit.collider.transform.gameObject)
             {
