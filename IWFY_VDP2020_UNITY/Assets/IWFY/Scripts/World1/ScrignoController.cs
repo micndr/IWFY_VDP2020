@@ -35,7 +35,7 @@ public class ScrignoController : MonoBehaviour
             for (int j = 0; j < i; j++)
             {
                 seconds++;
-                StartCoroutine(DelayedGhieraClicked(i, 1));
+                StartCoroutine(DelayedGhieraClicked(i, seconds));
             }
         }
     }
