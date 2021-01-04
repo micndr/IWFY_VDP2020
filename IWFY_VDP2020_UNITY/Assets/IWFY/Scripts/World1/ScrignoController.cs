@@ -8,6 +8,7 @@ public class ScrignoController : MonoBehaviour
 {
     // 0->2, 1->3, 2->4
     [SerializeField] private GameObject[] _ghiera;
+    [SerializeField] private GameObject _chiave;
     private int[] _angle;
     private bool occupied;
     [SerializeField] private Animator[] _animator;
@@ -61,21 +62,27 @@ public class ScrignoController : MonoBehaviour
 
     private void CheckWin()
     {
-        if (AllZeros()) {
+        PrintAll();
+        if (AllZeros())
+        {
             StartCoroutine(Apertura()); // Send ghiera completed message;
             for (int i = 0; i < _ghiera.Length; i++)
             {
                 _ghiera[i].GetComponent<MeshCollider>().enabled = false;
             }
+
+            _chiave.GetComponent<Triggerer>().enabled = true;
+            _chiave.GetComponent<ItemPickup>().enabled = true;
+            _chiave.GetComponent<IwfyClickableObjectNoPopup>().enabled = true;
         }
     }
 
     private IEnumerator Apertura()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.25f);
         _audioManager.SendMessage("PlayAmbient", 12);
-        _animator[3].SetBool("Aperto", true);
-        _animator[4].SetBool("Aperto", true);
+        _animator[_animator.Length-2].SetBool("Aperto", true);
+        _animator[_animator.Length-1].SetBool("Aperto", true);
     }
 
     private bool AllZeros()
@@ -87,5 +94,13 @@ public class ScrignoController : MonoBehaviour
         }
 
         return !foundNotZero;
+    }
+
+    private void PrintAll()
+    {
+        for (int i = 0; i < _ghiera.Length; i++)
+        {
+            Debug.Log("Angolo Ghiera "+i+": "+ _angle[i]);
+        }
     }
 }
