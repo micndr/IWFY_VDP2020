@@ -18,16 +18,17 @@ public class portalAnimation : MonoBehaviour {
     public float speedTransparency = 1;
 
     void Start() {
-        
+
     }
 
-    void Pulse () {
-        foreach(GameObject child in portalFxs) {
+    void Pulse() {
+        foreach (GameObject child in portalFxs) {
             Destroy(child);
         }
         portalFxs.Clear();
-        for (int i=0; i< numOfParticles; i++) {
+        for (int i = 0; i < numOfParticles; i++) {
             GameObject obj = GameObject.Instantiate(portalFx);
+            obj.name = namesLimbo[Random.Range(0, namesLimbo.Length)];
             obj.transform.position = transform.position;
             obj.transform.rotation = transform.rotation;
             float scale = 1 - (1.0f / numOfParticles) * i;
@@ -50,7 +51,7 @@ public class portalAnimation : MonoBehaviour {
             Pulse();
         }
 
-        float anim =  1 - (timer - Time.time) / duration; // from 0 to 1
+        float anim = 1 - (timer - Time.time) / duration; // from 0 to 1
         foreach (GameObject child in portalFxs) {
             if (!child) {
                 portalFxs.Clear();
@@ -66,4 +67,26 @@ public class portalAnimation : MonoBehaviour {
                 Mathf.Max(0, rend.material.color.a - 0.005f * speedTransparency));
         }
     }
+
+    string[] namesLimbo = {
+        "Omero", "Orazio",
+        "Ovidio", "Lucano",
+        "Elettra", "Ettore",
+        "Enea", "Cesare",
+        "Camilla", "Pantasilea",
+        "Re Latino", "Lavinia",
+        "Bruto", "Tarquinio il Superbo", "Lucrezia",
+        "Giulia", "Marzia",
+        "Cornelia", "Saladino",
+        "Aristotele", "Socrate",
+        "Platone", "Democrito",
+        "Diogene il Cinico",
+        "Dioscoride", "Orfeo",
+        "Cicerone", "Lino",
+        "Seneca", "Euclide",
+        "Tolomeo", "Ippocrate",
+        "Avicenna", "Galeno",
+        "Averroè",
+        "Virgilio"
+    };
 }
