@@ -26,7 +26,7 @@ public class openNote : MonoBehaviour
 
     public bool getAttivo()
     {
-        return attivo;
+        return note.enabled;
     }
 
     public void setAttivo()
