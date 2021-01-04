@@ -108,7 +108,10 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAmbient(int index)
     {
-        ambient[index].Play();
+        if (index < ambient.Length)
+        {
+            if (ambient[index] != null) ambient[index].Play();
+        }
     }
     
     // TODO
