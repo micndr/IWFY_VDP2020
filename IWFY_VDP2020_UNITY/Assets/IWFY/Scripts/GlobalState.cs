@@ -57,6 +57,10 @@ public class GlobalState : MonoBehaviour {
 
         // get a list of items, to reconstruct the inventory on load.
         inventoryItems = Resources.LoadAll<ItemObject>("Items");
+
+        if (Application.isEditor) {
+            OnLoadCallback(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+        }
     }
 
     public void AddQuest(QuestMain qm) {
@@ -90,17 +94,17 @@ public class GlobalState : MonoBehaviour {
                 SpawnpointPlayer();
             }
 
-        // set the completed quests to their last state
-        var qms = FindObjectsOfType<QuestMain>();
-        foreach (QuestMain qm in qms) {
-            if (completedQuests.Contains(qm.questName)) {
-                print("restoring completed quest name " + qm.name);
-                // TODO: change quest completion
-                qm.state = qm.stateNames.Length - 1;
-                qm.completed = true;
-                qm.CheckCompletion();
-            }
-        }
+            // set the completed quests to their last state
+            var qms = FindObjectsOfType<QuestMain>();
+            foreach (QuestMain qm in qms) {
+                if (completedQuests.Contains(qm.questName)) {
+                    print("restoring completed quest name " + qm.name);
+                    // TODO: change quest completion
+                    qm.state = qm.stateNames.Length - 1;
+                    qm.completed = true;
+                    qm.CheckCompletion();
+                }
+          }   
 
             // save current inventory to a local list
             // BackupInventory();
