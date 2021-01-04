@@ -23,6 +23,9 @@ public class SaveBin {
     public Vector3 playerCamRot;
 
     public string currentLevel;
+
+    public int[] keys;
+    public int[] letters;
 }
 
 // quest and setting synchronizer, saves/loads too
@@ -38,6 +41,9 @@ public class GlobalState : MonoBehaviour {
     public List<InventorySlot> inventoryBackup = new List<InventorySlot>();
 
     SaveBin loadbin = null;
+
+    public int[] keys = { 0, 0, 0, 0 };
+    public int[] letters = { 0, 0, 0, 0, 0, 0, 0 };
 
     void Awake() {
         // monolithic pattern
@@ -75,13 +81,14 @@ public class GlobalState : MonoBehaviour {
     }
 
     void OnLoadCallback(Scene scene, LoadSceneMode sceneMode) {
-        if (!this) return;
-        if (loadbin != null) {
-            ApplyBin(loadbin);
-        } else {
-            loadbin = null;
-            SpawnpointPlayer();
-        }
+        if (scene.name != "Menu") {
+            if (!this) return;
+            if (loadbin != null) {
+                ApplyBin(loadbin);
+            } else {
+                loadbin = null;
+                SpawnpointPlayer();
+            }
 
         // set the completed quests to their last state
         var qms = FindObjectsOfType<QuestMain>();
@@ -95,37 +102,15 @@ public class GlobalState : MonoBehaviour {
             }
         }
 
-        // save current inventory to a local list
-        BackupInventory();
+            // save current inventory to a local list
+            // BackupInventory();
+            Save();
 
-        // synchronize settings
-        //UpdateAudioVideo();
-        UpdateGraphicLevel();
+            // synchronize settings
+            //UpdateAudioVideo();
+            UpdateGraphicLevel();
 
-        Invoke("SetupPortalsAntiPrefabOverwriting", 0.2f);
-    }
-
-    private void BackupInventory() {
-        InventoryManager inventory = FindObjectOfType<InventoryManager>();
-        if (inventory) {
-            inventoryBackup.Clear();
-            inventoryBackup.AddRange(inventory.inventory.itemList);
-        }
-    }
-
-    // DEPRECATED, SHOULD NOT BE USED
-    private void UpdateAudioVideo() {
-        return;
-        // find all audio and video components and change the volume
-        AudioSource[] audios = FindObjectsOfType<AudioSource>();
-        VideoPlayer[] videos = FindObjectsOfType<VideoPlayer>();
-
-        for (int i = 0; i < audios.Length; i++) {
-            audios[i].volume = globalVolume;
-        }
-
-        for (int i = 0; i < videos.Length; i++) {
-            videos[i].SetDirectAudioVolume(0, globalVolume);
+            Invoke("SetupPortalsAntiPrefabOverwriting", 0.2f);
         }
     }
 
@@ -143,6 +128,7 @@ public class GlobalState : MonoBehaviour {
         }
     }
 
+    #region Portals
     public void ModifyPortal(PortalController portal, bool active, QuestMain[] mains = null, string dest="", string questname="", string canvas="") {
         print(portal.name + " active " + active.ToString());
         if (active) {
@@ -200,6 +186,8 @@ public class GlobalState : MonoBehaviour {
         foreach(GameObject fx in fxs) { Destroy(fx); }
     }
 
+    #endregion
+
     #region calledByUI
     public void UpdateVsync() {
         if (vsync) { QualitySettings.vSyncCount = 1; } else { QualitySettings.vSyncCount = 0; }
@@ -238,6 +226,11 @@ public class GlobalState : MonoBehaviour {
         bin.playerPos = player.transform.position;
         bin.playerRot = player.transform.rotation.eulerAngles;
         bin.playerCamRot = player.cam.rotation.eulerAngles;
+
+        bin.keys = new int[keys.Length];
+        bin.letters = new int[letters.Length];
+        keys.CopyTo(bin.keys, 0);
+        letters.CopyTo(bin.letters, 0);
         return bin;
     }
 
@@ -281,6 +274,9 @@ public class GlobalState : MonoBehaviour {
 
         player.transform.rotation = Quaternion.Euler(bin.playerRot);
         player.cam.rotation = Quaternion.Euler(bin.playerCamRot);
+
+        bin.keys.CopyTo(keys, 0);
+        bin.letters.CopyTo(keys, 0);
     }
 
     public void EraseSavedData() {
@@ -289,5 +285,34 @@ public class GlobalState : MonoBehaviour {
         string raw = JsonUtility.ToJson(bin);
         File.WriteAllText(Application.persistentDataPath + "/save.json", raw);
     }
+    #endregion
+
+    #region deprectationAppreciation
+
+    // deprecated in favor of saving everything, basically the "greater good"
+    private void BackupInventory() {
+        InventoryManager inventory = FindObjectOfType<InventoryManager>();
+        if (inventory) {
+            inventoryBackup.Clear();
+            inventoryBackup.AddRange(inventory.inventory.itemList);
+        }
+    }
+
+    // DEPRECATED, SHOULD NOT BE USED
+    private void UpdateAudioVideo() {
+        return;
+        // find all audio and video components and change the volume
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        VideoPlayer[] videos = FindObjectsOfType<VideoPlayer>();
+
+        for (int i = 0; i < audios.Length; i++) {
+            audios[i].volume = globalVolume;
+        }
+
+        for (int i = 0; i < videos.Length; i++) {
+            videos[i].SetDirectAudioVolume(0, globalVolume);
+        }
+    }
+
     #endregion
 }

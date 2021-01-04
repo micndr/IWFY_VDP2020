@@ -59,7 +59,7 @@ public class videoController : MonoBehaviour {
         if (isplaying && Time.time - timer > videoLenght) {
             Stop();
         }
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && isplaying) {
             Stop();
         }
 

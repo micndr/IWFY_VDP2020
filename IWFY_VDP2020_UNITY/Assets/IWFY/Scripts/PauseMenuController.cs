@@ -63,7 +63,7 @@ public class PauseMenuController : MonoBehaviour
     public void SavingGame()
     {
         GlobalState globalState = FindObjectOfType<GlobalState>();
-        globalState.Save();
+        //globalState.Save(); save only at level load (so at every portal)
     }
 
     public void preferences()

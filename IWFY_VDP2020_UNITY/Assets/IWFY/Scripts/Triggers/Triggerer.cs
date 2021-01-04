@@ -32,6 +32,8 @@ public class Triggerer : MonoBehaviour {
     public videoController video;
     public openNote openNote;
 
+    public Component component;
+
     public bool lockPlayer = false;
     public bool unlockPlayer = false;
     PlayerMove playerMove;
@@ -77,6 +79,8 @@ public class Triggerer : MonoBehaviour {
             return;
         }
 
+        print("lol");
+
         /*
         // triggers this function after triggerdelay seconds
         if (autoTriggerDelay > 0 && !autoTrigger) {
@@ -117,6 +121,7 @@ public class Triggerer : MonoBehaviour {
         if (openNote) openNote.showMessage();
         if (playAmbientSound != -1) { audioManager.PlayAmbient(playAmbientSound); }
         if (stopAmbientSound != -1) { audioManager.StopAmbient(stopAmbientSound); }
+        if (component) component.SendMessage("Trigger", SendMessageOptions.DontRequireReceiver);
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }
