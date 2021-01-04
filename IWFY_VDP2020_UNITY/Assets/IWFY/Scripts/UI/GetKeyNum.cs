@@ -11,12 +11,12 @@ public class GetKeyNum : MonoBehaviour {
     void Update() {
         if (!gs) gs = FindObjectOfType<GlobalState>();
         if (!tmptext) tmptext = GetComponent<TMPro.TextMeshProUGUI>();
-        tmptext.text = "x0";
+        tmptext.text = "x1";
         string lvl = SceneManager.GetActiveScene().name;
         if (lvl.Substring(0, 5) == "World" && lvl != "WorldHub") {
             int index = int.Parse(lvl[5].ToString()) - 1;
             if (index < 4) {
-                tmptext.text = "x" + gs.keys[index].ToString();
+                if (gs.keys[index] == 1) tmptext.text = "DONE";
             }
         }
     }
