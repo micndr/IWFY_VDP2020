@@ -225,8 +225,10 @@ public class GlobalState : MonoBehaviour {
         bin.playerRot = player.transform.rotation.eulerAngles;
         bin.playerCamRot = player.cam.rotation.eulerAngles;
 
+        bin.keys = new int[keys.Length];
+        bin.letters = new int[letters.Length];
         keys.CopyTo(bin.keys, 0);
-        letters.CopyTo(bin.keys, 0);
+        letters.CopyTo(bin.letters, 0);
         return bin;
     }
 
