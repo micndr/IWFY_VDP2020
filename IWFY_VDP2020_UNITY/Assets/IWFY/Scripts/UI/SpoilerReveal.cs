@@ -11,7 +11,7 @@ public class SpoilerReveal : MonoBehaviour {
     }
 
     public void OnClick () {
-        transform.Find("Text").gameObject.SetActive(false);
+        // transform.Find("Text").gameObject.SetActive(false);
         transform.Find("Spoiler").gameObject.SetActive(true);
     }
 }
