@@ -288,7 +288,7 @@ public class GlobalState : MonoBehaviour {
         player.cam.rotation = Quaternion.Euler(bin.playerCamRot);
 
         bin.keys.CopyTo(keys, 0);
-        bin.letters.CopyTo(keys, 0);
+        bin.letters.CopyTo(letters, 0);
     }
 
     public void EraseSavedData() {
