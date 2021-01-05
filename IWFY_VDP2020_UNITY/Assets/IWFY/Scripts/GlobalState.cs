@@ -124,6 +124,9 @@ public class GlobalState : MonoBehaviour {
             UpdateGraphicLevel();
 
             Invoke("SetupPortalsAntiPrefabOverwriting", 0.2f);
+        } else {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
