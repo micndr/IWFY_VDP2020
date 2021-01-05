@@ -10,15 +10,24 @@ public class ResDropdown : MonoBehaviour {
 
     void Awake() {
         // filter to 16:9
+        float epsilon = 0.05f;
         foreach (Resolution res in Screen.resolutions) {
-            if (res.width >= 800) {
+            float ratio = (float)res.width / res.height;
+            if (res.width >= 800
+                && ratio > 16.0f / 9.0f - epsilon
+                && ratio < 16.0f / 9.0f + epsilon) {
                 ress.Add(res);
             }
         }
 
         drop = GetComponent<Dropdown>();
-        foreach (Resolution res in ress) {
+        for (int i = 0; i < ress.Count; i++) {
+            Resolution res = ress[i];
             drop.options.Add(new Dropdown.OptionData(res.ToString()));
+            if (Screen.width == res.width && Screen.height == res.height) 
+            {
+                drop.value = i;
+            }
         }
     }
 
