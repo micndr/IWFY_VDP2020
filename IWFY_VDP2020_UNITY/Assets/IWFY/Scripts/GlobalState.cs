@@ -10,8 +10,6 @@ using TMPro;
 
 using System.Linq;
 
-using UnityEngine.SceneManagement; 
-
 
 // what is saved is thrown in here
 [SerializeField]
@@ -48,7 +46,6 @@ public class GlobalState : MonoBehaviour {
     public int[] letters = { 0, 0, 0, 0, 0, 0, 0 };
     
     public InventoryObject inventory;
-    
 
     void Awake() {
         // monolithic pattern
@@ -76,15 +73,15 @@ public class GlobalState : MonoBehaviour {
                 OnLoadCallback(SceneManager.GetActiveScene(), LoadSceneMode.Single);
             }
         }
-
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-        if (sceneName == "Menu")
-        {
-            inventory.itemList.Clear(); //Ok on first start
-        }
+        
+        if (inventory) inventory.itemList.Clear(); //Ok on first start
     }
-    
+
+    private void InventoryTester()
+    {
+        //ItemObject item;
+        //inventory.AddItem(item, 1, item.itemID, item.itemName);
+    }
 
     public void AddQuest(QuestMain qm) {
         // called by QuestMain when it's completed
