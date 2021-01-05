@@ -19,6 +19,11 @@ public class MoveFlat : MonoBehaviour {
 
     public Transform cam;
 
+    public AudioSource[] steps;
+    public float timeBetweenStepsMultiplier = 1f;
+    float steptimer = 0;
+    int steplast = 0;
+
     void Awake() {
         // cache components
         characterController = GetComponent<CharacterController>();
@@ -27,6 +32,20 @@ public class MoveFlat : MonoBehaviour {
         Cursor.visible = false;
         // Camera.main assumes only one main camera is in the scene
         cam = Camera.main.transform;
+        // find the audiosources safely
+        Transform stepsobj = transform.Find("Steps");
+        if (stepsobj) {
+            steps = stepsobj.GetComponents<AudioSource>();
+        }
+    }
+
+    void PlayStep () {
+        if (steps.Length > 0) {
+            int i = 0;
+            // cycle until next sound is different from prev
+            while (i == steplast) i = Random.Range(0, steps.Length);
+            steps[i].Play(); steplast = i;
+        }
     }
 
     void Update() {
@@ -71,14 +90,25 @@ public class MoveFlat : MonoBehaviour {
                 globalState.Load();
             }
         }
+
+        if (steptimer > 1) {
+            steptimer = 0;
+            PlayStep();
+        }
     }
 
     void FixedUpdate() {
         // apply acceleration only in fixed updates
         if (lockUserInput) acc = Vector3.zero;
+        Vector3 prevpos = transform.position;
         characterController.Move(acc * Time.fixedDeltaTime * speed
             + velocity * Time.fixedDeltaTime);
         velocity += Vector3.down * 9.8f * Time.fixedDeltaTime * 3;
+        // if close to ground, add distance to steptimer
+        if (Physics.Raycast(new Ray(transform.position, Vector3.down), 1.5f)) { 
+            steptimer += (transform.position - prevpos).magnitude
+                * timeBetweenStepsMultiplier;
+        }
     }
 
 }
