@@ -21,6 +21,8 @@ public class BirdGameMain : MonoBehaviour {
 
     public AnimController birbAnim;
     public Animator birbgothere;
+    public Animator ding;
+
 
     //AudioSource audioSource;
     Text debugText;
@@ -102,6 +104,7 @@ public class BirdGameMain : MonoBehaviour {
         }
         PlayClip(2+ part - 1);
 
+        ding.SetTrigger("trigger");
         birbAnim.OneShot(4);
     }
 
