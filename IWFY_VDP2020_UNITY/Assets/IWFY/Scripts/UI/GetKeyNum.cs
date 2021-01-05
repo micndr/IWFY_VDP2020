@@ -18,6 +18,8 @@ public class GetKeyNum : MonoBehaviour {
             if (index < 4) {
                 if (gs.keys[index] == 1) tmptext.text = "DONE";
             }
+        } else if (lvl == "WorldHub"){
+            tmptext.text = "x0";
         }
     }
 }
