@@ -119,7 +119,7 @@ public class Triggerer : MonoBehaviour {
         if (openNote) openNote.showMessage();
         if (playAmbientSound != -1) { audioManager.PlayAmbient(playAmbientSound); }
         if (stopAmbientSound != -1) { audioManager.StopAmbient(stopAmbientSound); }
-        if (component) component.SendMessage("Trigger", SendMessageOptions.DontRequireReceiver);
+        if (component) component.SendMessage("TriggerMsg", SendMessageOptions.DontRequireReceiver);
         if (destroyAfterTrigger) {
             Destroy(gameObject, 0.02f);
         }

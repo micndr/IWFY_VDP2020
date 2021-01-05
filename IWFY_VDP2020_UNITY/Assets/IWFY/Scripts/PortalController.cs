@@ -14,7 +14,7 @@ public class PortalController : MonoBehaviour
     
     [SerializeField] public string _newscene;
 
-    public void Trigger () {
+    public void TriggerMsg() {
         SceneManager.LoadScene(_newscene);
     }
 

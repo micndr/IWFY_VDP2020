@@ -7,7 +7,7 @@ public class OpenFinalChest : MonoBehaviour {
     public Animator anim;
     public GameObject collider;
 
-    void Trigger() {
+    void TriggerMsg() {
         GlobalState gs = FindObjectOfType<GlobalState>();
         if (gs.completedQuests.Contains("Chest")) { return; }
         int sum = 0; foreach (int n in gs.keys) sum += n;
