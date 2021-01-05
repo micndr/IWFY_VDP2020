@@ -44,6 +44,8 @@ public class GlobalState : MonoBehaviour {
 
     public int[] keys = { 0, 0, 0, 0 };
     public int[] letters = { 0, 0, 0, 0, 0, 0, 0 };
+    
+    public InventoryObject inventory;
 
     void Awake() {
         // monolithic pattern
@@ -71,8 +73,14 @@ public class GlobalState : MonoBehaviour {
                 OnLoadCallback(SceneManager.GetActiveScene(), LoadSceneMode.Single);
             }
         }
+        
+        inventory.itemList.Clear(); //Ok on first start
+    }
 
-
+    private void InventoryTester()
+    {
+        //ItemObject item;
+        //inventory.AddItem(item, 1, item.itemID, item.itemName);
     }
 
     public void AddQuest(QuestMain qm) {
