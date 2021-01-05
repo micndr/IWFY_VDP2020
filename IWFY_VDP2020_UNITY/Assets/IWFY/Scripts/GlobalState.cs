@@ -52,6 +52,7 @@ public class GlobalState : MonoBehaviour {
             Instance = this;
         } else if (Instance != this) {
             Destroy(gameObject);
+            return;
         }
         SceneManager.sceneLoaded += this.OnLoadCallback;
 
@@ -70,6 +71,8 @@ public class GlobalState : MonoBehaviour {
                 OnLoadCallback(SceneManager.GetActiveScene(), LoadSceneMode.Single);
             }
         }
+
+
     }
 
     public void AddQuest(QuestMain qm) {
