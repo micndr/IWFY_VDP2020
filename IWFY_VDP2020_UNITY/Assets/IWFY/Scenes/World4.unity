@@ -17169,37 +17169,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 835537516}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &835537520
-MonoBehaviour:
+--- !u!65 &835537520
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835537518}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 0.9098039, b: 0.63529414, a: 1}
-  outlineWidth: 4
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
---- !u!114 &835537521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835537518}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4571ac95180fd0806afbd26a5591c0e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doesNotDisappearWhenClicked: 0
+  m_GameObject: {fileID: 835537519}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.1620755, y: 1, z: 10.124681}
+  m_Center: {x: 0.1522282, y: -0.0000032024836, z: -7.106294}
 --- !u!95 &835537522
 Animator:
   serializedVersion: 3
@@ -17252,7 +17234,7 @@ MonoBehaviour:
   stopAmbientSound: -1
   findComponents: 0
   qlock: {fileID: 0}
-  pickup: {fileID: 0}
+  pickup: {fileID: 835537525}
   dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   triggerer: {fileID: 0}
@@ -17301,57 +17283,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &835537527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835537518}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bca403ef329d0744a338b9e03f79c55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  main: {fileID: 0}
-  pickups: []
-  keyNum: -1
---- !u!114 &835537528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835537518}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99979a0f46d4f3c46872031f2e0a3bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoTrigger: 0
-  autoTriggerDelay: 0
-  destroyAfterTrigger: 0
-  disableAfterTrigger: 0
-  playAmbientSound: -1
-  stopAmbientSound: -1
-  findComponents: 0
-  qlock: {fileID: 0}
-  pickup: {fileID: 0}
-  dialogueManager: {fileID: 0}
-  dialogue: {fileID: 0}
-  triggerer: {fileID: 0}
-  animator: {fileID: 0}
-  mirrorcont: {fileID: 0}
-  bidoneController: {fileID: 0}
-  ropeActivator: {fileID: 0}
-  audioSource: {fileID: 0}
-  thunder: {fileID: 0}
-  link: {fileID: 0}
-  video: {fileID: 0}
-  openNote: {fileID: 0}
-  component: {fileID: 0}
-  lockPlayer: 0
-  unlockPlayer: 0
 --- !u!1001 &864588725
 PrefabInstance:
   m_ObjectHideFlags: 0
