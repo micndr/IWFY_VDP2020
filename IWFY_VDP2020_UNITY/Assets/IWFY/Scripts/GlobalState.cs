@@ -78,7 +78,6 @@ public class GlobalState : MonoBehaviour {
             //print("added completed quest name " + qm.name);
             completedQuests.Add(qm.questName);
         }
-        print("completedQuests " + completedQuests.Count);
     }
 
     public void SpawnpointPlayer() {
