@@ -78,6 +78,7 @@ public class GlobalState : MonoBehaviour {
             //print("added completed quest name " + qm.name);
             completedQuests.Add(qm.questName);
         }
+        print("completedQuests " + completedQuests.Count);
     }
 
     public void SpawnpointPlayer() {
@@ -113,7 +114,7 @@ public class GlobalState : MonoBehaviour {
                     qm.completed = true;
                     qm.CheckCompletion();
                 }
-          }   
+            }   
 
             // save current inventory to a local list
             // BackupInventory();
@@ -143,7 +144,6 @@ public class GlobalState : MonoBehaviour {
 
     #region Portals
     public void ModifyPortal(PortalController portal, bool active, QuestMain[] mains = null, string dest="", string questname="", string canvas="") {
-        print(portal.name + " active " + active.ToString());
         if (active) {
             portal._newscene = dest;
             QuestLock ql = portal.GetComponent<QuestLock>();
