@@ -74,7 +74,7 @@ public class GlobalState : MonoBehaviour {
             }
         }
         
-        inventory.itemList.Clear(); //Ok on first start
+        if (inventory) inventory.itemList.Clear(); //Ok on first start
     }
 
     private void InventoryTester()
