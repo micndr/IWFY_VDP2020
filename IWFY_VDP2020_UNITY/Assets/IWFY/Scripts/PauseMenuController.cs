@@ -22,17 +22,17 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if ((isPaused) && (!UI.activeSelf) && panelToBeOpened.activeSelf)
-            {
-                panelToBeOpened.SetActive(false);
-                UI.SetActive(true);
-            }
-
-            else if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
+            // if ((isPaused) && (!UI.activeSelf) && panelToBeOpened.activeSelf)
+            // {
+            //     panelToBeOpened.SetActive(false);
+            //     UI.SetActive(true);
+            // }
+            //
+            // else if (isPaused)
+            // {
+            //     ResumeGame();
+            // }
+            // else
             {
                 Paused();
             }
@@ -70,6 +70,7 @@ public class PauseMenuController : MonoBehaviour
     {
         this.UI.SetActive(false);
         panelToBeOpened.SetActive(true);
+        Debug.Log("vieni");
     }
 
     public void QuitGame()
