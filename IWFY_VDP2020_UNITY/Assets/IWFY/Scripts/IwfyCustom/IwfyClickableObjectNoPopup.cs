@@ -20,6 +20,7 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
 
     public virtual void OnPointerEnter()
     {
+        if (!enabled) return;
         if(_reticlePointer != null)
             _reticlePointer.SendMessage("Animate");
         //Debug.Log("Mouse enter");
@@ -33,11 +34,11 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
         {
             this.transform.parent.gameObject.GetComponent<Outline>().enabled = true;
         }
-    }      
+    }
 
-    public virtual void OnPointerExit()
-    {
-        if(_reticlePointer != null)
+    public virtual void OnPointerExit() {
+        if (!enabled) return;
+        if (_reticlePointer != null)
             _reticlePointer.SendMessage("OnClickableObjectExit");
         //Debug.Log("Mouse exit");
         if (GetComponent<Outline>() != null)
@@ -52,15 +53,15 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
         }
     }
 
-    public virtual void OnPointerClick() 
-    {
+    public virtual void OnPointerClick() {
+        if (!enabled) return;
         // Jacopo -> ho messo anche qua l'attivazione dei trigger. Se si vuole si può spostare
         Triggerer triggerer = GetComponent<Triggerer>();
         if (triggerer)
         {
             triggerer.Trigger();
             
-            if (!doesNotDisappearWhenClicked) _reticlePointer.SendMessage("OnClickableObjectExit");
+            if (!doesNotDisappearWhenClicked) _reticlePointer.SendMessage("OnClickableObjectExit", SendMessageOptions.DontRequireReceiver);
             return;
         }
 
@@ -69,7 +70,7 @@ public class IwfyClickableObjectNoPopup : MonoBehaviour
             triggerer = transform.parent.gameObject.GetComponent<Triggerer>();
             if(triggerer) triggerer.Trigger();
             
-            if (!doesNotDisappearWhenClicked) _reticlePointer.SendMessage("OnClickableObjectExit");
+            if (!doesNotDisappearWhenClicked) _reticlePointer.SendMessage("OnClickableObjectExit", SendMessageOptions.DontRequireReceiver);
             return;
         }
     }
