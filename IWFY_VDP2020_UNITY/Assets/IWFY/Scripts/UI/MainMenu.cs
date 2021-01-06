@@ -7,9 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private string _scene;
         
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(_scene);
+    public void PlayGame() {
+        GlobalState globalState = FindObjectOfType<GlobalState>();
+        globalState.EraseSavedData();
+        globalState.Load();
     }
 
     public void LoadGame() {
