@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClockSelectArtifact : MonoBehaviour {
+public class ClockSelectArtifact : IwfyClickableObjectNoPopup {
 
     public bool OpenSelection = false;
     public int value = 0;
 
-    void OnPointerClick () {
+    public override void OnPointerClick () {
+        base.OnPointerClick();
         transform.parent.GetComponentInChildren<ClockSelect>().Select(gameObject);
     }
 }

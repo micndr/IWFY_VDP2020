@@ -37,7 +37,7 @@ public class BirdGameMain : MonoBehaviour {
         selseed = -1;
         hudseed = GameObject.Find("BirdGameHudSeed");
         if (!Application.isEditor) {
-            GameObject.Find("BirdCanvas").SetActive(false);
+            //GameObject.Find("BirdCanvas").SetActive(false);
         } else {
             debugText = GameObject.Find("BirdCanvas").transform.Find("BirdText").GetComponent<Text>();
         }
