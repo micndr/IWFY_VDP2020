@@ -109,10 +109,10 @@ public class GlobalState : MonoBehaviour {
             if (!this) return;
             if (loadbin != null) {
                 ApplyBin(loadbin);
-            } else {
                 loadbin = null;
-                SpawnpointPlayer();
             }
+
+            SpawnpointPlayer();
 
             // set the completed quests to their last state
             var qms = FindObjectsOfType<QuestMain>();
@@ -242,6 +242,7 @@ public class GlobalState : MonoBehaviour {
         bin.currentLevel = SceneManager.GetActiveScene().name;
         bin.quests.AddRange(completedQuests);
 
+        BackupInventory();
         // saves the items that were in the inventory on level load
         foreach (InventorySlot item in inventoryBackup) {
             bin.inventoryIDs.Add(item.itemID);
