@@ -20,16 +20,18 @@ public class PortalController : MonoBehaviour
 
     public void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("Player"))
-        {
+        if (col.CompareTag("Player")) {
+            AudioManager am = FindObjectOfType<AudioManager>();
+            am.StopOstForSceneChange();
             StartCoroutine(teleport());
-            
+            MoveFlat move = col.GetComponent<MoveFlat>();
+            move.lockUserInput = true;
         }
     }
 
     IEnumerator teleport()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0.25f);
         SceneManager.LoadScene(_newscene);
     }
 }
