@@ -139,8 +139,36 @@ public class AudioManager : MonoBehaviour
         ambient[index].Stop();
     }
 
+    public void StopAmbient(int index, int time)
+    {
+        IEnumerator fadeAmbient = FadeOut(ambient[index], time);
+        StartCoroutine (fadeAmbient);   
+    }
+
+    public void StopOstForSceneChange()
+    {
+        IEnumerator fadeOST = FadeOut(ost[0], 0.25f);
+        StartCoroutine (fadeOST);   
+    }
+
     public void PlayFlowerOn()
     {
         ambient[0].Play();
+    }
+
+    // USAGE
+    // IEnumerator fadeOST = FadeOut(ost[0], 0.5f);
+    // StartCoroutine (fadeOST);   
+    private IEnumerator FadeOut (AudioSource audioSource, float FadeTime) {
+        float startVolume = audioSource.volume;
+ 
+        while (audioSource.volume > 0) {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+ 
+            yield return null;
+        }
+ 
+        audioSource.Stop ();
+        audioSource.volume = startVolume;
     }
 }
