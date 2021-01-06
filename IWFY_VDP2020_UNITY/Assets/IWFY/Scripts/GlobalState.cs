@@ -101,6 +101,14 @@ public class GlobalState : MonoBehaviour {
             player.position = spawnpoint.position;
             player.rotation = spawnpoint.rotation;
             ch.enabled = true;
+        } else {
+            Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+            Transform spawnpoint = GameObject.Find("PlayerHomeSpawnpoint").transform;
+            CharacterController ch = player.GetComponent<CharacterController>();
+            ch.enabled = false;
+            player.position = spawnpoint.position;
+            player.rotation = spawnpoint.rotation;
+            ch.enabled = true;
         }
     }
 
