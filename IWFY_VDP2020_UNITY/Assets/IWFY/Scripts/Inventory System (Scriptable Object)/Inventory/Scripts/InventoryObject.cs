@@ -10,7 +10,7 @@ public class InventoryObject : ScriptableObject
     //public event EventHandler OnInventoryChange;
     public List<InventorySlot> itemList = new List<InventorySlot>(); //Storing items in a list
 
-    /*public void Awake()
+    /*public void Awake() //never called awake
     {
         Debug.Log("Awake");
         itemList.Clear();
