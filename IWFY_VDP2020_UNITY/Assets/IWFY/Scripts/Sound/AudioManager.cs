@@ -62,7 +62,12 @@ public class AudioManager : MonoBehaviour
             snapshot[2].TransitionTo(.01f);
             _globalState.OnVolumeChanged((float) (20.0 * Math.Log10(0.125)));    
         }
-        if (currentSoundscape == Soundscape.WorldHub) snapshot[1].TransitionTo(.01f);
+
+        if (currentSoundscape == Soundscape.WorldHub)
+        {
+            snapshot[1].TransitionTo(.01f);
+            StartCoroutine("DelayOST");
+        }
         if (currentSoundscape == Soundscape.World4) snapshot[3].TransitionTo(1f);
 
         
@@ -70,6 +75,12 @@ public class AudioManager : MonoBehaviour
         AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>() as AudioSource[];
         Debug.Log(allAudioSources.Length);
         
+    }
+    
+    private IEnumerator DelayOST()
+    {
+        yield return new WaitForSeconds(0.5f);
+        ost[0].Play();
     }
 
     private void Update()
