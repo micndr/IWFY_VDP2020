@@ -81,12 +81,12 @@ public class LightsOutController : MonoBehaviour
         _rowsCompletelyOff = UniformRows(false);
         
         // Color (glow)
-        for (int i = 0; i < 4; i++)
-        {
-            if (_rowsCompletelyOn[i]) layers[i].GetComponent<Renderer>().material.color = Color.red;
-            else if (_rowsCompletelyOff[i]) layers[i].GetComponent<Renderer>().material.color = Color.black;
-            else layers[i].GetComponent<Renderer>().material.color = Color.blue;
-        }
+        // for (int i = 0; i < 4; i++)
+        // {
+        //     if (_rowsCompletelyOn[i]) layers[i].GetComponent<Renderer>().material.color = Color.red;
+        //     else if (_rowsCompletelyOff[i]) layers[i].GetComponent<Renderer>().material.color = Color.black;
+        //     else layers[i].GetComponent<Renderer>().material.color = Color.blue;
+        // }
         
 
         _gameOnSimplified = _rowsCompletelyOn[0] && _rowsCompletelyOn[1] && _rowsCompletelyOn[2] && _rowsCompletelyOn[3];
