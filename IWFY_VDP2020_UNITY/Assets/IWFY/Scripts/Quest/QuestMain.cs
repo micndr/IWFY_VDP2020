@@ -159,7 +159,10 @@ public class QuestMain : MonoBehaviour {
                 }
             }
             // if not found, requirements are not met and the result is false.
-            if (!found) { flag = false; break; }
+            if (!found) { 
+                flag = false; break;
+                Debug.Log("not found item " + ql.requirements[j].itemName);
+            }
         }
         // if all are found, flag is still true
         return flag;
