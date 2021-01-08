@@ -18662,6 +18662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938772713}
   - component: {fileID: 938772714}
+  - component: {fileID: 938772715}
   m_Layer: 0
   m_Name: AutoStart
   m_TagString: Untagged
@@ -18696,8 +18697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoTrigger: 1
-  autoTriggerDelay: 0
-  destroyAfterTrigger: 0
+  autoTriggerDelay: 0.1
+  destroyAfterTrigger: 1
   disableAfterTrigger: 0
   playAmbientSound: -1
   stopAmbientSound: -1
@@ -18719,6 +18720,26 @@ MonoBehaviour:
   component: {fileID: 0}
   lockPlayer: 0
   unlockPlayer: 0
+--- !u!114 &938772715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938772712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5eb18c7b7d74d8cdd79a09c2eb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  state: 0
+  nextState: 0
+  activeUntilState: 0
+  invert: 0
+  toCompass: 0
+  requirements: []
+  deactivateDelay: 0
 --- !u!1 &961609827
 GameObject:
   m_ObjectHideFlags: 0
