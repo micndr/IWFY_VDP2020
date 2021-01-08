@@ -18,7 +18,7 @@ public class portalAnimation : MonoBehaviour {
     public float speedTransparency = 1;
 
     void Start() {
-
+        timer = 0;
     }
 
     void Pulse() {
@@ -33,13 +33,13 @@ public class portalAnimation : MonoBehaviour {
             obj.transform.rotation = transform.rotation;
             float scale = 1 - (1.0f / numOfParticles) * i;
             scale *= 0.5f;
-            obj.transform.localScale = new Vector3(scale, scale, scale);
+            obj.transform.localScale = new Vector3(scale, scale, 1);
             Renderer rend = obj.GetComponentInChildren<Renderer>();
             rend.material.color = new Color(
                 rend.material.color.r,
                 rend.material.color.g,
                 rend.material.color.b,
-                Mathf.Max(0, scale));
+                1);
             portalFxs.Add(obj);
         }
     }
@@ -51,10 +51,10 @@ public class portalAnimation : MonoBehaviour {
             Pulse();
         }
 
-        return;
         float anim = 1 - (timer - Time.time) / duration; // from 0 to 1
         foreach (GameObject child in portalFxs) {
             if (!child) {
+                print("abort");
                 portalFxs.Clear();
                 return;
             }
