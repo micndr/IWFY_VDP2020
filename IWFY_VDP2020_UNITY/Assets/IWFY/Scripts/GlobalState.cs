@@ -317,6 +317,8 @@ public class GlobalState : MonoBehaviour {
 
     public void EraseSavedData() {
         if (inventory) inventory.itemList.Clear(); //Ok on first start
+        for (int i=0; i<keys.Length; i++) { keys[i] = 0; }
+        for (int i = 0; i < letters.Length; i++) { letters[i] = 0; }
         SaveBin bin = new SaveBin();
         bin.currentLevel = "WorldHub";
         string raw = JsonUtility.ToJson(bin);
