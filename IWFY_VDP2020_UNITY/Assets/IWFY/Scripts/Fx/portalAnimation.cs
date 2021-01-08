@@ -58,14 +58,14 @@ public class portalAnimation : MonoBehaviour {
                 portalFxs.Clear();
                 return;
             }
-            child.transform.localPosition += transform.forward * child.transform.GetSiblingIndex() / 10000f * speedForwardMovement;
-            child.transform.localScale += Vector3.one * child.transform.GetSiblingIndex() / 2500f * speedScaling;
+            child.transform.localPosition += transform.forward / 5.000f * speedForwardMovement * Time.deltaTime;
+            child.transform.localScale += Vector3.one / 2.50f * speedScaling * Time.deltaTime;
             Renderer rend = child.GetComponentInChildren<Renderer>();
             rend.material.color = new Color(
                 rend.material.color.r,
                 rend.material.color.g,
                 rend.material.color.b,
-                Mathf.Max(0, rend.material.color.a - 0.005f * speedTransparency));
+                Mathf.Max(0, rend.material.color.a - 1f * speedTransparency * Time.deltaTime));
         }
     }
 
