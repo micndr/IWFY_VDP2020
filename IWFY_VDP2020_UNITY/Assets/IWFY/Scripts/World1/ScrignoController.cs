@@ -129,7 +129,7 @@ public class ScrignoController : MonoBehaviour
     {
         for (int i = 0; i < _ghiera.Length; i++)
         {
-            Debug.Log("Angolo Ghiera "+i+": "+ _angle[i]);
+            //Debug.Log("Angolo Ghiera "+i+": "+ _angle[i]);
         }
     }
 }

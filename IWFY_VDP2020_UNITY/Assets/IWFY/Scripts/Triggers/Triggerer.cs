@@ -98,7 +98,10 @@ public class Triggerer : MonoBehaviour {
             
         }
         if (triggerer) triggerer.Trigger();
-        if (animator) {
+        if (animator)
+        {
+            if (animator.enabled == false)
+                animator.enabled = true;
             animator.SetTrigger("trigger");
         }
         if (mirrorcont) mirrorcont.RotateMirror();
