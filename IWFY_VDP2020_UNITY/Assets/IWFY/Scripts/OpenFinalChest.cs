@@ -6,6 +6,7 @@ public class OpenFinalChest : MonoBehaviour {
 
     public Animator anim;
     public GameObject collider;
+    public DialogueTrigger dialogue;
 
     void TriggerMsg() {
         GlobalState gs = FindObjectOfType<GlobalState>();
@@ -15,6 +16,8 @@ public class OpenFinalChest : MonoBehaviour {
             anim.SetTrigger("trigger");
             collider.SetActive(false);
             gs.completedQuests.Add("Chest");
+        } else {
+            dialogue.TriggerDialogue();
         }
     }
 }
