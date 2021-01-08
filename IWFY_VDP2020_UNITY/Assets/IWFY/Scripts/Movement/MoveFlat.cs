@@ -25,6 +25,8 @@ public class MoveFlat : MonoBehaviour {
     float steptimer = 0;
     int steplast = 0;
 
+    AudioManager audioManager;
+
     void Awake() {
         // cache components
         characterController = GetComponent<CharacterController>();
@@ -38,6 +40,8 @@ public class MoveFlat : MonoBehaviour {
         if (stepsobj) {
             steps = stepsobj.GetComponents<AudioSource>();
         }
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void PlayStep () {
@@ -45,7 +49,8 @@ public class MoveFlat : MonoBehaviour {
             int i = 0;
             // cycle until next sound is different from prev
             while (i == steplast) i = Random.Range(0, steps.Length);
-            steps[i].Play(); steplast = i;
+            audioManager.PlayAmbient(i + 13);
+            steplast = i;
         }
     }
 
