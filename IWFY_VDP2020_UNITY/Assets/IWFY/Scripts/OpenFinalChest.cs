@@ -17,7 +17,7 @@ public class OpenFinalChest : MonoBehaviour {
             collider.SetActive(false);
             gs.completedQuests.Add("Chest");
         } else {
-            dialogue.TriggerDialogue();
+            if (dialogue) dialogue.TriggerDialogue();
         }
     }
 }
