@@ -17,6 +17,8 @@ public class GetKeyNum : MonoBehaviour {
             int index = int.Parse(lvl[5].ToString()) - 1;
             if (index < 4) {
                 if (gs.keys[index] == 1) tmptext.text = "DONE";
+            } else {
+                tmptext.text = "x0";
             }
         } else if (lvl == "WorldHub"){
             tmptext.text = "x0";
