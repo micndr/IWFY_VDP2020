@@ -13,6 +13,7 @@ public class MoveFlat : MonoBehaviour {
     public float mouseSensitivityX = 1;
     public float mouseSensitivityY = 1;
     public float speed = 9;
+    public float runSpeed = 16f;
 
     public bool lockUserInput = false;
     public bool freeCursor = false;
@@ -101,8 +102,14 @@ public class MoveFlat : MonoBehaviour {
         // apply acceleration only in fixed updates
         if (lockUserInput) acc = Vector3.zero;
         Vector3 prevpos = transform.position;
-        characterController.Move(acc * Time.fixedDeltaTime * speed
-            + velocity * Time.fixedDeltaTime);
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            characterController.Move(acc * Time.fixedDeltaTime * runSpeed
+                + velocity * Time.fixedDeltaTime);
+        } else {
+            characterController.Move(acc * Time.fixedDeltaTime * speed
+                + velocity * Time.fixedDeltaTime);
+        }
+
         velocity += Vector3.down * 9.8f * Time.fixedDeltaTime * 3;
         // if close to ground, add distance to steptimer
         if (Physics.Raycast(new Ray(transform.position, Vector3.down), 1.5f)) { 
