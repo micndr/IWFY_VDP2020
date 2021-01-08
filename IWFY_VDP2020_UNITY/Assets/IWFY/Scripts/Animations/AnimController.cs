@@ -12,7 +12,7 @@ public class AnimController : MonoBehaviour {
 
     void Start() {
         anims[current].Play();
-        animTimer = Time.time + anims[current].clip.length;
+        animTimer = Time.time + anims[current].clip.length+0.04f;
     }
 
     void Update() {
@@ -20,7 +20,7 @@ public class AnimController : MonoBehaviour {
             if (useoneshot) { useoneshot = false; } 
             else if (oneshot != -1) { current = oneshot; oneshot = -1; }
             anims[current].Play();
-            animTimer = Time.time + anims[current].clip.length;
+            animTimer = Time.time + anims[current].clip.length + 0.04f;
         }
 
         for (int i=0; i<anims.Count; i++) {
