@@ -51,6 +51,7 @@ public class portalAnimation : MonoBehaviour {
             Pulse();
         }
 
+        return;
         float anim = 1 - (timer - Time.time) / duration; // from 0 to 1
         foreach (GameObject child in portalFxs) {
             if (!child) {
