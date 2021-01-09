@@ -296,8 +296,8 @@ public class GlobalState : MonoBehaviour {
                 }
             }
             if (found) {
-                inventory.inventory.AddItem(found, bin.inventoryQuantity[i], bin.inventoryIDs[i]);
-                //Debug.Log("recovererd item " + found.itemName + " qt: " + bin.inventoryQuantity[i]);
+                inventory.inventory.AddItem(found, bin.inventoryQuantity[i], bin.inventoryIDs[i], found.itemName);
+                Debug.Log("recovererd item " + found.itemName + " qt: " + bin.inventoryQuantity[i]);
             } else {
                 Debug.LogWarning("While loading, item id " + bin.inventoryIDs[i] + " was not found.");
             }
