@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour
         
         if (currentSoundscape == Soundscape.World1)
         {
-            ambient[0].volume = (float) Math.Pow(10, _globalState.globalVolume / 20)-1f;
+            ambient[0].volume = (float) Math.Pow(10, _globalState.globalVolume / 20)-0.8f;
         }
 
         if (currentSoundscape == Soundscape.World4)
