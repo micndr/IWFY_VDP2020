@@ -74,7 +74,9 @@ public class AudioManager : MonoBehaviour
             snapshot[3].TransitionTo(1f);
             for (int i = 13; i <= 18; i++)
             {
-                ambient[i].volume = 0.8f;
+                float newVol = (float) Math.Pow(10, _globalState.globalVolume / 20)-1.11f;
+                Debug.Log("Step " + i + " set to: " + newVol);
+                ambient[i].volume = newVol;
             }
         }
 
