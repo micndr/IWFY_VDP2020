@@ -68,6 +68,11 @@ public class AudioManager : MonoBehaviour
             snapshot[1].TransitionTo(.01f);
             StartCoroutine("DelayOST");
         }
+        
+        if (currentSoundscape == Soundscape.World1)
+        {
+            ambient[0].volume = (float) Math.Pow(10, _globalState.globalVolume / 20)-1f;
+        }
 
         if (currentSoundscape == Soundscape.World4)
         {
