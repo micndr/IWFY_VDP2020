@@ -75,7 +75,7 @@ public class AudioManager : MonoBehaviour
             for (int i = 13; i <= 18; i++)
             {
                 float newVol = (float) Math.Pow(10, _globalState.globalVolume / 20)-1.11f;
-                Debug.Log("Step " + i + " set to: " + newVol);
+                //Debug.Log("Step " + i + " set to: " + newVol);
                 ambient[i].volume = newVol;
             }
         }
